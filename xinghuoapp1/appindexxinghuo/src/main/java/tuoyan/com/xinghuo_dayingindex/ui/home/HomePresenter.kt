@@ -25,7 +25,9 @@ class HomePresenter(onProgress: OnProgress) : BasePresenter(onProgress) {
     闪屏	spgg
      */
     fun getBanner(adspace: String, page: Int, step: Int, onNext: (List<Advert>) -> Unit) {
-        api.getAdvs(adspace, page, step,"1").sub({ onNext(it.body) })
+        api.getAdvs(adspace, page, step,"1").sub({
+            onNext(it.body)
+        })
     }
 
     fun login(login: Map<String, String>, onNext: (Int) -> Unit, onError: () -> Unit) {

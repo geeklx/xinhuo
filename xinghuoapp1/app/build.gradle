@@ -132,16 +132,16 @@ android {
 //        }
         //TODO harmonybufen
         release {
-            storeFile file('./../releasekey/harmonyandroid.jks')
-            keyAlias 'harmonyandroid'
-            keyPassword 'HarmonyAndroid'
-            storePassword 'HarmonyAndroid'
+            storeFile file('./../releasekey/sparkenglish.jks')
+            keyAlias 'sparkenglish'
+            keyPassword 'spark123'
+            storePassword 'spark123'
         }
         debug {
-            storeFile file('./../releasekey/harmonyandroid.jks')
-            keyAlias 'harmonyandroid'
-            keyPassword 'HarmonyAndroid'
-            storePassword 'HarmonyAndroid'
+            storeFile file('./../releasekey/sparkenglish.jks')
+            keyAlias 'sparkenglish'
+            keyPassword 'spark123'
+            storePassword 'spark123'
         }
     }
     buildTypes {
