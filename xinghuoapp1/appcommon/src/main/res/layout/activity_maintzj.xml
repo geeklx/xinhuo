@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/shouyef1_tv8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="1.灯塔2.0动态化开发实例-灯塔有声组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+
+    <TextView
+        android:id="@+id/shouyef1_tv9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="2.灯塔2.0动态化开发实例-灯塔大课堂组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="3.灯塔2.0动态化开发实例-灯塔发现榜样组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="4.灯塔2.0动态化开发实例-灯塔微视组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="5.灯塔2.0动态化开发实例-灯塔题库组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="6.灯塔2.0动态化开发实例-党员教育组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="7.灯塔2.0动态化开发实例-三务公开组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="8.灯塔2.0动态化开发实例-选派工作队组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="9.灯塔2.0动态化开发实例-政策法规库组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="10.灯塔2.0动态化开发实例-山东e支部组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="11.灯塔2.0动态化开发实例-数字图书馆组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+    <TextView
+        android:id="@+id/shouyef1_tv19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12mm"
+        android:layout_marginTop="12mm"
+        android:layout_marginRight="12mm"
+        android:gravity="left"
+        android:text="12.灯塔2.0动态化开发实例-在线调查组件"
+        android:textColor="@color/black"
+        android:textSize="12mm" />
+
+</LinearLayout>

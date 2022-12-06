@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_v_f5f6f9_e7f4ff">
+
+    <TextView
+        android:id="@+id/tv_p_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginRight="30dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="精炼标题精炼标题精炼标题精炼标题精炼标题精炼标题精炼标题"
+        android:textColor="@color/color_222"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="目录标题目录标题目录标题目录标题目录标题目录标题目录标题"
+        android:textColor="@color/color_afb3bf"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_title" />
+
+    <com.mersens.view.CircleNumberProgressBar
+        android:id="@+id/pb1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:max="10"
+        app:circleprogress_reache_color="@color/color_008aff"
+        app:circleprogress_reache_height="5dp"
+        app:circleprogress_text_color="@android:color/transparent"
+        app:circleprogress_unreache__height="5dp"
+        app:circleprogress_unreache_color="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/img1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img1" />
+
+    <com.mersens.view.CircleNumberProgressBar
+        android:id="@+id/pb2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:max="10"
+        app:circleprogress_reache_color="@color/color_008aff"
+        app:circleprogress_reache_height="5dp"
+        app:circleprogress_text_color="@android:color/transparent"
+        app:circleprogress_unreache__height="5dp"
+        app:circleprogress_unreache_color="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/img2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img2" />
+
+    <com.mersens.view.CircleNumberProgressBar
+        android:id="@+id/pb3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="25dp"
+        android:max="10"
+        app:circleprogress_reache_color="@color/color_008aff"
+        app:circleprogress_reache_height="5dp"
+        app:circleprogress_text_color="@android:color/transparent"
+        app:circleprogress_unreache__height="5dp"
+        app:circleprogress_unreache_color="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/img3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img3" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/shape_20_008aff"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:text="词汇扫盲"
+        android:textColor="@drawable/shape_20_008aff"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img1"
+        app:layout_constraintLeft_toRightOf="@+id/pb1"
+        app:layout_constraintRight_toRightOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/img1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="25dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_p_1" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/shape_20_008aff"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:text="词汇学习"
+        android:textColor="@drawable/shape_20_008aff"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img2"
+        app:layout_constraintLeft_toRightOf="@+id/pb2"
+        app:layout_constraintRight_toRightOf="@+id/img2"
+        app:layout_constraintTop_toTopOf="@+id/img2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="25dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img1">
+
+        <ImageView
+            android:id="@+id/img2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_icon_p_2" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="0dp"
+        android:id="@+id/tv3"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/shape_20_008aff"
+        android:paddingLeft="25dp"
+        android:paddingTop="20dp"
+        android:text="听力练习"
+        android:textColor="@drawable/shape_20_008aff"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/img3"
+        app:layout_constraintLeft_toRightOf="@+id/pb3"
+        app:layout_constraintRight_toRightOf="@+id/img3"
+        app:layout_constraintTop_toTopOf="@+id/img3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="25dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img2">
+
+        <ImageView
+            android:id="@+id/img3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shape_icon_p_2" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape_3_008aff_fff"
+        app:layout_constraintBottom_toTopOf="@+id/pb2"
+        app:layout_constraintLeft_toLeftOf="@+id/pb1"
+        app:layout_constraintRight_toRightOf="@id/pb1"
+        app:layout_constraintTop_toBottomOf="@+id/pb1" />
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape_3_008aff_fff"
+        app:layout_constraintBottom_toTopOf="@+id/pb3"
+        app:layout_constraintLeft_toLeftOf="@+id/pb2"
+        app:layout_constraintRight_toRightOf="@id/pb2"
+        app:layout_constraintTop_toBottomOf="@+id/pb2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

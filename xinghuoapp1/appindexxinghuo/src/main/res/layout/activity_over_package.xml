@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:title="">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:onClick="onBack"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="过级包详情"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <tuoyan.com.xinghuo_dayingindex.widegt.SparkVideoPlayer
+                    android:id="@+id/video_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:scaleType="centerCrop"
+                    android:background="@color/color_f5f5f9"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/color_222831"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    tools:text="去微软推i欧赔平均狂风帝国军队覅计划发生的" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有效期至"
+                        android:textColor="@color/color_c3c7cb"
+                        android:textSize="13dp"
+                        android:visibility="gone" />
+
+                    <Space
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_validity_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_222831"
+                        android:textSize="13dp"
+                        tools:text="2018.2.25 23:55" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#f6f7f8" />
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_gravity="center"
+                android:background="@color/color_ffffff"
+                app:tabIndicatorHeight="0dp"
+                app:tabSelectedTextColor="@color/color_222831"
+                app:tabTextAppearance="@style/collection"
+                app:tabTextColor="@color/color_c3c7cb" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/divider" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ffffff"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="140dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:drawablePadding="6dp"-->
+        <!--android:drawableStart="@mipmap/ic_service"-->
+        <!--android:gravity="center"-->
+        <!--android:onClick="service"-->
+        <!--android:text="客服热线"-->
+        <!--android:textColor="@color/color_666666"-->
+        <!--android:textSize="14dp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_buy"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/color_1482ff"-->
+        <!--android:gravity="center"-->
+        <!--android:onClick="buy"-->
+        <!--android:text="立即购买"-->
+        <!--android:textColor="@color/color_ffffff"-->
+        <!--android:textSize="14dp"-->
+        <!--android:textStyle="bold" />-->
+
+        <!--</LinearLayout>-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

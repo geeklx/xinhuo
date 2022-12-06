@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/afl1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/iv_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="250mm"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dt_login_bg" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="16mm"
+        android:layout_height="16mm"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20mm"
+        android:layout_marginTop="40mm"
+        android:src="@drawable/icon_back" />
+
+    <TextView
+        android:id="@+id/tv_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_back"
+        android:layout_marginLeft="30mm"
+        android:layout_marginTop="40mm"
+        android:text="@string/applogin5"
+        android:textColor="@color/white"
+        android:textSize="28mm"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="140mm"
+        android:layout_height="38mm"
+        android:layout_below="@+id/iv_bg1"
+        android:layout_centerHorizontal="true"
+        app:tabBackground="@color/transparent"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#E50D02"
+        app:tabIndicatorFullWidth="false"
+        app:tabMaxWidth="0dp"
+        app:tabRippleColor="@color/transparent"
+        app:tabSelectedTextColor="#333333"
+        app:tabTextColor="#999999"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs" />
+
+</RelativeLayout>

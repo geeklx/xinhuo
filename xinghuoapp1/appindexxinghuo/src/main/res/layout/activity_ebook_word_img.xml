@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.ebook.word.EBookWordImgActivity">
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        app:navigationIcon="@mipmap/ic_back" />
+
+    <ImageView
+        android:id="@+id/img_catalog"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@mipmap/icon_ebook_catalog"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintRight_toRightOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_play"
+        android:layout_width="108dp"
+        android:layout_height="33dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/shape_16_5_f5f6f9"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/img_catalog"
+        app:layout_constraintRight_toLeftOf="@+id/img_catalog"
+        app:layout_constraintTop_toTopOf="@+id/img_catalog"
+        app:layout_goneMarginRight="15dp">
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/icon_ebook_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:text="播放本组"
+            android:textColor="@color/color_222"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/img_play"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

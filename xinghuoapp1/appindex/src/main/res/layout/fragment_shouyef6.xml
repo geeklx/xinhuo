@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/colorE60000"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorF1F2F4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_user_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12mm"
+                    android:layout_marginTop="50mm"
+                    android:background="@drawable/back"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18mm"
+                    android:layout_marginBottom="35mm"
+                    android:paddingLeft="14mm"
+                    android:paddingRight="14mm">
+
+                    <com.geek.libglide47.base.GlideImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="58mm"
+                        android:layout_height="58mm"
+                        android:layout_marginLeft="14mm"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_grxx1" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_ydl1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17mm"
+                        android:layout_marginTop="0mm"
+                        android:layout_toRightOf="@+id/iv1"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv1"
+                                style="@style/loginstyle1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginRight="10mm"
+                                android:layout_toLeftOf="@+id/iv_scan"
+                                android:text="ces"
+                                android:textColor="@color/white"
+                                android:textSize="19mm"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/iv_scan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1mm"
+                                android:layout_marginRight="10mm"
+                                android:layout_toLeftOf="@+id/tv2"
+                                android:src="@drawable/icon_my7" />
+
+                            <ImageView
+                                android:id="@+id/tv2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="18mm"
+                                android:layout_toLeftOf="@+id/tv3"
+                                android:src="@drawable/icon_my2" />
+
+                            <ImageView
+                                android:id="@+id/tv3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/icon_my8" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv4"
+                            style="@style/loginstyle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ces"
+                            android:textColor="@color/white"
+                            android:textSize="12mm" />
+
+                        <TextView
+                            android:id="@+id/tv5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_my_qm"
+                            android:drawablePadding="5mm"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="暂无签名"
+                            android:textColor="@color/white"
+                            android:textSize="12mm" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_wdl1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17mm"
+                        android:layout_marginTop="4mm"
+                        android:layout_toRightOf="@+id/iv1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_wdl1"
+                            style="@style/loginstyle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/applogin30"
+                            android:textColor="@color/white"
+                            android:textSize="20mm" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10mm"
+                    android:layout_marginTop="18mm"
+                    android:background="@color/colorF1F2F4"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14mm"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14mm"
+                    android:paddingTop="12mm"
+                    android:paddingBottom="12mm">
+
+                    <ImageView
+                        android:layout_width="24mm"
+                        android:layout_height="24mm"
+                        android:src="@drawable/icon_my3" />
+
+                    <TextView
+                        style="@style/loginstyle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10mm"
+                        android:layout_weight="1"
+                        android:text="@string/appindex1"
+                        android:textColor="@color/color333333"
+                        android:textSize="16mm"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_my1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="47mm"
+                    android:layout_marginRight="14mm"
+                    android:background="@color/colorE5E5E5"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14mm"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14mm"
+                    android:paddingTop="12mm"
+                    android:paddingBottom="12mm"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="24mm"
+                        android:layout_height="24mm"
+                        android:src="@drawable/icon_my4" />
+
+                    <TextView
+                        style="@style/loginstyle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10mm"
+                        android:layout_weight="1"
+                        android:text="@string/appindex2"
+                        android:textColor="@color/color333333"
+                        android:textSize="16mm"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_my1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="47mm"
+                    android:layout_marginRight="14mm"
+                    android:background="@color/colorE5E5E5" />
+
+                <LinearLayout
+                    android:id="@+id/ll4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14mm"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14mm"
+                    android:paddingTop="12mm"
+                    android:paddingBottom="12mm">
+
+                    <ImageView
+                        android:layout_width="24mm"
+                        android:layout_height="24mm"
+                        android:src="@drawable/icon_my6" />
+
+                    <TextView
+                        style="@style/loginstyle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10mm"
+                        android:layout_weight="1"
+                        android:text="@string/appindex4"
+                        android:textColor="@color/color333333"
+                        android:textSize="16mm"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_my1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="47mm"
+                    android:layout_marginRight="14mm"
+                    android:background="@color/colorE5E5E5" />
+
+                <LinearLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14mm"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="14mm"
+                    android:paddingTop="12mm"
+                    android:paddingBottom="12mm">
+
+                    <ImageView
+                        android:layout_width="24mm"
+                        android:layout_height="24mm"
+                        android:src="@drawable/icon_my5" />
+
+                    <TextView
+                        style="@style/loginstyle1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10mm"
+                        android:layout_weight="1"
+                        android:text="@string/appmy6"
+                        android:textColor="@color/color333333"
+                        android:textSize="16mm"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/icon_my1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="47mm"
+                    android:layout_marginRight="14mm"
+                    android:background="@color/colorE5E5E5" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

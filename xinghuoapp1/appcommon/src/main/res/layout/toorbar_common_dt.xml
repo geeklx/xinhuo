@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_head"
+    android:layout_width="match_parent"
+    android:layout_height="45mm"
+    android:background="@color/colorE60000">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="45mm"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/iv_back_selector"
+        android:clickable="true"
+        android:scaleType="center"
+        android:src="@drawable/icon_dt_back" />
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="14mm" />
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="15mm"
+        android:background="@drawable/toolbar_btn_bg"
+        android:paddingStart="8mm"
+        android:paddingTop="4mm"
+        android:paddingEnd="8mm"
+        android:paddingBottom="4mm">
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10mm"
+            android:scaleType="center"
+            android:src="@drawable/icon_dt_more" />
+
+        <View
+            android:layout_width="1mm"
+            android:layout_height="20mm"
+            android:layout_marginEnd="10mm"
+            android:background="#66FFFFFF" />
+
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/icon_dt_close" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0mm"
+        android:layout_height="0mm"
+        />
+
+</RelativeLayout>
+
+

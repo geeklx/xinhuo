@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_edeff0" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="不开启"
+            android:textColor="@drawable/color_22_54"
+            android:textSize="15dp" />
+
+        <CheckBox
+            android:id="@+id/chb_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:checked="true"
+            android:clickable="false"
+            android:drawableRight="@drawable/icon_audio_check"
+            android:drawablePadding="15dp"
+            android:text=""
+            android:textColor="@color/color_8e"
+            android:textSize="12dp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_week"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/tv_week"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/shape_10_f5f6f9"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp"
+        android:gravity="center"
+        android:text="12月12日-12月12日"
+        android:textColor="@color/color_222"
+        android:textSize="12dp" />
+
+    <ProgressBar
+        android:id="@+id/pb_me"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@drawable/shape_progress_5467ff" />
+
+    <View
+        android:id="@+id/point_me"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_5_c4cbde"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb_class"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="40"
+        android:progressDrawable="@drawable/shape_progress" />
+
+    <View
+        android:id="@+id/point_class"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_5_c4cbde"
+        android:visibility="gone" />
+</LinearLayout>

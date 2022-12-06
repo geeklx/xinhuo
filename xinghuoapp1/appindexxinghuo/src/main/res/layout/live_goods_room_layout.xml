@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pc_portrait_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--错误界面-->
+    <LinearLayout
+        android:id="@+id/id_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewfinder_mask"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/id_msg_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放异常，请刷新重试"
+            android:textColor="#fff"
+            android:textSize="@dimen/pc_live_top_title" />
+
+        <TextView
+            android:id="@+id/id_try"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/video_error_button_bg"
+            android:paddingLeft="15dp"
+            android:paddingTop="3dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="3dp"
+            android:text="刷新"
+            android:textColor="@color/write_color_selector"
+            android:textSize="@dimen/pc_live_top_title" />
+
+    </LinearLayout>
+
+    <!--直播状态显示 已结束/未开始 -->
+    <RelativeLayout
+        android:id="@+id/no_stream_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/live_nostart_bg"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <!--倒计时图标-->
+        <ImageView
+            android:id="@+id/iv_no_stream"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/live_nostart_img" />
+
+        <!--直播未开始-->
+        <TextView
+            android:id="@+id/tv_no_stream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_no_stream"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_30_3b4054"
+            android:paddingLeft="30dp"
+            android:paddingTop="14dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="14dp"
+            android:text="直播未开始"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <!--倒计时-->
+        <TextView
+            android:id="@+id/id_count_down_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_no_stream"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/reply_button_disable"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <!--顶部布局-->
+    <RelativeLayout
+        android:id="@+id/rl_portrait_live_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+            <!--返回按钮-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_portrait_live_close"-->
+            <!--                style="@style/phoneLiveLandscapeTitleViewTheme"-->
+            <!--                android:layout_alignParentLeft="true"-->
+            <!--                android:paddingRight="5dp"-->
+            <!--                android:src="@drawable/title_back" />-->
+            <!--标题-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/tv_portrait_live_title"-->
+            <!--                style="@style/phoneLiveLandscapeTitleViewTheme"-->
+            <!--                android:layout_toRightOf="@id/iv_portrait_live_close"-->
+            <!--                android:paddingLeft="0dp"-->
+            <!--                android:visibility="visible" />-->
+
+            <LinearLayout
+                android:id="@+id/ll_top_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!--视频文档更多配置-->
+                <ImageView
+                    android:id="@+id/video_doc_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="16dp"
+                    android:src="@drawable/ic_setting_select"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_live_info"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_20_4d000000"
+
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+
+                <ImageView
+                    android:id="@+id/iv_point_name"
+                    android:layout_width="40dp"
+
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_live_logo"></ImageView>
+
+                <TextView
+                    android:id="@+id/tv_point_name"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/point_4b84ff"
+                    android:gravity="center"
+                    android:text="星火\n英语"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_portrait_live_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_toRightOf="@+id/iv_point_name"
+                    android:text="小火苗福利社"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_look_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_portrait_live_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_point_name"
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp"
+                    tools:text="1.4万观看" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/iv_portrait_live_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_live_close"></ImageView>
+
+            <LinearLayout
+                android:id="@+id/ll_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_live_info"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/shape_20_4d000000"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="公告："
+                    android:textColor="#ffff7800"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mq_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="12sp">
+
+                    <requestFocus />
+                </TextView>
+                <!--                <tuoyan.com.xinghuo_daying.ui.cc.livegoods.MarqueeView-->
+                <!--                    android:id="@+id/mq_notice"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="10dp"-->
+                <!--                    android:layout_marginRight="10dp"-->
+                <!--                    app:mvAnimDuration="3000"-->
+                <!--                    app:mvDirection="right_to_left"-->
+                <!--                    app:mvGravity="left"-->
+                <!--                    app:mvInterval="5000"-->
+                <!--                    app:mvSingleLine="true"-->
+                <!--                    app:mvTextColor="@color/white"-->
+                <!--                    app:mvTextSize="12sp"></tuoyan.com.xinghuo_daying.ui.cc.livegoods.MarqueeView>-->
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_notice"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_live_coupon"
+                android:minHeight="50dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_coupon_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:minWidth="50dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:textColor="#FF1717"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="¥99.55"></TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--横屏的随堂测/答题卡缩小按钮-->
+    <TextView
+        android:id="@+id/tv_land_vote"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/float_answer"
+        android:elevation="15dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:translationZ="10dp"
+        android:visibility="gone" />
+
+    <!--下方布局-->
+    <RelativeLayout
+        android:id="@+id/rl_portrait_live_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+
+        <!--下方控制按钮-->
+        <RelativeLayout
+            android:id="@+id/portrait_live_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/living_bottom_bg"
+            android:visibility="visible">
+
+
+            <!--其他控制-->
+            <LinearLayout
+                android:id="@+id/l_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <!--切换文档或视频-->
+                <ImageView
+                    android:id="@+id/iv_barrage_control"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:contentDescription="弹幕开关"
+                    android:padding="10dp"
+                    android:src="@drawable/danmu_selected" />
+
+                <ImageView
+                    android:id="@+id/img_camera"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@drawable/camera_selected"
+                    android:text="双屏开关" />
+
+
+                <ImageView
+                    android:id="@+id/video_doc_switch"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/exchange_view"
+                    android:text="切换文档" />
+                <!-- 视频全屏 -->
+                <ImageView
+                    android:id="@+id/iv_portrait_live_full"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@drawable/selector_full_screen" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <com.bokecc.livemodule.live.chat.barrage.BarrageLayout
+            android:id="@+id/live_barrage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <!--跑马灯-->
+    <com.bokecc.sdk.mobile.live.widget.MarqueeView
+        android:id="@+id/marquee_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+    <!-- 弹幕组件 -->
+
+    <!--横屏显示：右边弹出界面-->
+    <com.bokecc.livemodule.live.room.rightview.LiveRightView
+        android:id="@+id/right_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-platform-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-parcelize'
+apply from: './../../commonlibs1.gradle'
+def librarys = rootProject.ext.dependencies //
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+}
+// mob
+apply from: './../../MobSDK.gradle'

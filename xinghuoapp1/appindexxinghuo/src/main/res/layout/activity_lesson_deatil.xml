@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".ui.netLesson.lesson.detail.LessonDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_lesson_detail"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="课程详情"
+            android:textColor="#222831"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/ic_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:contentDescription="分享"
+        android:src="@mipmap/ic_share"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_lesson_detail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tb_lesson_detail" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingBottom="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/tb_lesson_detail">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <tuoyan.com.xinghuo_dayingindex.widegt.SparkVideoPlayer
+                    android:id="@+id/video_player"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="visible"
+                    app:layout_constraintDimensionRatio="w,210:375"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/color_f5f5f9"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/video_player"
+                    app:layout_constraintLeft_toLeftOf="@+id/video_player"
+                    app:layout_constraintRight_toRightOf="@+id/video_player"
+                    app:layout_constraintTop_toTopOf="@+id/video_player" />
+
+                <LinearLayout
+                    android:id="@+id/ll_down_time"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:background="@color/color_ff5200"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/video_player"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_down_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_count_down" />
+
+                    <TextView
+                        android:id="@+id/tv_down_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        tools:text="距离拼团活动开始还有：66天 66:66:66" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_lesson_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/color_222"
+                    android:textSize="18dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/video_player"
+                    tools:text="艾派简系列 新题型2018大学英语四级听力1000题DTJ181" />
+
+                <TextView
+                    android:id="@+id/tv_date_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_222"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/tv_lesson_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lesson_title"
+                    tools:text="2018.2.25-12.28" />
+
+                <View
+                    android:id="@+id/v_data_1"
+                    android:layout_width="2dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape_1_edeff0"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_date_info"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_date_info"
+                    app:layout_constraintTop_toTopOf="@+id/tv_date_info" />
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/color_222"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_date_info"
+                    app:layout_constraintLeft_toRightOf="@+id/v_data_1"
+                    app:layout_constraintTop_toTopOf="@+id/tv_date_info"
+                    tools:text="3课时" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlv_lessons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date_info" />
+
+                <View
+                    android:id="@+id/v_1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlv_lessons" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_union"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v_1">
+
+                    <View
+                        android:id="@+id/v_union"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:background="@color/color_f5f5f9"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_union"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@mipmap/lesson_union"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="联报优惠"
+                        android:textColor="@color/color_222"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_union" />
+
+                    <TextView
+                        android:id="@+id/tv_union_w"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/color_ff5200"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_union"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_union"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_union"
+                        tools:text="联报优惠" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rl_assemble"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctl_union">
+
+                    <View
+                        android:id="@+id/v_2"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:background="@color/color_f5f5f9"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_assemble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@mipmap/icon_assemble"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="拼团规则"
+                        android:textColor="@color/color_222"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_2" />
+
+                    <TextView
+                        android:id="@+id/tv_assemble_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:drawableRight="@mipmap/icon_more_lesson_coupon"
+                        android:drawablePadding="10dp"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/color_ff5d32"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_assemble"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_assemble"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_assemble"
+                        tools:text="邀请2名好友即可拼团购买邀请2名好友即可拼团购买" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_assemble">
+
+                    <View
+                        android:id="@+id/v_3"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:background="@color/color_f5f5f9"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@mipmap/icon_lesson_coupon"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical"
+                        android:text="优惠券"
+                        android:textColor="@color/color_222"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_3" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_coupon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_one"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_one"
+                        app:layout_constraintRight_toLeftOf="@+id/img_more"
+                        app:layout_constraintTop_toTopOf="@+id/tv_one" />
+
+                    <ImageView
+                        android:id="@+id/img_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/icon_more_lesson_coupon"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_one"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_one" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctl_coupon">
+
+                    <View
+                        android:id="@+id/v_4"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:background="@color/color_f5f5f9"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@mipmap/icon_union"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="联报优惠"
+                        android:textColor="@color/color_222"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v_4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/color_ff5200"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_ll"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_ll"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_ll"
+                        tools:text="联报联报联报联报联报联报联报联报联报联报联报联报联报联报联报联报联报联报" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:background="@color/color_f5f5f9"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctl_ll" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="课程介绍"
+                    android:textColor="@drawable/color_008aff_c4cbde"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/vr_1"
+                    android:layout_width="2dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_edeff0" />
+
+                <RadioButton
+                    android:id="@+id/rb_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="目录"
+                    android:textColor="@drawable/color_008aff_c4cbde"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/vr_2"
+                    android:layout_width="2dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_edeff0" />
+
+                <RadioButton
+                    android:id="@+id/rb_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="教师介绍"
+                    android:textColor="@drawable/color_008aff_c4cbde"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/vr_3"
+                    android:layout_width="2dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/shape_edeff0" />
+
+                <RadioButton
+                    android:id="@+id/rb_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="评价"
+                    android:textColor="@drawable/color_008aff_c4cbde"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_lesson_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_limit_info"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:background="@color/color_e6ffaf30"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/tv_limit_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            tools:text="shijian" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/ic_limit"
+            android:drawablePadding="5dp"
+            android:text="限时免费"
+            android:textColor="@android:color/white"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_outdate"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@color/color_ff3b00"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_count_down" />
+
+        <TextView
+            android:id="@+id/tv_outdate_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            tools:text="距离下架还有66天 66:66:66" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ff3b00"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_buyer_count"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="$666" />
+
+        <TextView
+            android:id="@+id/tv_buyer_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_afb3bf"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="$666" />
+
+        <TextView
+            android:id="@+id/btn_buy"
+            android:layout_width="115dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_22_ff6800_ff0000"
+            android:gravity="center"
+            android:text="立即购买"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_assemble_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_union_left"
+                android:gravity="center"
+                android:text="原价购买"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="5dp"
+                app:layout_constraintRight_toRightOf="@+id/tv_buy"
+                app:layout_constraintTop_toTopOf="@+id/tv_buy" />
+
+            <TextView
+                android:id="@+id/tv_assemble_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_union_right"
+                android:gravity="center"
+                android:text="联报购买"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/v1"
+                app:layout_constraintTop_toTopOf="@+id/tv_buy" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tv_service"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_25_f5f6f9_fff"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/img_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_ebook_service"
+            app:layout_constraintBottom_toTopOf="@+id/tv_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="客服"
+            android:textColor="@color/color_222"
+            android:textSize="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_1"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <tuoyan.com.xinghuo_dayingindex.widegt.DragFloatView
+        android:id="@+id/drag_float"
+        android:layout_width="77dp"
+        android:visibility="gone"
+        android:layout_height="250dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/free_drag"
+        app:layout_constraintRight_toRightOf="parent"></tuoyan.com.xinghuo_dayingindex.widegt.DragFloatView>
+    <tuoyan.com.xinghuo_dayingindex.widegt.FreeDragFloatView
+        android:id="@+id/free_drag"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_service"
+        app:layout_constraintRight_toRightOf="parent">
+    </tuoyan.com.xinghuo_dayingindex.widegt.FreeDragFloatView>
+</androidx.constraintlayout.widget.ConstraintLayout>

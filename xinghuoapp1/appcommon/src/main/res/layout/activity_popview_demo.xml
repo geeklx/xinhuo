@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5mm">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50mm"
+        android:text="常用弹窗效果"
+        android:textSize="25mm" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_bottom_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="0、底部弹窗" />
+
+            <TextView
+                android:id="@+id/tv_bottom_list_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="1、底部弹窗(带选中效果)" />
+
+            <TextView
+                android:id="@+id/tv_pop1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="2、普通弹窗" />
+
+            <TextView
+                android:id="@+id/tv_pop11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5mm"
+                android:layout_marginTop="5mm"
+                android:text="21、普通弹窗(样式1)" />
+
+            <TextView
+                android:id="@+id/tv_pop2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="3、自定义布局弹窗" />
+
+            <TextView
+                android:id="@+id/tv_pop3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="4、带单个输入框的弹窗" />
+
+            <TextView
+                android:id="@+id/tv_pop4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="5、在中间弹出List列表的弹窗" />
+
+            <TextView
+                android:id="@+id/tv_pop5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="6、在中间弹出List列表的弹窗(带选中效果)" />
+
+            <TextView
+                android:id="@+id/tv_pop6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="7、气泡弹窗" />
+
+            <TextView
+                android:id="@+id/tv_pop7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="8、MProgressDialog数据请求" />
+
+
+            <TextView
+                android:id="@+id/tv_pop8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="9、更多自定义效果点击查看" />
+
+            <TextView
+                android:id="@+id/tv_pop9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="10、分享弹窗" />
+
+            <TextView
+                android:id="@+id/tv_pop10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:text="11、可拖拽弹窗列表（地图）" />
+
+            <LinearLayout
+                android:layout_width="200mm"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5mm"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pop12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12、学科分类下拉弹窗" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="20mm"
+                    android:layout_height="20mm"
+                    android:src="@drawable/drag_btn_n" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

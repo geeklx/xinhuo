@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.main.coupon.MainCouponActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/top_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@mipmap/icon_mian_top"
+            app:layout_constraintDimensionRatio="h,75:34"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@mipmap/icon_back_white" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_rlv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/shape_15_ffeeee"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginRight="21dp"
+            android:background="@drawable/shape_5_ff5200"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_f"
+            app:layout_constraintRight_toLeftOf="@+id/tv_f"
+            app:layout_constraintTop_toTopOf="@+id/tv_f" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_8_ff3b00"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_f"
+            app:layout_constraintRight_toLeftOf="@+id/tv_f"
+            app:layout_constraintTop_toTopOf="@+id/tv_f" />
+
+        <TextView
+            android:id="@+id/tv_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="快来领取福利吧"
+            android:textColor="@color/color_ff1717"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_8_ff3b00"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_f"
+            app:layout_constraintLeft_toRightOf="@+id/tv_f"
+            app:layout_constraintTop_toTopOf="@+id/tv_f" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="21dp"
+            android:background="@drawable/shape_5_ff5200"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_f"
+            app:layout_constraintLeft_toRightOf="@+id/tv_f"
+            app:layout_constraintTop_toTopOf="@+id/tv_f" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_coupon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_white_top_r_15"
+            android:paddingHorizontal="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_f"
+            tools:listitem="@layout/layout_coupon_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-15dp"
+        android:background="@drawable/bg_white_top_r_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/icon_main_coupon"
+            android:drawablePadding="22dp"
+            android:text="暂无优惠券，请随时关注活动~"
+            android:textColor="@color/color_222"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.43"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

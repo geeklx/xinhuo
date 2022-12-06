@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/colorE60000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_co_top2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48mm"
+                android:layout_marginTop="5mm"
+                android:orientation="horizontal"
+                android:paddingStart="12mm"
+                android:paddingEnd="12mm">
+
+                <EditText
+                    android:id="@+id/edt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="原密码"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingTop="14mm"
+                    android:paddingBottom="14mm"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_000"
+                    android:textCursorDrawable="@drawable/common_ed_bg1"
+                    android:textSize="14mm" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5mm"
+                    android:layout_alignParentBottom="true"
+                    android:background="#D8D8D8" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48mm"
+                android:orientation="horizontal"
+                android:paddingStart="12mm"
+                android:paddingEnd="12mm">
+
+
+                <EditText
+                    android:id="@+id/edt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="新密码"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingTop="14mm"
+                    android:paddingBottom="14mm"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_000"
+                    android:textCursorDrawable="@drawable/common_ed_bg1"
+                    android:textSize="14mm" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5mm"
+                    android:layout_alignParentBottom="true"
+                    android:background="#D8D8D8" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48mm"
+                android:layout_marginTop="0mm"
+                android:orientation="horizontal"
+                android:paddingStart="12mm"
+                android:paddingEnd="12mm">
+
+
+                <EditText
+                    android:id="@+id/edt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="确定密码"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingTop="14mm"
+                    android:paddingBottom="14mm"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_000"
+                    android:textCursorDrawable="@drawable/common_ed_bg1"
+                    android:textSize="14mm" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="40mm"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="60mm"
+            android:layout_marginTop="60mm"
+            android:layout_marginEnd="60mm"
+            android:layout_marginBottom="40mm"
+            android:background="@drawable/btn_denglu2_enpressed"
+            android:gravity="center"
+            android:text="确定修改"
+            android:textColor="@color/tv_comm2"
+            android:textSize="16mm" />
+
+    </LinearLayout>
+</RelativeLayout>

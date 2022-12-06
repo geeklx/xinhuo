@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9"
+    tools:context=".ui.netLesson.myLesson.MonthDataActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="2020年06月"
+            android:textColor="#222831"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:background="@color/color_fffac8"
+                android:gravity="center"
+                android:text="本页数据将于次日零点更新"
+                android:textColor="@color/color_ffaf00"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:text="听课时长"
+                android:textColor="@color/color_222"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+            <LinearLayout
+                android:id="@+id/ll_time_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_12_e8ebff"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_12_ff"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_me_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我·66小时66分钟"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_222"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_me_time"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/shape_progress_5467ff"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_me_time" />
+
+                    <View
+                        android:id="@+id/point_me_time"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/shape_5_c4cbde"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_me_time"
+                        app:layout_constraintTop_toTopOf="@+id/pb_me_time" />
+
+                    <TextView
+                        android:id="@+id/tv_class_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="班级平均·66小时66分钟"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_222"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pb_me_time" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_class_time"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/shape_progress"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_class_time"
+                        app:layout_goneMarginTop="8dp" />
+
+                    <View
+                        android:id="@+id/point_class_time"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/shape_5_c4cbde"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_class_time"
+                        app:layout_constraintTop_toTopOf="@+id/pb_class_time" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_time_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginBottom="12.5dp"
+                    android:drawableLeft="@mipmap/icon_hot_study_data"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/color_5467ff"
+                    android:gravity="center_vertical"
+                    android:text="超越了100%的同学" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:text="完成听课"
+                android:textColor="@color/color_222"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_time_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_listen_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_12_e8ebff"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_12_ff"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_listen_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我·完成666节"
+                        android:textColor="@color/color_222"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_me_listen"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/shape_progress_5467ff"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_listen_time"
+                        app:layout_goneMarginTop="8dp" />
+
+                    <View
+                        android:id="@+id/point_me_listen"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/shape_5_c4cbde"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_me_listen"
+                        app:layout_constraintTop_toTopOf="@+id/pb_me_listen" />
+
+                    <TextView
+                        android:id="@+id/tv_class_listen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="班级平均·完成666节"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_222"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pb_me_listen" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_class_listen"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/shape_progress"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_class_listen"
+                        app:layout_goneMarginTop="8dp" />
+
+                    <View
+                        android:id="@+id/point_class_listen"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/shape_5_c4cbde"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_class_listen"
+                        app:layout_constraintTop_toTopOf="@+id/pb_class_listen" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_listen_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginBottom="12.5dp"
+                    android:drawableLeft="@mipmap/icon_hot_study_data"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/color_5467ff"
+                    android:gravity="center_vertical"
+                    android:text="超越了100%的同学" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="完成练习"
+                android:textStyle="bold"
+                android:textColor="@color/color_222"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_listen_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_12_e8ebff"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_12_ff"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_test_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我·完成666节"
+                        android:textColor="@color/color_222"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_me_test"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/shape_progress_5467ff"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_test_time" />
+
+                    <View
+                        android:id="@+id/point_me_test"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/shape_5_c4cbde"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_me_test"
+                        app:layout_constraintTop_toTopOf="@+id/pb_me_test" />
+
+                    <TextView
+                        android:id="@+id/tv_class_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="班级平均·完成666节"
+                        android:textColor="@color/color_222"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pb_me_test" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_class_test"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="8dp"
+                        android:max="100"
+                        android:progress="40"
+                        android:progressDrawable="@drawable/shape_progress"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_class_test" />
+
+                    <View
+                        android:id="@+id/point_class_test"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/shape_5_c4cbde"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_class_test"
+                        app:layout_constraintTop_toTopOf="@+id/pb_class_test" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_test_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12.5dp"
+                    android:layout_marginBottom="12.5dp"
+                    android:drawableLeft="@mipmap/icon_hot_study_data"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_5467ff"
+                    android:text="超越了100%的同学" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

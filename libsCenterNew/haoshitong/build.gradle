@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default",file('AnroidPhoneSdk-3.36.4.3.aar'))

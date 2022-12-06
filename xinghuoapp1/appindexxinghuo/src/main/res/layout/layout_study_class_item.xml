@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/bg_network_item"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_cover"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:background="@color/color_f5f5f9"
+            android:scaleType="fitXY" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_cover_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/bg_class_tag"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="标签"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/cv_cover"
+        app:layout_constraintTop_toTopOf="@+id/cv_cover" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="标题标题标题标题标题标题"
+        android:textColor="@color/color_222"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/cv_cover"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv_cover" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_tags"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="17dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintLeft_toLeftOf="@+id/tv_title"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_title">-->
+
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:drawableLeft="@mipmap/icon_class_teacher"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="老师"
+        android:textColor="@color/color_8e"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_cover"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintRight_toRightOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@mipmap/icon_class_time"
+        android:drawablePadding="5dp"
+        android:text="2019.09.09-2.19.09.11"
+        android:textColor="@color/color_8e"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_teacher"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_teacher" />
+
+    <TextView
+        android:id="@+id/tv_class_status"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_8_e8ebff"
+        android:drawableLeft="@mipmap/icon_living"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:text="直播中"
+        android:textColor="@color/color_5467ff"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_cover" />
+
+    <TextView
+        android:id="@+id/tv_work_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_work_state"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:textColor="@drawable/color_ff7100_15d25f"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_class_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_class_status" />
+
+    <TextView
+        android:id="@+id/tv_repeat"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_8_e7f4ff"
+        android:gravity="center"
+        android:text="重读服务"
+        android:textColor="@color/color_008aff"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_class_status"
+        app:layout_constraintRight_toLeftOf="@+id/tv_class_status"
+        app:layout_constraintTop_toTopOf="@+id/tv_class_status" />
+</androidx.constraintlayout.widget.ConstraintLayout>

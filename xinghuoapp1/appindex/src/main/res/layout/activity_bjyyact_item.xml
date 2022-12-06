@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10mm">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.geek.libglide47.base.GlideImageView
+                android:id="@+id/iv1"
+                android:layout_width="50mm"
+                android:layout_height="50mm"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2mm"
+                android:layout_marginTop="2mm"
+                android:layout_marginRight="2mm"
+                android:scaleType="centerCrop" />
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv1"-->
+            <!--                android:layout_width="50mm"-->
+            <!--                android:layout_height="50mm"-->
+            <!--                android:layout_centerVertical="true"-->
+            <!--                android:layout_marginLeft="2mm"-->
+            <!--                android:background="@color/orange"-->
+            <!--                android:layout_marginTop="2mm"-->
+            <!--                android:layout_marginRight="2mm"-->
+            <!--                android:scaleType="centerCrop" />-->
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4mm"
+                android:layout_marginBottom="0mm"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="ces"
+                android:textColor="@color/black"
+                android:textSize="10mm" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="15mm"
+            android:layout_height="15mm"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0mm"
+            android:layout_marginRight="0mm"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

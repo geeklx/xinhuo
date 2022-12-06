@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/colorE60000" />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30mm"
+        android:background="@color/colorF1F2F4"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorE60000">
+
+            <TextView
+                android:id="@+id/tv1"
+                style="@style/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50mm"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/appindex7"
+                android:textColor="@color/white"
+                android:textSize="16mm"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="30mm"
+                android:layout_height="wrap_content"
+                android:padding="6mm"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18mm" />
+        </RelativeLayout>
+
+        <com.geek.libbase.emptyview.EmptyViewNewNew
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="0mm"
+            android:layout_weight="1"
+            android:background="@color/colorF1F2F4"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:errornet_layout="@layout/empty_error1"
+            app:loading_layout="@layout/empty_loading"
+            app:nodata_layout="@layout/empty_nodata"
+            app:unreachable_layout="@layout/empty_error" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0mm"
+            android:layout_weight="1">
+
+            <com.geek.tablib.tablayout.SlidingTabLayout
+                android:id="@+id/tl_fenlei1"
+                android:layout_width="match_parent"
+                android:layout_height="50mm"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                tl:tl_indicator_color="@color/colorE60000"
+                tl:tl_indicator_corner_radius="1.5dp"
+                tl:tl_indicator_height="3mm"
+                tl:tl_indicator_width="20mm"
+                tl:tl_textSelectColor="@color/colorE60000"
+                tl:tl_textUnselectColor="@color/black" />
+
+            <com.geek.libbase.widgets.ViewPagerSlide
+                android:id="@+id/vs_fenlei1"
+                android:layout_width="match_parent"
+                android:layout_height="0mm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tl_fenlei1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50mm"-->
+        <!--            android:orientation="vertical">-->
+
+        <!--            &lt;!&ndash;            <com.geek.libbase.widgets.XRecyclerView&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:id="@+id/recycler_view1"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:overScrollMode="never"&ndash;&gt;-->
+        <!--            &lt;!&ndash;                android:scrollbars="none" />&ndash;&gt;-->
+        <!--            <com.geek.tablib.tablayout.SlidingTabLayout-->
+        <!--                android:id="@+id/tl_fenlei1"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:background="@color/white"-->
+        <!--                tl:tl_indicator_color="@color/colorE60000"-->
+        <!--                tl:tl_indicator_corner_radius="1.5dp"-->
+        <!--                tl:tl_indicator_height="3mm"-->
+        <!--                tl:tl_indicator_width="20mm"-->
+        <!--                tl:tl_textSelectColor="@color/colorE60000"-->
+        <!--                tl:tl_textUnselectColor="@color/black" />-->
+        <!--        </RelativeLayout>-->
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:background="@color/colorF1F2F4">-->
+
+        <!--            <com.geek.libbase.widgets.ViewPagerSlide-->
+        <!--                android:id="@+id/vs_fenlei1"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent" />-->
+
+        <!--        </RelativeLayout>-->
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F6F6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10mm">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0mm"
+            android:layout_marginBottom="10mm"
+            android:gravity="center"
+            android:text="拖动可调整应用位置"
+            android:textSize="12mm" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_shape_white_co1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_syyy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10mm"
+                android:layout_marginTop="10mm"
+                android:text="首页应用"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <com.geek.libbase.widgets.XRecyclerView
+                android:id="@+id/rv_syyy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:paddingBottom="10mm"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

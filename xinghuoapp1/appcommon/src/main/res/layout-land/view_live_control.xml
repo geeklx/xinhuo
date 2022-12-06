@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="38mm"
+        android:layout_marginLeft="50mm"
+        android:layout_marginTop="10mm"
+        android:background="@drawable/view_common_shape_white"
+        android:gravity="center"
+        android:paddingLeft="12mm"
+        android:paddingRight="12mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_live_logo"
+            android:drawablePadding="10mm"
+            android:gravity="center"
+            android:text="直播间：829302"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13mm" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_refresh"
+        android:layout_width="24mm"
+        android:layout_height="24mm"
+        android:layout_marginLeft="17mm"
+        android:layout_marginBottom="17mm"
+        android:background="@drawable/icon_live_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25mm"
+        android:layout_marginTop="50mm"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_info">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系统消息："
+            android:textColor="#FF89BAEB"
+            android:textSize="12mm" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停播中"
+            android:textColor="@color/white"
+            android:textSize="12mm" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_finish"
+        android:layout_width="56mm"
+        android:layout_height="28mm"
+        android:layout_marginRight="17mm"
+        android:layout_marginBottom="17mm"
+        android:background="@drawable/view_common_shape_white1"
+        android:gravity="center"
+        android:text="退出"
+        android:textColor="#FFFFFFFF"
+        android:textSize="13mm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+////        jcenter() // Warning: this repository is going to shut down soon
+//
+//    }
+//}
+rootProject.name = "fsjxappkuangjia-android"
+// start aar
+include ':libsCenter', ':biz-libs'
+// end aar
+
+// start aar
+include ':libsCenterNew',
+        ':libsCenterNew:libocrsdk',
+        ':libsCenterNew:alipaysdk',
+        ':libsCenterNew:hooklistenerlib2',
+        ':libsCenterNew:libmvpaar',
+        ':libsCenterNew:libretrofitaar',
+        ':libsCenterNew:haoshitong',
+        ':libsCenterNew:libvpnsdk'
+//        ':libsCenterNew:opendroid2'
+// end aar
+
+// start app11
+include ':xinghuoapp1',
+        ':xinghuoapp1:app',
+        ':xinghuoapp1:appcommon',
+        ':xinghuoapp1:appsplash',
+        ':xinghuoapp1:applogin',
+        ':xinghuoapp1:appsearch',
+//        ':xinghuoapp1:appplugin',
+        ':xinghuoapp1:appindex',
+        ':xinghuoapp1:appindexxinghuo',
+//        ':xinghuoapp1:appindexdt',
+//        ':xinghuoapp1:appindexdtcate',
+        ':xinghuoapp1:zbiz1',
+        ':xinghuoapp1:appmy',
+        ':xinghuoapp1:appvariants'
+
+// start app11
+
+
+//include ':commonbiz',
+//        ':commonbiz:bizfxzteachercomm'
+
+// commonlibs
+include ':commonlibs',
+        ':commonlibs:compressor',
+        ':commonlibs:library',
+        ':commonlibs:livemodule',
+        ':commonlibs:UdeskSDKUI',
+        ':commonlibs:zxinglibrary'
+
+// commonlibs
+

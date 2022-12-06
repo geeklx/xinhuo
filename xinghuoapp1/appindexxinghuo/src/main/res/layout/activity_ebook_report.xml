@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.ebook.EBookReportActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="答题报告"
+            android:textColor="@color/color_222"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_an"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/shape_20_e7f4ff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_report_top" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@mipmap/icon_report_line"
+                    android:drawablePadding="10dp"
+                    android:text="数据报告"
+                    android:textColor="@color/color_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="数据来自本次模考"
+                    android:textColor="@color/color_222"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv1"
+                    app:layout_constraintLeft_toRightOf="@+id/tv1"
+                    app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_circle"
+                    android:layout_width="0dp"
+                    android:layout_height="145dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv1"
+                    app:layout_constraintWidth_percent="0.45">
+
+                    <com.mersens.view.CircleNumberProgressBar
+                        android:id="@+id/pb_circle"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:max="100"
+                        android:progress="0"
+                        app:circleprogress_reache_color="@color/color_008aff"
+                        app:circleprogress_reache_height="15dp"
+                        app:circleprogress_text_color="@android:color/transparent"
+                        app:circleprogress_unreache__height="15dp"
+                        app:circleprogress_unreache_color="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="31.5dp"
+                        android:text="666"
+                        android:textColor="@color/color_008aff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_circle"
+                        app:layout_constraintRight_toRightOf="@+id/pb_circle"
+                        app:layout_constraintTop_toTopOf="@+id/pb_circle" />
+
+                    <TextView
+                        android:id="@+id/tv_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="31.5dp"
+                        android:text="满分666"
+                        android:textColor="@color/color_222"
+                        android:textSize="11dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/pb_circle"
+                        app:layout_constraintLeft_toLeftOf="@+id/pb_circle"
+                        app:layout_constraintRight_toRightOf="@+id/pb_circle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ctl_circle"
+                    app:layout_constraintLeft_toRightOf="@+id/ctl_circle"
+                    app:layout_constraintTop_toTopOf="@+id/ctl_circle">
+
+                    <TextView
+                        android:id="@+id/tv_right_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="666"
+                        android:textColor="@color/color_222"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_right_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="答对题数"
+                        android:textColor="@color/color_afb3bf"
+                        android:textSize="10dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_right_num" />
+
+                    <TextView
+                        android:id="@+id/tv_right_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="66%"
+                        android:textColor="@color/color_222"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_right_1" />
+
+                    <TextView
+                        android:id="@+id/tv_right_rate_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="正确率"
+                        android:textColor="@color/color_afb3bf"
+                        android:textSize="10dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_right_rate" />
+
+                    <TextView
+                        android:id="@+id/tv_stu_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="66%"
+                        android:textColor="@color/color_222"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_right_rate_1"
+                        app:layout_goneMarginTop="21dp" />
+
+                    <TextView
+                        android:id="@+id/tv_3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="击败考生"
+                        android:textColor="@color/color_afb3bf"
+                        android:textSize="10dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_stu_rate" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_answers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctl_top" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_an"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_22_f5f6f9"
+        android:gravity="center"
+        android:text="全部解析"
+        android:textColor="@color/color_008aff"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_err" />
+
+    <TextView
+        android:id="@+id/tv_err"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_22_008aff"
+        android:gravity="center"
+        android:text="错题解析"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_an"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_all_an"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:background="@drawable/shape_22_32c5ff_007bff"
+        android:gravity="center"
+        android:scrollbarSize="17dp"
+        android:text="全部解析"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_an" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+apply from: './../../commonlibs2.gradle'
+def librarys = rootProject.ext.dependencies //
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // 核心库bufen
+//    api 'com.github.GeekCodesTeam.geeklibs:libgeek:3.5.6'
+//    api 'com.github.geeklx.libbase1:zdkplayer:2.1.1'//核心库
+    api 'com.github.geeklx.libbase1:libyanzheng:2.1.1'//核心库
+    api 'com.github.geeklx.libbase1:libshadowlayout:2.1.1'//核心库
+//    api 'com.github.geeklx.libbase1:libocr:2.0.1'
+    api 'com.github.geeklx.libbase2:libbase:2.3.1'//核心库
+    api 'com.github.geeklx.libbase2:libutils:2.3.1'//核心库
+    api 'com.github.geeklx.libbase2:libotherlibs:2.3.1'//核心库
+    api 'com.github.MachineHou:Aspectjrt:1.0.8'//核心库
+    // 支持分版本网络请求bufen
+    bxnt_nationImplementation project(':xinghuoapp1:zbiz1')
+    bxny_nationImplementation project(':xinghuoapp1:zbiz1')
+    bxn_nationImplementation project(':xinghuoapp1:zbiz1')
+    // yewu
+//    implementation 'com.github.geeklx.xinghuoku:liball:1.0.0'//核心库
+    // 或者
+    api "com.github.CarGuo:GSYIjkJava:1.0.0"
+//    implementation 'com.github.geeklx.libbase1:zdkplayer:2.1.1'//核心库
+    api('com.github.geeklx.libbase1:zdkplayer:2.1.1') {
+//        exclude group: 'com.bokecc', module: 'hdplayer'
+//        exclude group: 'tv.danmaku.ijk.media', module: 'ijkplayer-java'
+        exclude group: 'com.github.CarGuo', module: 'GSYIjkJava'
+    }
+    api('com.github.geeklx.xinghuoku:livemodule:1.0.5') {
+        exclude group: 'com.bokecc', module: 'hdplayer'
+//        exclude group: 'tv.danmaku.ijk.media', module: 'ijkplayer-java'
+//        exclude group: 'com.github.CarGuo', module: 'GSYIjkJava'
+    }
+    api 'com.github.geeklx.xinghuoku:library:1.0.5'//核心库
+//    implementation 'com.github.geeklx.xinghuoku:livemodule:1.0.4'//核心库
+    api 'com.github.geeklx.xinghuoku:UdeskSDKUI:1.0.5'//核心库
+    api 'com.github.geeklx.xinghuoku:zxinglibrary:1.0.5'//核心库
+    api 'com.github.geeklx.xinghuoku:zxinglibrary:1.0.5'//核心库
+    api 'com.github.geeklx.xinghuoku:compressor:1.0.5'//核心库
+//    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    //
+    api 'com.umeng.umsdk:common:9.5.0'          //必选
+    api 'com.umeng.umsdk:asms:1.6.3'               //必选
+    api 'com.umeng.umsdk:link:1.2.0'//集成U-Link，可选，如要统计分享回流次数和分享新增用户指标则必选
+//    api 'com.umeng.umsdk:push:6.5.3'             //必选
+    api('com.umeng.umsdk:push:6.5.3') {
+        exclude group: 'com.umeng.umsdk', module: 'utdid'
+    }
+    api 'com.umeng.umsdk:share-core:7.1.9'      //必选
+    api 'com.umeng.umsdk:share-qq:7.1.9'
+    api 'com.tencent.tauth:qqopensdk:3.53.0'       //QQ官方SDK依赖库
+    api 'com.umeng.umsdk:share-wx:7.1.9'
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9'//微信官方SDK依赖库
+    api 'com.umeng.umsdk:share-sina:7.1.9'
+//    api 'io.github.sinaweibosdk:core:12.5.0@aar'//新浪微博官方SDK依赖库， mob
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+//    implementation 'com.google.android.material:material:1.4.0'
+//    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    api 'org.parceler:parceler-api:1.1.13'
+    annotationProcessor 'org.parceler:parceler:1.1.13'
+    api('androidx.vectordrawable:vectordrawable:1.1.0',
+            "org.jetbrains.anko:anko-common:$anko_version",
+            "org.jetbrains.anko:anko-sdk19:$anko_version",
+            "org.jetbrains.anko:anko-support-v4:$anko_version",
+            "org.jetbrains.anko:anko-appcompat-v7:$anko_version",
+            "org.jetbrains.anko:anko-design:$anko_version",
+            "org.jetbrains.anko:anko-cardview-v7:$anko_version",
+            "org.jetbrains.anko:anko-recyclerview-v7:$anko_version",
+            'com.geyifeng.immersionbar:immersionbar:3.2.2',
+//            'com.liulishuo.filedownloader:library:1.7.7',
+//            'com.github.lzyzsd:jsbridge:1.0.4',
+            'com.contrarywind:Android-PickerView:4.1.3',
+            'com.github.Mersens:CircleNumberProgressBar:1.0',
+//            'id.zelory:compressor:3.0.1'// 3.0.1需要下载源码 2.1.0
+    )
+    api 'com.contrarywind:wheelview:4.1.0'
+    api 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+    api 'com.tencent.sonic:sdk:3.0.0'
+//    implementation 'com.airbnb.android:lottie:5.2.0'
+    api 'cn.jiguang.sdk:jverification:2.7.1'
+    api 'cn.jiguang.sdk:jcore:2.8.2'
+//    implementation 'androidx.cardview:cardview:1.0.0'
+//    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+//    implementation 'org.greenrobot:eventbus:3.3.1'
+//    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+//    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'io.reactivex.rxjava2:rxjava:2.2.21'
+    api 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:6.5.5'
+    api 'com.sensorsdata.analytics.android:SensorsFocusSDK:0.5.5'
+    api project(':libsCenterNew:alipaysdk')
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}
+android {
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.geek.common'
+}
+// TODO mob
+apply from: './../../MobSDK.gradle'

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9"
+    tools:context=".ui.mine.user.YanMessageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#222831"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_content"
+                android:layout_width="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/bg_yan_message"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="10.5dp"
+                    android:drawableLeft="@mipmap/icon_yan_message"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="考研档案"
+                    android:textColor="@color/color_008aff"
+                    android:textSize="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdv_header"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginTop="56dp"
+                    app:cardBackgroundColor="@color/color_f5f6f9"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="0dp"
+                    app:contentPadding="1dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_avatar" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="用户昵称"
+                    android:textColor="@color/color_afb3bf"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toRightOf="@+id/cdv_header"
+                    app:layout_constraintTop_toTopOf="@+id/cdv_header" />
+
+                <TextView
+                    android:id="@+id/tv_nick_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="昵称昵称昵称"
+                    android:textColor="@color/color_222"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cdv_header"
+                    app:layout_constraintLeft_toRightOf="@+id/cdv_header"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="31dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/shape_10_edeff0"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="真实姓名"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textColor="@color/color_222"
+                    android:textColorHint="@color/color_afb3bf"
+                    android:textSize="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cdv_header" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="5.5dp"
+                    android:paddingRight="5.5dp"
+                    android:text="真实姓名"
+                    android:visibility="gone"
+                    android:textColor="@color/color_afb3bf"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_name"
+                    app:layout_constraintLeft_toLeftOf="@+id/et_name" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/shape_10_edeff0"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:hint="手机号码"
+                    android:inputType="number|phone"
+                    android:maxLines="1"
+                    android:paddingLeft="25dp"
+                    android:maxLength="11"
+                    android:paddingRight="25dp"
+                    android:textColor="@color/color_222"
+                    android:textColorHint="@color/color_afb3bf"
+                    android:textSize="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="5.5dp"
+                    android:paddingRight="5.5dp"
+                    android:text="手机号码"
+                    android:visibility="gone"
+                    android:textColor="@color/color_afb3bf"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_phone"
+                    app:layout_constraintLeft_toLeftOf="@+id/et_phone" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_school"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_10_edeff0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_phone">
+
+                    <TextView
+                        android:id="@+id/et_school"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:hint="所在院校"
+                        android:maxLines="1"
+                        android:textColor="@color/color_222"
+                        android:textColorHint="@color/color_afb3bf"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/icon_yan_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="5.5dp"
+                    android:paddingRight="5.5dp"
+                    android:text="所在院校"
+                    android:visibility="gone"
+                    android:textColor="@color/color_afb3bf"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ctl_school"
+                    app:layout_constraintLeft_toLeftOf="@+id/ctl_school" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_2_school"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_10_edeff0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctl_school">
+
+                    <TextView
+                        android:id="@+id/et_2_school"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:hint="报考院校"
+                        android:maxLines="1"
+                        android:textColor="@color/color_222"
+                        android:textColorHint="@color/color_afb3bf"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_2_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/icon_yan_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_2_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="5.5dp"
+                    android:paddingRight="5.5dp"
+                    android:text="报考院校"
+                    android:visibility="gone"
+                    android:textColor="@color/color_afb3bf"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ctl_2_school"
+                    app:layout_constraintLeft_toLeftOf="@+id/ctl_2_school" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ctl_project"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="30dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_10_edeff0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctl_2_school">
+
+                    <TextView
+                        android:id="@+id/et_project"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:hint="报考专业"
+                        android:maxLines="1"
+                        android:textColor="@color/color_222"
+                        android:textColorHint="@color/color_afb3bf"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_3_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/icon_yan_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="42dp"
+                    android:background="@color/white"
+                    android:paddingLeft="5.5dp"
+                    android:paddingRight="5.5dp"
+                    android:text="报考专业"
+                    android:visibility="gone"
+                    android:textColor="@color/color_afb3bf"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ctl_project"
+                    app:layout_constraintLeft_toLeftOf="@+id/ctl_project" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_12_fffac8"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="我们承诺尊重和保护您的隐私，根据您填写的信息，为您提供对应的班级服务。"
+                    android:textColor="@color/color_ffaf00"
+                    android:textSize="14dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ctl_project" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/shape_22_fff"
+                android:gravity="center"
+                android:text="跳过"
+                android:textColor="@color/color_cfd2d9"
+                android:textSize="17dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_save"
+                app:layout_constraintTop_toBottomOf="@+id/ctl_content" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/shape_22_add_us"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/tv_cancel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctl_content" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

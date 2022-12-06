@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10mm"
+            android:background="@color/white"
+            android:paddingTop="16mm"
+            android:paddingEnd="16mm"
+            android:paddingBottom="16mm"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="4mm"
+                android:layout_height="16mm"
+                android:layout_marginStart="16mm"
+                android:src="@drawable/btn_common_shape_red2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8mm"
+                android:includeFontPadding="false"
+                android:text="权威发布"
+                android:textColor="#333333"
+                android:textSize="16mm"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_image"
+                app:layout_constraintStart_toEndOf="@id/iv_image"
+                app:layout_constraintTop_toTopOf="@id/iv_image"
+                tools:text="权威发布" />
+
+            <ImageView
+                android:layout_width="15mm"
+                android:layout_height="15mm"
+                android:src="@drawable/ic_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/cl_top1" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10mm"
+            android:background="@color/white"
+            android:paddingTop="16mm"
+            android:paddingEnd="16mm"
+            android:paddingBottom="16mm"
+            app:layout_constraintTop_toBottomOf="@id/rv1">
+
+            <ImageView
+                android:id="@+id/iv_image1"
+                android:layout_width="4mm"
+                android:layout_height="16mm"
+                android:layout_marginStart="16mm"
+                android:src="@drawable/btn_common_shape_red2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8mm"
+                android:includeFontPadding="false"
+                android:text="办事指南"
+                android:textColor="#333333"
+                android:textSize="16mm"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_image1"
+                app:layout_constraintStart_toEndOf="@id/iv_image1"
+                app:layout_constraintTop_toTopOf="@id/iv_image1" />
+
+            <ImageView
+                android:layout_width="15mm"
+                android:layout_height="15mm"
+                android:src="@drawable/ic_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/cl_top2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

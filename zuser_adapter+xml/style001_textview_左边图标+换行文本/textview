@@ -1,0 +1,6 @@
+  SpannableString spanString = new SpannableString("icon");
+            Drawable tvDrawable = ContextCompat.getDrawable(this, R.drawable.icon_zhibo1);
+            tvDrawable.setBounds(0, 0, tvDrawable.getMinimumWidth(), tvDrawable.getMinimumHeight());
+//        MyImageSpan span = new MyImageSpan(tvDrawable, ImageSpan.ALIGN_BASELINE);
+            CenteredImageSpan span = new CenteredImageSpan(this, R.drawable.icon_zhibo1);
+            spanString.setSpan(span, 0, 4, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);

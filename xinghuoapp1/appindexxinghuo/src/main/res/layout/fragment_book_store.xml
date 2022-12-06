@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_store"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:text="书城"
+        android:textColor="@color/color_222831"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top" />
+
+    <ImageView
+        android:id="@+id/img_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="购物车"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@mipmap/icon_good"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_store"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_store" />
+
+    <tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout
+        android:id="@+id/srfl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_store">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/abl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bg_study_code"
+                    android:drawableLeft="@mipmap/icon_search"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="请输入图书名称"
+                    android:textColor="@color/color_c7cdd7"
+                    android:textSize="12dp"
+                    app:layout_scrollFlags="scroll" />
+
+                <tuoyan.com.xinghuo_dayingindex.widegt.FlyBanner
+                    android:id="@+id/banner_books"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:dimensionRatio="w,150:345"
+                    app:layout_scrollFlags="scroll" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_top_r_whole"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/rg_book"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_one"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="40dp"
+                            android:text="综合"
+                            android:textColor="@drawable/color_8e_54"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_two"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="销量"
+                            android:textColor="@drawable/color_8e_54"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/rb_three"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableRight="@mipmap/icon_price_normal"
+                            android:drawablePadding="2dp"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="20dp"
+                            android:text="价格"
+                            android:textColor="@drawable/color_8e_54"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tv_sel_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableRight="@drawable/chb_book"
+                        android:drawablePadding="2dp"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="40dp"
+                        android:text="筛选"
+                        android:textColor="@drawable/color_8e_54"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/color_edeff0" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/layout_book_store_item" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout>
+    <tuoyan.com.xinghuo_dayingindex.widegt.DragFloatView
+        android:id="@+id/drag_float"
+        android:visibility="gone"
+        android:layout_width="77dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="71dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></tuoyan.com.xinghuo_dayingindex.widegt.DragFloatView>
+</androidx.constraintlayout.widget.ConstraintLayout>

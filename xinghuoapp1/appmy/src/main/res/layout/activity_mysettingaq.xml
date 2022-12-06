@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/colorE60000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_co_top2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10mm"
+            android:background="#F1F2F4"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="0mm"
+            android:paddingLeft="12mm"
+            android:paddingRight="12mm">
+
+            <TextView
+                style="@style/loginstyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16mm"
+                android:layout_marginBottom="16mm"
+                android:text="@string/appmy15"
+                android:textColor="@color/color333333"
+                android:textSize="16mm" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_gy2" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:layout_marginLeft="12mm"
+            android:layout_marginRight="12mm"
+            android:background="@color/colorE5E5E5" />
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="12mm"
+            android:paddingRight="12mm">
+
+            <TextView
+                style="@style/loginstyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16mm"
+                android:layout_marginBottom="16mm"
+                android:text="@string/appmy16"
+                android:textColor="@color/color333333"
+                android:textSize="16mm" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12mm"
+                android:layout_toLeftOf="@+id/iv_jt1"
+                android:text="10086"
+                android:textColor="@color/color999999"
+                android:textSize="16mm" />
+
+            <ImageView
+                android:id="@+id/iv_jt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_gy2" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:layout_marginLeft="12mm"
+            android:layout_marginRight="12mm"
+            android:background="@color/colorE5E5E5" />
+
+        <RelativeLayout
+            android:id="@+id/rl3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="12mm"
+            android:paddingRight="12mm">
+
+            <TextView
+                style="@style/loginstyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16mm"
+                android:layout_marginBottom="16mm"
+                android:text="@string/appmy17"
+                android:textColor="@color/color333333"
+                android:textSize="16mm" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12mm"
+                android:layout_toLeftOf="@+id/iv_jt2"
+                android:text="010-27392378"
+                android:textColor="@color/color999999"
+                android:textSize="16mm" />
+
+            <ImageView
+                android:id="@+id/iv_jt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_gy2" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:layout_marginLeft="12mm"
+            android:layout_marginRight="12mm"
+            android:background="@color/colorE5E5E5" />
+
+        <RelativeLayout
+            android:id="@+id/rl4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="12mm"
+            android:paddingRight="12mm">
+
+            <TextView
+                style="@style/loginstyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16mm"
+                android:layout_marginBottom="16mm"
+                android:text="@string/appmy18"
+                android:textColor="@color/color333333"
+                android:textSize="16mm" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12mm"
+                android:layout_toLeftOf="@+id/iv_jt3"
+                android:text="@string/appmy19"
+                android:textColor="@color/color999999"
+                android:textSize="16mm" />
+
+            <ImageView
+                android:id="@+id/iv_jt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_gy2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12mm"
+            android:paddingRight="12mm"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/loginstyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16mm"
+                android:layout_marginBottom="16mm"
+                android:text="@string/appmy22"
+                android:textColor="@color/color333333"
+                android:textSize="16mm" />
+
+            <com.haier.cellarette.baselibrary.switchbutton.SwitchButtonK
+                android:id="@+id/sb_ios5"
+                style="@style/SwitchButtonStyleappmy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12mm"
+                android:checked="false"
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/btn_co_st1"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-8dp"
+                app:kswThumbMarginLeft="-5dp"
+                app:kswThumbMarginRight="-5dp"
+                app:kswThumbMarginTop="-2.5dp"
+                app:kswThumbRangeRatio="1.4" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

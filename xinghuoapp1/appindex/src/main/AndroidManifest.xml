@@ -1,0 +1,230 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<!--    package="com.geek.appindex"-->
+    <application
+        android:supportsRtl="true">
+<!--        android:allowBackup="true"-->
+<!--        android:label="@string/app_nameappindex"-->
+        <activity
+            android:name=".index.ShouyeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:theme="@style/AppThemeBaseAppcommon">
+            <!--            android:windowSoftInputMode="stateVisible|adjustPan"-->
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.shouye" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.shouye"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+
+        </activity>
+        <!--统一学时播放器 TEST-->
+        <activity
+            android:name=".tyxsbofangqi.VideoPlayerAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.VideoPlayerAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--Polyv TEST-->
+        <activity
+            android:name=".polyv.PolyvActList1"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.PolyvActList1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--login TEST-->
+        <activity
+            android:name=".logindemo.LoginActDemo"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.LoginActDemo" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".logindemo.AdLoginActDemo"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.AdLoginActDemo" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".logindemo.AdLoginImgActDemo"
+            android:exported="false"
+            android:theme="@style/ad_common_dialogstyle1">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.AdLoginImgActDemo" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".musicplayer.MusicAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MusicAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".musicplayer.liebiao.MusicAct1"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MusicAct1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".musicplayer.MusicAct2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MusicAct2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".addrecycleview.BjyyAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.BjyyAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.BjyyAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fenlei.ShouyeCateAct1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.ShouyeCateAct1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.ShouyeCateAct1"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".index.activity.GztFragmentKuangjia1Act"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentKuangjia1Act" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentKuangjia2Act"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentKuangjia2Act" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentMyAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentMyAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentPeopleAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentPeopleAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentPeopleAct2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentPeopleAct2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentShouyeAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentShouyeAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentXiaoxiAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentXiaoxiAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentXiaoxiAct2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentXiaoxiAct2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".index.activity.GztFragmentZixunAct"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.GztFragmentZixunAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".musicplayer.MusicService2"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".musicplayer.liebiao.MusicService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+</manifest>

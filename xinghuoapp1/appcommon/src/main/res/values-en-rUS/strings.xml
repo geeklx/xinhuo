@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_nameappcommon" translatable="false">appcommon</string>
+    <string name="appmy1" translatable="false">Setting</string>
+    <string name="appmy2" translatable="false">Security center</string>
+    <string name="appmy3" translatable="false">The font size</string>
+    <string name="appmy4" translatable="false">Language switching</string>
+    <string name="appmy5" translatable="false">Clear the cache</string>
+    <string name="appmy6" translatable="false">About</string>
+    <string name="appmy7" translatable="false">New alerts</string>
+    <string name="appmy8" translatable="false">exit</string>
+    <string name="appmy9" translatable="false">The version number</string>
+    <string name="appmy10" translatable="false">Customer service telephone</string>
+    <string name="appmy11" translatable="false">Function introduction</string>
+    <string name="appmy12" translatable="false">User agreement</string>
+    <string name="appmy13" translatable="false">Privacy policy</string>
+    <string name="appmy14" translatable="false">Security center</string>
+    <string name="appmy15" translatable="false">Change the password</string>
+    <string name="appmy16" translatable="false">Mobile phone number change</string>
+    <string name="appmy17" translatable="false">Machine change</string>
+    <string name="appmy18" translatable="false">Email address change</string>
+    <string name="appmy19" translatable="false">Is not set</string>
+    <string name="appmy20" translatable="false">My qr code</string>
+    <string name="appmy21" translatable="false">Please fill in...</string>
+    <string name="appmy22" translatable="false">Fingerprint login</string>
+    <string name="appmy23" translatable="false">head portrait</string>
+    <string name="appmy24" translatable="false">full name</string>
+    <string name="appmy25" translatable="false">cell-phone number</string>
+    <string name="appmy26" translatable="false">Gender</string>
+    <string name="appmy27" translatable="false">Personal signature</string>
+    <string name="appmy28" translatable="false">Organization</string>
+    <string name="appmy29" translatable="false">position</string>
+    <string name="appmy30" translatable="false">personal data</string>
+
+    <string name="applogin1" translatable="false">prompt</string>
+    <string name="applogin2" translatable="false">Log out?</string>
+    <string name="applogin3" translatable="false">cancel</string>
+    <string name="applogin4" translatable="false">determine</string>
+    <string name="applogin5" translatable="false">Welcome to use</string>
+    <string name="applogin6" translatable="false">Login is representative</string>
+    <string name="applogin7" translatable="false">User agreement</string>
+    <string name="applogin8" translatable="false">and</string>
+    <string name="applogin9" translatable="false">Privacy policy</string>
+    <string name="applogin10" translatable="false">Please enter the phone number</string>
+    <string name="applogin11" translatable="false">Please enter the password</string>
+    <string name="applogin12" translatable="false">The login</string>
+    <string name="applogin13" translatable="false">Forgot password?</string>
+    <string name="applogin14" translatable="false">Register now</string>
+    <string name="applogin15" translatable="false">Binding mobile phone number</string>
+    <string name="applogin16" translatable="false">In order to your account more secure, the binding mobile phone first, please</string>
+    <string name="applogin17" translatable="false">Mobile phone no.</string>
+    <string name="applogin18" translatable="false">Verification code</string>
+    <string name="applogin19" translatable="false">Please enter the verification code</string>
+    <string name="applogin20" translatable="false">Get verification code</string>
+    <string name="applogin21" translatable="false">Forgot password</string>
+    <string name="applogin22" translatable="false">Please enter a new password</string>
+    <string name="applogin23" translatable="false">Please enter a new password again</string>
+    <string name="applogin24" translatable="false">Password must contain letters, Numbers, 8 to 18</string>
+    <string name="applogin25" translatable="false">Please enter a new password again</string>
+    <string name="applogin26" translatable="false">To reset your password</string>
+    <string name="applogin27" translatable="false">registered</string>
+    <string name="applogin28" translatable="false">Two password is not consistent, please enter again</string>
+    <string name="applogin29" translatable="false">Please check the user information and privacy policy</string>
+    <string name="applogin30" translatable="false">no login</string>
+
+    <string name="appindex1" translatable="false">My collection</string>
+    <string name="appindex2" translatable="false">Enterprise / Organization</string>
+    <string name="appindex3" translatable="false">My news</string>
+    <string name="appindex4" translatable="false">set up</string>
+    <string name="appindex5" translatable="false">No signature, please fill in</string>
+    <string name="appindex6" translatable="false">搜索</string>
+
+    <string name="appcommon1" translatable="false">工作台</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableBottom="@drawable/shape_point_12_008aff_7_c4cbde"
+    android:drawablePadding="5dp"
+    android:gravity="center"
+    android:paddingTop="13dp"
+    android:paddingBottom="12.5dp"
+    android:text="0.5x"
+    android:textColor="@drawable/color_008aff_222"
+    android:textSize="13dp" />

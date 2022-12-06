@@ -1,0 +1,256 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<!--    package="com.geek.common">-->
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:supportsRtl="true">
+<!--        android:allowBackup="true"-->
+<!--        android:label="@string/app_nameappcommon"-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="003f9d72f673c35434847f35e2cb6e96" />
+
+        <!--MOBID TEST-->
+
+        <service
+            android:name="com.geek.appcommon.service.MOBIDservices"
+            android:enabled="true"
+            android:exported="false" />
+        <service android:name="com.geek.appcommon.service.MOBIDServicesBg" />
+
+        <activity
+            android:name="com.geek.appcommon.mobhuodong.AdNaticeActivity"
+            android:exported="true"
+            android:theme="@style/ad_common_dialogstyle1">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.AdNaticeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.AdNaticeActivity"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.geek.appcommon.mobhuodong.AdPushNaticeActivity"
+            android:exported="true"
+            android:theme="@style/ad_common_dialogstyle1">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.AdPushNaticeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.AdPushNaticeActivity"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.geek.appcommon.mobhuodong.AdBusinessNaticeActivity"
+            android:exported="true"
+            android:theme="@style/ad_common_dialogstyle1">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.AdBusinessNaticeActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.AdBusinessNaticeActivity"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.geek.appcommon.web.activity.H5JsWebActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.H5JsWebActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.H5JsWebActivity"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.geek.appcommon.web.activity.H5WebAct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.H5WebAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.H5WebAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.geek.appcommon.video.PIPActivityDk"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.PIPActivityDk" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.PIPActivityDk"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.geek.appcommon.video.TikTokListActivityDK"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.TikTokListActivityDK" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.TikTokListActivityDK"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <!--WeChatWebView TEST-->
+        <activity
+            android:name="com.geek.appcommon.wechat.WeChatWebActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.WeChatWebActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.geek.appcommon.wechat.WeChatH5JsWebActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.WeChatH5JsWebActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--PopView TEST-->
+        <activity
+            android:name="com.geek.appcommon.huadongyanzhengpop.PopviewDemoAct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.PopviewDemoAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.geek.appcommon.ytx.YHCLiveDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.YHCLiveDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.geek.appcommon.ytx.DTRXEmployeeSearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.DTRXEmployeeSearchActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

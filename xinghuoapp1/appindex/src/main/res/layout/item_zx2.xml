@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12mm"
+    android:layout_marginTop="12mm"
+    android:paddingEnd="14mm">
+
+    <com.geek.libglide47.base.GlideImageView
+        android:id="@+id/iv1"
+        android:layout_width="128mm"
+        android:layout_height="72mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8mm"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#333333"
+        android:textSize="15mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv1"
+        app:layout_constraintTop_toTopOf="@id/iv1"
+        tools:text="习近平出席中央党委人才工作会议并发表重要讲话" />
+
+    <TextView
+        android:id="@+id/tv_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12mm"
+        android:textColor="#999999"
+        android:textSize="12mm"
+        app:layout_constraintStart_toStartOf="@id/iv1"
+        app:layout_constraintTop_toBottomOf="@id/iv1"
+        tools:text="市政府网站" />
+
+    <TextView
+        android:id="@+id/tv_publishtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8mm"
+        android:textColor="#999999"
+        android:textSize="12mm"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_origin"
+        app:layout_constraintStart_toEndOf="@id/tv_origin"
+        app:layout_constraintTop_toTopOf="@id/tv_origin"
+        tools:text="2021-07-05" />
+
+
+    <TextView
+        android:id="@+id/tv_amazingNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17mm"
+        android:textColor="#999999"
+        android:textSize="12mm"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_publishtime"
+        app:layout_constraintBottom_toBottomOf="@id/tv_publishtime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_publishtime"
+        tools:text="29" />
+
+    <ImageView
+        android:id="@+id/iv_amazing"
+        android:layout_width="12mm"
+        android:layout_height="12mm"
+        android:layout_marginEnd="6mm"
+        android:src="@drawable/selector_amazing"
+        app:layout_constraintBottom_toBottomOf="@id/tv_amazingNum"
+        app:layout_constraintEnd_toStartOf="@id/tv_amazingNum"
+        app:layout_constraintTop_toTopOf="@id/tv_amazingNum" />
+
+    <TextView
+        android:id="@+id/tv_watchNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36mm"
+        android:textColor="#999999"
+        android:textSize="12mm"
+        app:layout_constraintBottom_toBottomOf="@id/tv_amazingNum"
+        app:layout_constraintEnd_toStartOf="@id/tv_amazingNum"
+        app:layout_constraintTop_toTopOf="@id/tv_amazingNum"
+        tools:text="1029" />
+
+    <ImageView
+        android:layout_width="12mm"
+        android:layout_height="12mm"
+        android:layout_marginEnd="6mm"
+        android:src="@drawable/icon_watch"
+        app:layout_constraintBottom_toBottomOf="@id/tv_watchNum"
+        app:layout_constraintEnd_toStartOf="@id/tv_watchNum"
+        app:layout_constraintTop_toTopOf="@id/tv_watchNum" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginTop="10mm"
+        android:background="#F0F2F7"
+        app:layout_constraintTop_toBottomOf="@id/tv_amazingNum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

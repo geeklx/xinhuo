@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9"
+    tools:context=".ui.MainActivity">
+
+    <View
+        android:id="@+id/v_c_t"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/shape_fff_f5f6f9"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout
+        android:id="@+id/srfl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/slv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/top"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <tuoyan.com.xinghuo_dayingindex.widegt.FlyBanner
+                        android:id="@+id/banner_home"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        app:dimensionRatio="w,150:345"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rlv_menu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingBottom="10dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/banner_home"
+                        app:layout_constraintWidth_percent="0.91"
+                        />
+
+                    <LinearLayout
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/shape_12_f5f6f9_fff"
+                        android:id="@+id/ll_exam"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rlv_menu"
+                       >
+
+                        <ImageView
+                            android:scaleType="fitXY"
+                            android:padding="2dp"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/icon_exam_label"></ImageView>
+
+                        <tuoyan.com.xinghuo_dayingindex.ui.cc.livegoods.MarqueeView
+                            android:id="@+id/mq_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            app:mvAnimDuration="1500"
+                            app:mvDirection="bottom_to_top"
+                            app:mvGravity="left"
+                            app:mvInterval="2500"
+                            app:mvSingleLine="true"
+                            app:mvTextColor="#ff222222"
+                            app:mvTextSize="12sp"></tuoyan.com.xinghuo_dayingindex.ui.cc.livegoods.MarqueeView>
+                    </LinearLayout>
+
+                    <tuoyan.com.xinghuo_dayingindex.widegt.FlyBanner
+                        android:id="@+id/banner_recommed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+
+                        app:dimensionRatio="w,75:345"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_exam" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/v_c"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/shape_fff_f5f6f9"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/top" />
+
+                <TextView
+                    android:id="@+id/tv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center_vertical"
+                    android:text="在线课程"
+                    android:textColor="@color/color_222"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/v_c" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlv_class"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_id"
+                    tools:listitem="@layout/layout_home_class_item" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout>
+
+    <tuoyan.com.xinghuo_dayingindex.widegt.DragFloatView
+        android:id="@+id/drag_float"
+        android:layout_width="77dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="70dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"></tuoyan.com.xinghuo_dayingindex.widegt.DragFloatView>
+</androidx.constraintlayout.widget.ConstraintLayout>

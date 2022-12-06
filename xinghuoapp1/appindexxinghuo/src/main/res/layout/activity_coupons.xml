@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:title="">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:onClick="onBack"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="3dp"
+            android:text="优惠券"
+            android:textColor="#222"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_search"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:layout_scrollFlags="scroll">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_10_f9fafc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toLeftOf="@+id/tv_sub"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="请输入兑换码"
+                android:textColor="@color/color_222831"
+                android:textColorHint="@color/color_c4cbde"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_sub"
+                android:background="@color/color_edeff0" />
+
+            <TextView
+                android:id="@+id/tv_sub"
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:onClick="exchange"
+                android:text="兑换"
+                android:textColor="@color/color_222"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RadioGroup
+        android:id="@+id/rg_c"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableBottom="@drawable/shape_rg_c"
+            android:drawablePadding="6dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="11dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="2dp"
+            android:text="未使用"
+            android:textColor="@drawable/color_008aff_c4cbde"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
+            android:drawableBottom="@drawable/shape_rg_c"
+            android:drawablePadding="6dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="11dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="2dp"
+            android:text="已过期"
+            android:textColor="@drawable/color_008aff_c4cbde"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RadioGroup>
+    <com.google.android.material.tabs.TabLayout
+        android:visibility="gone"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:overScrollMode="never"
+        app:tabIndicatorColor="@color/color_1482ff"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@color/color_222831"
+        app:tabTextAppearance="@style/collection"
+        app:tabTextColor="@color/color_c3c7cb">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未使用" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已过期" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:overScrollMode="never" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@drawable/bg_mine_down_alpha" />
+    </FrameLayout>
+
+</LinearLayout>

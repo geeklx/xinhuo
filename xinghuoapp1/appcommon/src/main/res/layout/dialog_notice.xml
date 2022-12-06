@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20mm"
+        android:background="@drawable/bg_pop_white1"
+        android:clipChildren="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20mm"
+            android:src="@drawable/icon_notice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10mm"
+            android:text="公告标题"
+            android:textColor="#333333"
+            android:textSize="16mm" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40mm"
+            android:layout_marginTop="10mm"
+            android:layout_marginRight="40mm"
+            android:layout_marginBottom="30mm"
+            android:lineSpacingExtra="5mm"
+            android:textColor="#666666"
+            android:textSize="13mm"
+            tools:text="公告摘要描述公告摘要描述公告，摘要描述公告摘要描述公告摘要描述公告摘要描述公告摘要描述，公告摘要描述公告摘要描述公告摘要描述公告摘要描述，公告摘要描述公告摘要描述公告摘要描述公告摘要描述" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1mm"
+            android:background="#E5E5E5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48mm"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/common_dialog_notice"
+                android:gravity="center"
+                android:text="知道了"
+                android:textColor="#666666"
+                android:textSize="16mm" />
+
+
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/common_dialog_ok3"
+                android:gravity="center"
+                android:text="去看看"
+                android:textColor="@color/white"
+                android:textSize="16mm" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

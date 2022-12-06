@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9">
+
+    <ImageView
+        android:id="@+id/img_shadow"
+        android:layout_width="222dp"
+        android:layout_height="222dp"
+        android:src="@mipmap/ebook_shadow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <ImageView
+            android:id="@+id/img_toolbar_download"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:contentDescription="下载"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/icon_download_toolbar"
+            android:visibility="visible" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/color_222"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:textColor="@color/color_222"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="书名书名书名书名书名书名书名书名书名书名书名书名书名书名书名书名" />
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="到期时间"
+                        android:textColor="@color/color_afb3bf"
+                        android:textSize="12dp"
+                        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+                    <TextView
+                        android:id="@+id/tv_validity_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/color_ffaf00"
+                        android:textSize="12dp"
+                        app:layout_constraintLeft_toRightOf="@+id/tv_1"
+                        app:layout_constraintTop_toTopOf="@+id/tv_1"
+                        tools:text="2020.06.06" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cd_wx"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintDimensionRatio="w,14:67"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_1">
+
+                        <ImageView
+                            android:id="@+id/img_wx"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/go_wx" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cd_yan"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintDimensionRatio="w,14:67"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cd_wx">
+
+                        <ImageView
+                            android:id="@+id/img_yan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/ll_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cd_yan">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/ctl_listen"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="4.2"
+                            android:background="@drawable/shape_12_ff"
+                            android:clipChildren="true">
+
+                            <ImageView
+                                android:id="@+id/img_lesson"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_lesson_t"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="17.5dp"
+                                android:paddingBottom="17.5dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="2" />
+
+                                <com.mersens.view.CircleNumberProgressBar
+                                    android:id="@+id/pb_listen"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:background="@drawable/shape_28_c_white"
+                                    android:max="100"
+                                    android:progress="10"
+                                    app:circleprogress_reache_color="@color/color_5467ff"
+                                    app:circleprogress_reache_height="10dp"
+                                    app:circleprogress_text_color="#fff"
+                                    app:circleprogress_unreache__height="10dp"
+                                    app:circleprogress_unreache_color="@color/color_f5f6f9" />
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_listen_num"
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="100/100"
+                                        android:textColor="@color/color_222"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_lesson_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:text="完成听课"
+                                        android:textColor="@color/color_afb3bf"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/ctl_test"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="4.2"
+                            android:background="@drawable/shape_12_ff">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_home_t"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toRightOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="17.5dp"
+                                android:paddingBottom="17.5dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="2" />
+
+                                <com.mersens.view.CircleNumberProgressBar
+                                    android:id="@+id/pb_test"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:background="@drawable/shape_28_c_white"
+                                    android:max="100"
+                                    android:progress="10"
+                                    app:circleprogress_reache_color="@color/color_008aff"
+                                    app:circleprogress_reache_height="10dp"
+                                    app:circleprogress_text_color="#fff"
+                                    app:circleprogress_unreache__height="10dp"
+                                    app:circleprogress_unreache_color="@color/color_f5f6f9" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_test_num"
+                                        android:layout_width="70dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="100/100"
+                                        android:textColor="@color/color_222"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_test_title"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:text="完成练习"
+                                        android:textColor="@color/color_afb3bf"
+                                        android:textSize="12dp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:layout_weight="1" />
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_all_data"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_12_ff"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_all_data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="1"
+                                android:gravity="center"
+                                android:text="全部数据"
+                                android:textColor="@color/color_afb3bf"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ctl_pro"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/shape_12_ff"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_progress">
+
+                        <TextView
+                            android:id="@+id/tv_class_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="166/166"
+                            android:textColor="@color/color_222"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv1"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv1"
+                            app:layout_constraintRight_toRightOf="@id/tv1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/tv_pre_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="166/166"
+                            android:textColor="@color/color_222"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv2"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv2"
+                            app:layout_constraintRight_toRightOf="@id/tv2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/tv_work_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="166/166"
+                            android:textColor="@color/color_222"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/tv3"
+                            app:layout_constraintLeft_toLeftOf="@+id/tv3"
+                            app:layout_constraintRight_toRightOf="@id/tv3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/tv1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="必修课程"
+                            android:textColor="@color/color_afb3bf"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/v1"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_class_num" />
+
+                        <View
+                            android:id="@+id/v1"
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/tv1"
+                            app:layout_constraintRight_toLeftOf="@+id/tv2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="必修预习"
+                            android:textColor="@color/color_afb3bf"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/v1"
+                            app:layout_constraintRight_toLeftOf="@+id/v2"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_pre_num" />
+
+                        <View
+                            android:id="@+id/v2"
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/shape_line"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/tv2"
+                            app:layout_constraintRight_toLeftOf="@+id/tv3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="必修课后作业"
+                            android:textColor="@color/color_afb3bf"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/v2"
+                            app:layout_constraintRight_toLeftOf="@+id/clt_data"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_work_num" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clt_data"
+                            android:layout_width="36dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:background="@mipmap/icon_data_all"
+                            app:layout_constraintLeft_toRightOf="@+id/tv3"
+                            app:layout_constraintRight_toRightOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_net_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <RadioButton
+                    android:id="@+id/rb_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/shape_rg_17"
+                    android:drawablePadding="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="9dp"
+                    android:text="每日任务"
+                    android:textColor="@drawable/color_008aff_222"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/shape_rg_17"
+                    android:drawablePadding="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="9dp"
+                    android:text="直播列表"
+                    android:textColor="@drawable/color_008aff_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/shape_rg_17"
+                    android:drawablePadding="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="9dp"
+                    android:text="回放列表"
+                    android:textColor="@drawable/color_008aff_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/shape_rg_17"
+                    android:drawablePadding="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="9dp"
+                    android:text="课程服务"
+                    android:textColor="@drawable/color_008aff_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_white_top_r_15"
+            android:orientation="horizontal"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

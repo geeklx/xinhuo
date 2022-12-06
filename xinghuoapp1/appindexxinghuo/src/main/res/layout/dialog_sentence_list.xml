@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_top_15_fff">
+
+    <RadioGroup
+        android:id="@+id/rd_group"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@mipmap/icon_book_checked"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="全部句子"
+            android:textColor="@drawable/color_008aff_c4cbde"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/v_1"
+            android:layout_width="2dp"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_edeff0" />
+
+        <RadioButton
+            android:id="@+id/rb_two"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="标记的句子"
+            android:textColor="@drawable/color_008aff_c4cbde"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_content"
+        android:layout_width="0dp"
+        android:layout_height="488dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rd_group"
+        tools:itemCount="7"
+        tools:listitem="@layout/layout_sentence_dialog" />
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlv_content" />
+
+    <include
+        android:id="@+id/layout_empty"
+        layout="@layout/layout_sentence_empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rlv_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

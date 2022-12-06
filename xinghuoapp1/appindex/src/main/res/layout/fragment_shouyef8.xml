@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F6F6">
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="100mm"-->
+    <!--        android:background="@color/colorE60000" />-->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="250mm"
+                android:layout_marginStart="0mm"
+                android:layout_marginTop="0mm"
+                android:layout_marginEnd="0mm"
+                android:layout_marginBottom="10mm"
+                android:visibility="visible"
+                app:banner_round_bottom_left="true"
+                app:banner_round_bottom_right="true"
+                banner:banner_indicator_normal_color="@color/white_alpha30"
+                banner:banner_indicator_selected_color="@color/white"
+                banner:banner_radius="5mm" />
+
+            <com.geek.libbase.widgets.XRecyclerView
+                android:id="@+id/rv_others"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10mm"
+                android:layout_marginRight="10mm"
+                android:layout_marginTop="-60mm"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="80mm"
+        android:layout_alignParentTop="true"
+        android:alpha="0"
+        android:background="@color/colorE60000"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30mm"
+        android:orientation="vertical">
+
+        <com.haier.cellarette.baselibrary.widget.LxLinearLayout
+            android:id="@+id/lxll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10mm"
+            android:layout_marginBottom="10mm"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivContract1"
+                android:layout_width="20mm"
+                android:layout_height="20mm"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12mm"
+                android:layout_marginRight="12mm"
+                android:src="@drawable/icon_contract" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="50mm"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4mm"
+                android:layout_toRightOf="@+id/iv1"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="14mm"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_search1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btn_common_shape_white1search"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/icon_ssgzt1"
+                    android:drawablePadding="8mm"
+                    android:gravity="center"
+                    android:paddingTop="4mm"
+                    android:paddingBottom="4mm"
+                    android:text="@string/appindex6"
+                    android:textColor="@color/white"
+                    android:textSize="16mm" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivMine"
+                android:layout_width="20mm"
+                android:layout_height="20mm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12mm"
+                android:layout_marginRight="12mm"
+                android:src="@drawable/icon_mine" />
+        </com.haier.cellarette.baselibrary.widget.LxLinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

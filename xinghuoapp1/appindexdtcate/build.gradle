@@ -1,0 +1,20 @@
+apply from: './../commonlibsapks1.gradle'
+def librarys = rootProject.ext.dependencies //
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //    api 'com.github.GeekCodesTeam.geeklibs:libgeek:3.5.6'
+//    api 'com.github.geeklx.fosunglibs:libbase:1.2.9'
+//    api 'com.github.geeklx.fosunglibs:libdkplayer:1.2.9'
+//    api 'com.github.geeklx.fosunglibs:libotherlibs:1.2.9'
+//    api 'com.github.geeklx.fosunglibs:libutils:1.2.9'
+    //api 'com.github.geeklx.libbase1:zdkplayer:2.0.0'
+    api 'com.github.geeklx.libbase2:libbase:2.3.0'
+    api 'com.github.geeklx.libbase2:libutils:2.3.1'
+    api 'com.github.geeklx.libbase2:libotherlibs:2.3.0'
+    bxnt_nationImplementation project(':xinghuoapp1:zbiz1')
+    bxny_nationImplementation project(':xinghuoapp1:zbiz1')
+    bxn_nationImplementation project(':xinghuoapp1:zbiz1')
+}
+
+// TODO mob
+apply from: './../../MobSDK.gradle'

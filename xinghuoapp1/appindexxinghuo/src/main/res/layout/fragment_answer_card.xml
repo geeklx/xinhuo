@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/tv_paper_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:singleLine="true"
+        android:text="asdasdasdas"
+        android:textColor="#1e1e1e"
+        android:textSize="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_answer_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_submit"
+        android:layout_below="@+id/tv_paper_name"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_above="@+id/tv_submit"
+        android:background="@drawable/shadow_bottom" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/shape_btn_add"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/color_white"
+        android:textSize="13dp" />
+
+</RelativeLayout>

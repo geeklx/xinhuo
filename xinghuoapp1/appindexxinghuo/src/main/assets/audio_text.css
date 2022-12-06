@@ -1,0 +1,42 @@
+ .bg_span {
+     display: inline-block;
+     position: absolute;
+     width: 95px;
+     height: 83px;
+     right: 35px;
+     top: 0;
+     z-index: -1;
+     background: url("icon_bg.png") no-repeat center;
+     background-size: cover;
+ }
+
+ .title {
+     font-size: 24px;
+     font-weight: bold;
+     color: black;
+     display: block;
+ }
+
+ .sec_title {
+     margin-top: 30px;
+     visibility: hidden;
+ }
+
+ .sec_title > span:first-child {
+     background: url("icon_see.png") no-repeat center;
+     display: inline-block;
+     width: 20px;
+     vertical-align: top;
+     background-size: cover;
+     height: 20px;
+ }
+ img {
+     width: 100%;
+ }
+ .sec_title > span:last-child {
+     display: inline-block;
+     vertical-align: top;
+     line-height: 20px;
+     margin-left: 5px;
+     color:#8e95a1;
+ }

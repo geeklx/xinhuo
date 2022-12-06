@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:title="">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:onClick="onBack"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableEnd="@drawable/arr_down"
+            android:drawablePadding="3dp"
+            android:onClick="grade"
+            android:text="四级"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_word_back"
+                android:divider="@drawable/divider"
+                android:dividerPadding="15dp"
+                android:gravity="center_vertical"
+                android:onClick="core"
+                android:paddingStart="30dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="13dp"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_word_core" />
+
+                <TextView
+                    android:id="@+id/tv_core"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="核心词汇（0）"
+                    android:textColor="@color/color_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:background="@drawable/bg_word_back"
+                android:divider="@drawable/divider"
+                android:dividerPadding="15dp"
+                android:gravity="center_vertical"
+                android:onClick="common"
+                android:paddingStart="30dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="13dp"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_word_common" />
+
+                <TextView
+                    android:id="@+id/tv_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:drawableEnd="@drawable/arr_up_down"
+                    android:text="常用词汇"
+                    android:textColor="@color/color_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_word_back"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:background="@drawable/bg_word_back"
+                android:divider="@drawable/divider"
+                android:dividerPadding="15dp"
+                android:gravity="center_vertical"
+                android:onClick="wrong"
+                android:paddingStart="30dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="13dp"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_word_wrong" />
+
+                <TextView
+                    android:id="@+id/tv_wrong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="错词本"
+                    android:textColor="@color/color_222831"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="83dp"
+                android:background="@drawable/bg_word_back"
+                android:divider="@drawable/divider"
+                android:dividerPadding="15dp"
+                android:gravity="center_vertical"
+                android:onClick="newWord"
+                android:paddingStart="30dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="13dp"
+                android:showDividers="middle">
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_word_new" />
+
+                <TextView
+                    android:id="@+id/tv_new_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="生词本"
+                    android:textColor="@color/color_222831"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/view_pager"
+                android:layout_width="280dp"
+                android:layout_height="197dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:background="@color/color_ffffff"
+                android:src="@drawable/bg_back_word_button" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

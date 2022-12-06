@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<!--    package="com.geek.appmy"-->
+    <application
+        android:supportsRtl="true">
+<!--        android:allowBackup="true"-->
+<!--        android:label="@string/app_nameappmy"-->
+        <activity
+            android:name=".MySettingAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MySettingEwmAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingEwmAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MyPersonalDataAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MyPersonalDataAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MyPersonalDataAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".MySettingAboutAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingAboutAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MySettingAboutAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MySettingAqAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingAqAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MySettingAqAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MySaomaAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySaomaAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MySaomaAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MySettingFunctionAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingFunctionAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MySettingFunctionAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MySettingMyPhotoAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingMyPhotoAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MySettingMyPhotoAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MySettingQmAct"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MySettingQmAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.MySettingQmAct"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

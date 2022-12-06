@@ -1,0 +1,197 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-platform-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-parcelize'
+def config = rootProject.ext //
+def library = rootProject.ext.dependencies //
+android {
+    namespace 'tuoyan.com.xinghuo_daying'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    packagingOptions {
+        jniLibs {
+            pickFirsts += ['lib/*/libRSSupport.so', 'lib/*/librsjni_androidx.so', 'lib/*/librsjni.so', 'lib/*/libc++_shared.so']
+        }
+    }
+    kotlinOptions {
+        suppressWarnings = true
+        jvmTarget = "11"
+    }
+    //    ndkVersion "23.0.7599858" // e.g.,  ndkVersion '21.3.6528147'
+    compileSdkVersion config.compileSdkVersion
+//    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        applicationId "tuoyan.com.xinghuo_daying"
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.appversionCode
+        versionName config.appversionName
+        multiDexEnabled true
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        externalNativeBuild {
+            cmake {
+//                version "3.18.1"
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                arguments "-DANDROID_ARM_NEON=TRUE",
+                        "-DANDROID_CPP_FEATURES=rtti exceptions"
+//                abiFilters /*'armeabi-v7a',*/ 'arm64-v8a'
+            }
+        }
+        ndk {
+            abiFilters /*'armeabi-v7a',*/ 'arm64-v8a'
+        }
+        manifestPlaceholders = [qqappid      : "你的qq appid",
+
+                                JPUSH_PKGNAME: applicationId,
+//                正式
+                                JPUSH_APPKEY : "698be8ff956a7e8f2ea10073",
+//                测试
+//                JPUSH_APPKEY : "3234008698f6191293503e4c",
+//                JPUSH_APPKEY : "beb645d59babd9ed4a5e9df6",
+                                JPUSH_CHANNEL: "developer-default",]
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+//            version "3.18.1"
+        }
+    }
+    flavorDimensions "keep","sparke"
+    productFlavors {
+        bxn_nation {
+            dimension "keep"
+            applicationId "tuoyan.com.xinghuo_daying"
+            manifestPlaceholders = [app_name: "星火英语新版",
+                                    app_icon: "@mipmap/icon1",
+//                    package       : "com.fosung.lighthouse.dt2"
+            ]
+        }
+        bxnt_nation {
+            dimension "keep"
+            applicationId "tuoyan.com.xinghuo_daying"
+            manifestPlaceholders = [app_name: "星火英语新版-测试",
+                                    app_icon: "@mipmap/icon1",
+//                    package       : "com.fosung.lighthouse.dt2"
+            ]
+        }
+        bxny_nation {
+            dimension "keep"
+            applicationId "tuoyan.com.xinghuo_daying"
+            manifestPlaceholders = [app_name: "星火英语新版-预生产",
+                                    app_icon: "@mipmap/icon1",
+//                    package       : "com.fosung.lighthouse.dt2"
+            ]
+        }
+        sparke {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "sparke"]
+            dimension "sparke"
+        }
+        ying_yong_bao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "ying_yong_bao"]
+            dimension "sparke"
+        }
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo_app_store"]
+            dimension "sparke"
+        }
+        hua_wei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "hua_wei_app_store"]
+            dimension "sparke"
+        }
+        xiao_mi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiao_mi_app_store"]
+            dimension "sparke"
+        }
+        vivo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo_app_store"]
+            dimension "sparke"
+        }
+    }
+    android.applicationVariants.all { variant ->
+        def outputApkName = "${variant.flavorName}-${config.appversionCode}-release.apk"
+        variant.outputs.all {
+            outputFileName = outputApkName
+        }
+    }
+    signingConfigs {
+//        release {
+//            storeFile file('./../releasekey/firebox_keystore.jks')
+//            keyAlias 'haier'
+//            keyPassword 'android'
+//            storePassword 'android'
+//        }
+//        debug {
+//            storeFile file('./../releasekey/firebox_keystore.jks')
+//            keyAlias 'haier'
+//            keyPassword 'android'
+//            storePassword 'android'
+//        }
+        //TODO harmonybufen
+        release {
+            storeFile file('./../releasekey/harmonyandroid.jks')
+            keyAlias 'harmonyandroid'
+            keyPassword 'HarmonyAndroid'
+            storePassword 'HarmonyAndroid'
+        }
+        debug {
+            storeFile file('./../releasekey/harmonyandroid.jks')
+            keyAlias 'harmonyandroid'
+            keyPassword 'HarmonyAndroid'
+            storePassword 'HarmonyAndroid'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+//            zipAlignEnabled false
+//            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+//            zipAlignEnabled false
+//            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // TODO 鸿蒙bufen
+    implementation files('./libs/abilityshell_ide_java.jar')
+    // TODO 支持分版本网络请求
+    bxnt_nationImplementation project(':xinghuoapp1:appvariants')
+    bxny_nationImplementation project(':xinghuoapp1:appvariants')
+    bxn_nationImplementation project(':xinghuoapp1:appvariants')
+    // TODO 业务
+    implementation project(':xinghuoapp1:appsplash')
+    implementation project(':xinghuoapp1:appcommon')
+    implementation project(':xinghuoapp1:appindex')
+    implementation project(':xinghuoapp1:appindexxinghuo')
+    implementation project(':xinghuoapp1:applogin')
+    implementation project(':xinghuoapp1:appsearch')
+    implementation project(':xinghuoapp1:appmy')
+
+}
+
+// TODO Wallet打包
+apply from: './multiple-channel.gradle'
+// TODO mob
+apply from: './../../MobSDK.gradle'

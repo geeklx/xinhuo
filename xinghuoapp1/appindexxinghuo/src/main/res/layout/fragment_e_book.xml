@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srfl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/shape_fff_f5f6f9"
+            android:visibility="gone" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_search"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@android:color/white"
+                app:layout_scrollFlags="scroll">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_10_f9fafc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/et_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toLeftOf="@+id/tv_sub"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入训练营激活码"
+                        android:textColor="@color/color_222831"
+                        android:textColorHint="@color/color_c4cbde"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_sub"
+                        android:background="@color/color_edeff0" />
+
+                    <TextView
+                        android:id="@+id/tv_sub"
+                        android:layout_width="66dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="兑换"
+                        android:textColor="@color/color_222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                app:layout_scrollFlags="scroll">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/shape_fff_f5f6f9"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:drawableLeft="@mipmap/ebook_icon"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="特训营"
+                    android:textColor="@color/color_222"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@mipmap/ebook_add"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="20dp"
+                    android:text="添加"
+                    android:textColor="@color/color_ff5200"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlv_ebook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="15dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_title"
+                    app:layout_scrollFlags="scroll"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/layout_ebook" />
+
+                <ImageView
+                    android:id="@+id/img_re"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/study_re"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlv_ebook" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/layout_home_class_item" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_fff_f9fafc"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@mipmap/ebook_icon"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="特训营"
+                android:textColor="@color/color_222"
+                android:textSize="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_top_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:drawableLeft="@mipmap/ebook_add"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="20dp"
+                android:text="添加"
+                android:textColor="@color/color_ff5200"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_top_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

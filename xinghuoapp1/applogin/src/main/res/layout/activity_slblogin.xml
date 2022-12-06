@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/afl1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="15mm"
+            android:layout_height="15mm"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="33mm"
+            android:layout_marginTop="40mm"
+            android:src="@drawable/hxkt_icon_xxx" />
+
+        <TextView
+            android:id="@+id/tv_title0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30mm"
+            android:layout_marginTop="40mm"
+            android:text="@string/applogin5"
+            android:textColor="@color/black_000"
+            android:textSize="28mm"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_bg1"
+            android:layout_width="290mm"
+            android:layout_height="228mm"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30mm"
+            android:layout_marginTop="40mm"
+            android:layout_marginRight="30mm"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号"
+                android:textColor="@color/color_333333"
+                android:textSize="15mm"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10mm"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinputlayout1"
+                    style="@style/Widget.Design.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/applogin10"
+                    android:orientation="vertical"
+                    android:textColorHint="@color/color_dcdcdc"
+                    app:errorEnabled="false"
+                    app:errorTextAppearance="@style/ErrorText"
+                    app:hintAnimationEnabled="false"
+                    app:hintTextAppearance="@style/ErrorText">
+
+                    <!--            android:fontFamily="sans-serif-light"-->
+                    <!--            android:textStyle="italic"-->
+
+                    <EditText
+                        android:id="@+id/edt1"
+                        android:layout_width="200mm"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0mm"
+                        android:background="@null"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:paddingTop="10mm"
+                        android:paddingBottom="10mm"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/black_000"
+                        android:textCursorDrawable="@drawable/common_ed_bg1"
+                        android:textSize="16mm"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5mm"
+                        android:background="#D8D8D8" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/iv_xx"
+                    android:layout_width="20mm"
+                    android:layout_height="20mm"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20mm"
+                    android:src="@drawable/hxkt_icon_xx"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30mm"
+            android:layout_marginTop="0mm"
+            android:layout_marginRight="30mm"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码"
+                android:textColor="@color/color_333333"
+                android:textSize="15mm"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10mm"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textinputlayout2"
+                    style="@style/Widget.Design.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10mm"
+                    android:hint="@string/applogin11"
+                    android:orientation="vertical"
+                    android:textColorHint="@color/color_dcdcdc"
+                    app:endIconDrawable="@drawable/pwd_toggle_bg1"
+                    app:endIconMode="password_toggle"
+                    app:errorEnabled="false"
+                    app:errorTextAppearance="@style/ErrorText"
+                    app:hintAnimationEnabled="false"
+                    app:hintTextAppearance="@style/ErrorText">
+
+                    <!--            android:fontFamily="sans-serif-light"-->
+                    <!--            android:textStyle="italic"-->
+
+                    <EditText
+                        android:id="@+id/edt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0mm"
+                        android:background="@null"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:paddingTop="15mm"
+                        android:paddingBottom="15mm"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/black_000"
+                        android:textCursorDrawable="@drawable/common_ed_bg1"
+                        android:textSize="16mm"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5mm"
+                        android:background="#D8D8D8" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv1"
+            android:layout_width="308mm"
+            android:layout_height="50mm"
+            android:layout_below="@+id/rl1"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32mm"
+            android:background="@drawable/btn_denglu2_enpressed"
+            android:text="@string/applogin12"
+            android:textColor="@color/tv_comm2"
+            android:textSize="16mm" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0mm"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="15mm"
+                android:layout_marginRight="30mm">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    style="@style/loginstyle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/applogin13"
+                    android:textColor="@color/color999999"
+                    android:textSize="12mm" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    style="@style/loginstyle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/applogin14"
+                    android:textColor="@color/color1376F6"
+                    android:textSize="12mm" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm"
+                android:layout_marginBottom="10mm"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/rad_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0mm"
+                    android:button="@drawable/btn_common_checkbox1"
+                    android:paddingLeft="2mm"
+                    android:text=""
+                    android:textColor="@color/color999999"
+                    android:textSize="12mm"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/tv_tips12"
+                    style="@style/logincommtextview"
+                    android:layout_width="match_parent"
+                    android:text=""
+                    android:textColor="@color/color999999"
+                    android:textSize="12mm" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20mm"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_wx"-->
+            <!--                android:layout_width="156mm"-->
+            <!--                android:layout_height="44mm"-->
+            <!--                android:src="@drawable/login_wechat33"-->
+            <!--                android:visibility="gone" />-->
+            <TextView
+                android:id="@+id/tv_qtfsdl1"
+                style="@style/loginstyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll1"
+                android:layout_marginBottom="10mm"
+                android:text="其他方式登录" />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_wx"
+                    android:layout_width="30mm"
+                    android:layout_height="30mm"
+                    android:layout_marginRight="10mm"
+                    android:src="@drawable/share_wechat_solid"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_zw"
+                    android:layout_width="40mm"
+                    android:layout_height="40mm"
+                    android:src="@drawable/icon_login_zw1"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

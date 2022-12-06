@@ -1,0 +1,19 @@
+apply from: './../../commonlibsapks.gradle'
+def librarys = rootProject.ext.dependencies //
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':xinghuoapp1:appcommon')
+    bxnt_nationImplementation project(':xinghuoapp1:zbiz1')
+    bxny_nationImplementation project(':xinghuoapp1:zbiz1')
+    bxn_nationImplementation project(':xinghuoapp1:zbiz1')
+
+}
+android {
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.geek.appindex'
+}
+// TODO mob
+apply from: './../../MobSDK.gradle'

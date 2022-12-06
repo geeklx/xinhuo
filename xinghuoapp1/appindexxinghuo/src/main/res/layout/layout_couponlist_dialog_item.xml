@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@drawable/shape_coupon_item">
+
+        <RelativeLayout
+            android:id="@+id/rl_left"
+            android:layout_width="104dp"
+            android:layout_height="103dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp"
+            android:background="@drawable/shape_10_fffafa">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/color_ff1717"
+                android:textSize="32dp"
+                tools:text="￥30" />
+
+            <TextView
+                android:id="@+id/tv_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_price"
+                android:gravity="center_horizontal"
+                android:textColor="@color/color_ff1717"
+                android:textSize="12dp"
+                tools:text="满666可用" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_right"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="1dp"
+            android:layout_toRightOf="@+id/rl_left"
+            android:background="@drawable/shape_10_ffeeee">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/tv_had"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineHeight="18dp"
+                android:lines="1"
+                android:textColor="@color/color_ff1717"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="优惠券优优惠券优惠券优优惠券优惠券优优惠券优惠券优优惠券优惠券优优惠券优惠券" />
+
+            <TextView
+                android:id="@+id/tv_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:textColor="@color/color_ff1717"
+                android:textSize="11sp"
+                tools:text="16号链接30元券" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_explain"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:lines="1"
+                android:textColor="@color/color_ff1717"
+                android:textSize="11sp"
+                tools:text="2020.00.00-2020.01.21" />
+
+            <TextView
+                android:id="@+id/tv_had"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/shape_30_ff1717"
+
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="立即领取"
+                android:textColor="@color/color_ffe7ef"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_rule"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_br_10_ffe5e5"
+                android:drawableEnd="@drawable/coupon_selctor"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="使用规则"
+                android:textColor="@color/color_ff1717"
+                android:textSize="11dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="12dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="99dp"
+            android:background="@mipmap/ic_coupon_list_line" />
+
+        <ImageView
+            android:id="@+id/img_coupon_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_coupon_tag"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_rule_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_10_b_ffeeee"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/color_ff1717"
+        android:textSize="12dp"
+        android:visibility="gone"
+        tools:text="可用商品：可用商品可用商品可用\n商品可用商可用商品：可用商品可用商品可用商品可用商" />
+</LinearLayout>

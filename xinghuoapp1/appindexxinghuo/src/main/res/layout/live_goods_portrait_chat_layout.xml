@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0000">
+    <!-- 公聊列表 -->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/chat_container"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_above="@+id/v_marge"
+            android:layout_marginBottom="10dp" />
+
+        <View
+            android:id="@+id/v_marge"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+    <!-- 进入 退出提醒-->
+    <com.bokecc.livemodule.view.AutoScrollView
+        android:id="@+id/auto_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/userjoin_tips_bg"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="gone" />
+    <!-- 下方输入聊天信息框 -->
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="440dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_goods_list"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/ic_goods_list">
+
+                <TextView
+                    android:id="@+id/tv_goods_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    tools:text="16" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_input"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_20_4d000000"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="说点什么..."
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <tuoyan.com.xinghuo_dayingindex.widegt.like.HintLikeView
+            android:id="@+id/iv_likes"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+
+            android:src="@drawable/ic_likes" />
+
+    </LinearLayout>
+</FrameLayout>

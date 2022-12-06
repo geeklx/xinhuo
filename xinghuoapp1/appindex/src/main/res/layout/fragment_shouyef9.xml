@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/colorE60000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorF1F2F4"
+        android:layout_marginTop="30mm"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorE60000"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12mm"
+                android:src="@drawable/icon_dw1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="50mm"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4mm"
+                android:layout_toRightOf="@+id/iv1"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="14mm"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/appindex8"
+                android:textColor="@color/white"
+                android:textSize="16mm"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2mm"
+                android:layout_toRightOf="@+id/tv1"
+                android:src="@drawable/icon_dw2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_sysm1"
+                android:layout_width="20mm"
+                android:layout_height="20mm"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12mm"
+                android:src="@drawable/icon_ssgzt1"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="32mm"
+            android:layout_marginLeft="12mm"
+            android:layout_marginTop="10mm"
+            android:layout_marginRight="12mm"
+            android:layout_marginBottom="12mm"
+            android:background="@drawable/common_shape_white_co4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <!--btn_common_white_search-->
+            <TextView
+                android:id="@+id/tv_search1"
+                android:layout_width="16mm"
+                android:layout_height="16mm"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10mm"
+                android:layout_marginRight="10mm"
+                android:background="@drawable/icon_common_ss1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="26mm"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.haier.cellarette.baselibrary.marqueelibrary.SimpleMarqueeView
+                    android:id="@+id/marqueeView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateFirstView="true"
+                    android:autoStart="true"
+                    android:flipInterval="6000"
+                    android:inAnimation="@anim/in_top"
+                    android:outAnimation="@anim/out_bottom"
+                    android:visibility="visible"
+                    app:marqueeAnimDuration="500"
+                    app:smvTextColor="@color/color333333"
+                    app:smvTextGravity="center_vertical"
+                    app:smvTextSize="14mm"
+                    tools:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/edit_query1"
+                    style="@style/logincontentedit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:maxLength="15"
+                    android:text=""
+                    android:textColor="@color/black_000"
+                    android:textColorHint="@color/color333333"
+                    android:textSize="12mm"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--        android:background="@color/colorF6F6F6"-->
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150mm"
+                    android:layout_marginStart="10mm"
+                    android:layout_marginTop="10mm"
+                    android:layout_marginEnd="10mm"
+                    android:layout_marginBottom="0mm"
+                    banner:banner_indicator_normal_color="@android:color/white"
+                    banner:banner_indicator_selected_color="@color/colorRed"
+                    banner:banner_radius="5mm" />
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10mm"
+                    android:background="@drawable/btn_common_shape_red1"
+                    android:orientation="horizontal"
+                    android:padding="10mm">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="20mm"
+                        android:layout_height="20mm"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4mm"
+                        android:background="@drawable/icon_ding1" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:text="您有2条待办任务"
+                        android:textColor="@color/colorE60000"
+                        android:textSize="12mm" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="点击进入 >"
+                        android:textColor="@color/colorE60000"
+                        android:textSize="12mm" />
+                </RelativeLayout>
+
+                <com.geek.libbase.widgets.XRecyclerView
+                    android:id="@+id/rv_others"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10mm"
+                    android:layout_marginTop="2mm"
+                    android:layout_marginRight="10mm"
+                    android:layout_marginBottom="0mm"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_f6f7f8_r_18"
+        android:gravity="center"
+        android:text="问题类型"
+        android:textColor="@color/color_8d95a1"
+        android:textSize="13dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_type"
+        android:layout_width="match_parent"
+        android:layout_height="302dp"
+        android:background="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/color_f6f7f8" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_222831"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+</LinearLayout>

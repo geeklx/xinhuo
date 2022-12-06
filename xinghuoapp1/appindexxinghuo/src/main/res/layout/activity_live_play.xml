@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--上边显示-->
+    <RelativeLayout
+        android:id="@+id/rl_pc_live_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/black">
+
+        <!--大屏：文档、视频、连麦 -->
+        <RelativeLayout
+            android:id="@+id/rl_video_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--房间其他控制-->
+        <com.bokecc.livemodule.live.room.LiveRoomLayout
+            android:id="@+id/live_room_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <!--下半部分-->
+    <RelativeLayout
+        android:id="@+id/ll_pc_live_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/color_f5" />
+
+        <RelativeLayout
+            android:id="@+id/rl_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/v1"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/icon_recommend_player" />
+
+            <TextView
+                android:id="@+id/tv_re_sel"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_15_c7cdd7"
+                android:drawableRight="@drawable/lesson_sel"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="11dp"
+                android:text="收起"
+                android:textColor="@color/color_8e"
+                android:textSize="11dp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlc_lessons"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:layout_below="@+id/rl_recommend"
+            android:layout_marginBottom="-5dp"
+            android:background="@color/color_f5"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/rlc_lessons"
+            android:background="@drawable/chat_msg_shadow" />
+        <!--中间的tab-->
+        <include
+            layout="@layout/live_pc_portrait_msg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_line" />
+    </RelativeLayout>
+</LinearLayout>

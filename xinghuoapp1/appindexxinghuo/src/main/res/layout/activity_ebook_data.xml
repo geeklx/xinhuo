@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9"
+    tools:context=".ui.ebook.EBookDataActivity">
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="学习数据"
+            android:textColor="@color/color_222"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+            <TextView
+                android:id="@+id/tv_today_learn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="今日学习情况"
+                android:textColor="@color/color_222"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="2066年·06月06日"
+                android:textColor="@color/color_afb3bf"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_today_learn"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_today_learn" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_learn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_15_fff"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/ctl_rate"
+                app:layout_constraintTop_toBottomOf="@+id/tv_today_learn">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66小时66分钟"
+                    android:textColor="@color/color_008aff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学习时长"
+                    android:textColor="@color/color_222"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_rate"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_15_fff"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ctl_learn"
+                app:layout_constraintLeft_toRightOf="@+id/ctl_learn"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ctl_learn">
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="66%"
+                    android:textColor="@color/color_008aff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_rate_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="模考正确率"
+                    android:textColor="@color/color_222"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rate" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tv_learn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:text="学习时长"
+                android:textColor="@color/color_222"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ctl_learn" />
+
+            <RadioGroup
+                android:id="@+id/rg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_learn_time"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_learn_time">
+
+                <RadioButton
+                    android:id="@+id/rb_time_7"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/shape_ebook_rb"
+                    android:drawablePadding="5.5dp"
+                    android:gravity="center"
+                    android:paddingTop="13.5dp"
+                    android:paddingBottom="8dp"
+                    android:text="7日"
+                    android:textColor="@drawable/shape_ebook_rb"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_time_30"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/shape_ebook_rb"
+                    android:drawablePadding="5.5dp"
+                    android:gravity="center"
+                    android:paddingTop="13.5dp"
+                    android:paddingBottom="8dp"
+                    android:text="按月"
+                    android:textColor="@drawable/shape_ebook_rb"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <tuoyan.com.xinghuo_dayingindex.widegt.DrawLineView
+                android:id="@+id/dlv_line"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_15_fff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_learn_time" />
+
+            <TextView
+                android:id="@+id/tv_right_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                android:text="模考正确率"
+                android:textColor="@color/color_222"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dlv_line" />
+
+            <RadioGroup
+                android:id="@+id/rg_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_right_rate"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_right_rate">
+
+                <RadioButton
+                    android:id="@+id/rb_rate_7"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/shape_ebook_rb"
+                    android:drawablePadding="5.5dp"
+                    android:gravity="center"
+                    android:paddingTop="13.5dp"
+                    android:paddingBottom="8dp"
+                    android:text="7日"
+                    android:textColor="@drawable/shape_ebook_rb"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_rate_30"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/shape_ebook_rb"
+                    android:drawablePadding="5.5dp"
+                    android:gravity="center"
+                    android:paddingTop="13.5dp"
+                    android:paddingBottom="8dp"
+                    android:text="按月"
+                    android:textColor="@drawable/shape_ebook_rb"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <tuoyan.com.xinghuo_dayingindex.widegt.DrawLineView
+                android:id="@+id/dlv_rate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_15_fff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_right_rate" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/tools"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/fl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/drawable_common_red_grident3"
+            android:padding="7.5mm"
+            banner:banner_indicator_normal_color="@android:color/white"
+            banner:banner_indicator_selected_color="@color/colorRed"
+            banner:banner_radius="5mm" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fl2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="35mm"
+        android:paddingRight="35mm"
+        android:paddingBottom="35mm"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_common_red_grident2"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/hts_icon1" />
+
+            <com.haier.cellarette.baselibrary.marqueelibrary.SimpleMarqueeView
+                android:id="@+id/marqueeView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10mm"
+                android:layout_marginRight="10mm"
+                android:animateFirstView="true"
+                android:autoStart="true"
+                android:flipInterval="6000"
+                android:inAnimation="@anim/in_top"
+                android:outAnimation="@anim/out_bottom"
+                android:visibility="visible"
+                app:marqueeAnimDuration="500"
+                app:smvTextColor="@color/color333333"
+                app:smvTextGravity="center_vertical"
+                app:smvTextSize="13mm" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24mm"
+            android:background="@drawable/hst_icon2"
+            android:orientation="vertical"
+            android:padding="45mm">
+
+            <com.geek.tablib.tablayout.SlidingTabLayout
+                android:id="@+id/tl_fenlei1"
+                android:layout_width="wrap_content"
+                android:layout_height="50mm"
+                android:layout_marginStart="25mm"
+                app:tl_textsize="28mm"
+                tl:tl_indicator_color="#A50007"
+                tl:tl_indicator_corner_radius="1.5dp"
+                tl:tl_indicator_height="3mm"
+                tl:tl_indicator_width="50mm"
+                tl:tl_textSelectColor="#A50007"
+                tl:tl_textUnselectColor="#BF3F3F" />
+
+            <com.geek.libbase.widgets.ViewPagerSlide
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="0mm"
+                android:layout_marginTop="10mm"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

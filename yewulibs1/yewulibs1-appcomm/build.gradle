@@ -1,0 +1,115 @@
+apply plugin: 'com.android.library'
+apply from: './../../commonlibs2.gradle'
+def librarys = rootProject.ext.dependencies //
+//configurations {
+//    // use exclude
+//    implementation.exclude group: 'io.reactivex.rxjava2', module: 'rxjava'
+//    all {
+//        resolutionStrategy {
+//            eachDependency { DependencyResolveDetails details ->
+//                if (details.requested.group == 'io.reactivex.rxjava3' &&
+//                        details.requested.name == 'rxjava') {
+//                    details.useVersion '3.0.0-RC0'
+//                    details.because 'Unified the version of RxJava3.'
+//                }
+//            }
+//        }
+//    }
+//}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //TODO common libs
+    api 'com.github.GeekCodesTeam.geeklibs:libgeek:3.5.6'
+    // 支持分版本网络请求
+    bxnt_nationImplementation project(':yewulibs1:yewulibs1-libvariants')
+    bxny_nationImplementation project(':yewulibs1:yewulibs1-libvariants')
+    bxn_nationImplementation project(':yewulibs1:yewulibs1-libvariants')
+    // https://github.com/yanzhenjie/NoFragment
+    api project(':commonlibs:bhunheku:libyanzhenjiebase')
+    // https://github.com/li-xiaojun/XPopup
+//    api project(':commonlibs:cyewulibs:slbxpopup')
+    // https://github.com/hongyangAndroid/FlowLayout
+//    api 'com.hyman:flowlayout-lib:1.1.2'
+    // https://github.com/AigeStudio/WheelPicker
+//    api 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+    api project(':commonlibs:bhunheku:libwheelpicker')
+    // https://github.com/shaohui10086/BottomDialog
+//    api 'me.shaohui:bottomdialog:1.1.9'
+    api project(':commonlibs:bhunheku:llibbottomdialog')
+    // https://github.com/KunMinX/Linkage-RecyclerView
+//    api 'com.kunminx.linkage:linkage-recyclerview:2.3.5'
+//    api project(':commonlibs:bhunheku:liblinkagerecyclerview')
+    // https://github.com/LuckSiege/PictureSelector
+//    api project(':commonlibs:cyewulibs:slbpictureselector')
+    // https://github.com/ethanhua/Skeleton
+//    api 'com.ethanhua:skeleton:1.1.2'
+    // https://github.com/team-supercharge/ShimmerLayout
+//    api 'io.supercharge:shimmerlayout:2.1.0'
+    api project(':commonlibs:bhunheku:libskeleton')
+    // https://github.com/drawthink/ExpandableRecyclerView
+//    api 'com.drawthink:expandable-recyclerview:0.0.3'
+//    api project(':commonlibs:bhunheku:libexpandablerecyclerview')
+    // app升级
+//    api project(':commonlibs:bhunheku:libupdateapputilsold')
+    // https://github.com/teprinciple/UpdateAppUtils
+//    api 'com.teprinciple:updateapputilsx:2.3.0'
+    api project(':commonlibs:bhunheku:libupdateapputilsnew')
+    // Umeng统计
+    api project(':commonlibs:bhunheku:libappumengstatistics')
+    // mob分享
+//    api project(':commonlibs:bhunheku:libappmob')
+    // 支付
+    api project(':commonlibs:bhunheku:libapppay')
+    // https://github.com/crazyandcoder/citypicker
+    // api 'liji.library.dev:citypickerview:4.3.2'
+    api project(':commonlibs:cyewulibs:slbcitypickerview')
+    // https://github.com/begeekmyfriend/yasea
+    api project(':commonlibs:cyewulibs:slbscreenlibrary')
+    // slbbluetooth
+    api project(':commonlibs:cyewulibs:slbbluetooth')
+    // ncalendar
+//    api project(':commonlibs:cyewulibs:slbncalendar')
+    // slbota
+    api project(':commonlibs:cyewulibs:slbota')
+    // slbwifi
+    api project(':commonlibs:cyewulibs:slbwifi')
+    // https://github.com/jenly1314/ZXingLite
+    // api 'com.king.zxing:zxing-lite:1.1.4-androidx'
+    api project(':commonlibs:cyewulibs:zxinglibs1')
+    api project(':commonlibs:cyewulibs:zxinglibs2')
+    //
+//    api project(':zfsjx-commonlibs:libZRecyclerView')
+    // https://github.com/wangyiwy/PDF_Preview
+    api project(':commonlibs:bhunheku:libpdf')
+    // 高德地图
+    api project(':commonlibs:bhunheku:liblocations')
+    // https://github.com/CarGuo/GSYIjkJava
+    api project(':commonlibs:cyewulibs:slbgsyvideonew')
+    // https://github.com/Jzvd/JZVideo
+    api project(':commonlibs:cyewulibs:slbjiaozvideonew')
+    // https://github.com/Doikki/DKVideoPlayer
+//    api project(':commonlibs:zdkplayer:dkplayer-sample')
+//    api 'com.github.GeekCodesTeam.geeklibs:zdkplayer:dkplayer:3.0.5'
+//    api('com.github.GeekCodesTeam.geeklibs:zdkplayer:3.0.5') {
+//        exclude module: 'gsyVideoPlayer-armv5'
+//        exclude module: 'gsyVideoPlayer-armv7a'
+//        exclude module: 'gsyVideoPlayer-armv64'
+//        exclude module: 'gsyVideoPlayer-x86'
+//        exclude module: 'gsyVideoPlayer-x86_64'
+//    }
+    // okhttputils
+//    api project(':commonlibs:bhunheku:libokhttputils')
+    // 指纹验证
+//    api project(':commonlibs:cyewulibs:slbyanzheng')
+    // TODO 业务bufen
+    // 环信IM
+    // api project(':commonlibs:huanxin:huanxinim')
+    // 保利威直播1
+//    api project(':commonlibs:zzhibopolyv:demo')
+    // TencentIm
+    api project(':commonlibs:ztencent:tencentim')
+    // RongCloudIM
+//    api project(':commonlibs:rongcloud:rongcloudim')
+    // 业务
+//    api 'com.github.GeekCodesTeam.geeklibs:libxuanzeqi:3.0.5'
+}

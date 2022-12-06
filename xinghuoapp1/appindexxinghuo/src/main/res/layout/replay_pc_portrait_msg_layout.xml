@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/white">
+
+        <RadioGroup
+            android:id="@+id/rg_infos_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/live_portrait_info_chat"
+                style="@style/liveRadioButtonTheme"
+                android:drawableLeft="@drawable/chat_drawable"
+                android:text="聊天" />
+
+            <RadioButton
+                android:id="@+id/live_portrait_info_qa"
+                style="@style/liveRadioButtonTheme"
+                android:drawableLeft="@drawable/ask_drawable"
+                android:text="提问" />
+
+            <RadioButton
+                android:id="@+id/live_portrait_info_intro"
+                style="@style/liveRadioButtonTheme"
+                android:drawableLeft="@drawable/session_selected"
+                android:text="章节" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_chat_top"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_15_c7cdd7"
+            android:drawableRight="@mipmap/chat_msg_icon_top"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="11dp"
+            android:text="置顶"
+            android:textColor="@color/color_8e"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/live_portrait_container_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_tab" />
+
+</RelativeLayout>

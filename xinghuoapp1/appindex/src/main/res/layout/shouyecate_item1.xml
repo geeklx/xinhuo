@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.geek.libbase.widgets.LxRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="4mm"
+    android:paddingTop="10mm"
+    android:paddingRight="4mm"
+    app:is_touch="true">
+
+    <com.geek.libglide47.base.GlideImageView
+        android:id="@+id/iv1"
+        android:layout_width="40mm"
+        android:layout_height="40mm"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_grxx1" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4mm"
+        android:gravity="center"
+        android:text="ces"
+        android:textColor="@color/color666666"
+        android:textSize="10mm" />
+</com.geek.libbase.widgets.LxRelativeLayout>

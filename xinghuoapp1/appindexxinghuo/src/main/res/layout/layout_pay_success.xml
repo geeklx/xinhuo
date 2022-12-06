@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_suc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/ic_pay_success"
+        android:drawablePadding="15dp"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="@string/payment_success"
+        android:textColor="@color/color_222"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_home"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_shape_5_4c84ff"
+        android:text="返回首页"
+        android:textColor="@color/color_ffffff"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_suc" />
+
+    <LinearLayout
+        android:id="@+id/ll_assemble"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/bg_item"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_suc">
+
+        <TextView
+            android:id="@+id/tv_stu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还差2人拼团成功"
+            android:textColor="@color/color_222831"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_down_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="距离结束108天00小时00分00秒"
+            android:textColor="@color/color_8d95a1"
+            android:textSize="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_student"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_assemble_student" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_shape_21_5467ff"
+            android:gravity="center"
+            android:text="立即邀请好友参团"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

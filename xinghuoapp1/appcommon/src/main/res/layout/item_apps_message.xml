@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15mm">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF333333"
+        android:textSize="18mm"
+        tools:text="你收到的一个审核任务待处理" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="10mm"
+        android:text="2022-05-08 11:34"
+        android:textColor="#FF999999"
+        android:textSize="18mm" />
+
+    <com.geek.libshadowlayout.widgets.ShadowLayouts
+        android:id="@+id/read"
+        android:layout_width="8mm"
+        android:layout_height="8mm"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5mm"
+        app:hl_cornerRadius="8mm"
+        app:hl_layoutBackground="#EE0B19"
+        app:hl_strokeColor="#EE0B19" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="15mm"
+        android:background="#E6E6E6" />
+
+</RelativeLayout>

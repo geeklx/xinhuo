@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlyBanner">
+        <attr name="points_visibility" format="boolean"/>
+        <attr name="points_position" format="enum">
+            <enum name="CENTER" value="0"/>
+            <enum name="LEFT" value="1"/>
+            <enum name="RIGHT" value="2"/>
+        </attr>
+        <attr name="points_container_background" format="reference|color"/>
+        <attr name="dimensionRatio" format="string" />
+        <attr name="radius1" format="integer" />
+        <attr name="default_banner" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference"/>
+        <attr name="mvAnimDuration" format="integer|reference"/>
+        <attr name="mvTextSize" format="dimension|reference"/>
+        <attr name="mvTextColor" format="color|reference"/>
+        <attr name="mvSingleLine" format="boolean"/>
+        <attr name="mvFont" format="reference"/>
+        <attr name="mvGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="mvDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+    </declare-styleable>
+    <!--点赞动画-->
+    <declare-styleable name="KsgLikeView">
+        <!-- 进入动画 时长-->
+        <attr name="ksg_enter_duration" format="integer"/>
+        <!--路径动画 时长-->
+        <attr name="ksg_curve_duration" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="AndRatingBar">
+        <!-- color of star -->
+        <attr name="starColor" format="color|reference" />
+
+        <!-- color of secondary star -->
+        <attr name="subStarColor" format="color|reference" />
+
+        <!-- color of background star -->
+        <attr name="bgColor" format="color|reference" />
+
+        <!-- drawable of star -->
+        <attr name="starDrawable" format="reference" />
+
+        <!-- drawable of background star -->
+        <attr name="bgDrawable" format="reference" />
+
+        <!-- if keep the origin color of star drawable -->
+        <attr name="keepOriginColor" format="boolean" />
+
+        <!-- the scale factor of ratingbar that can change the spacing of star -->
+        <attr name="scaleFactor" format="float" />
+
+        <!-- additional the spacing of the star -->
+        <attr name="starSpacing" format="dimension" />
+
+        <!-- right to left -->
+        <attr name="right2Left" format="boolean" />
+    </declare-styleable>
+</resources>

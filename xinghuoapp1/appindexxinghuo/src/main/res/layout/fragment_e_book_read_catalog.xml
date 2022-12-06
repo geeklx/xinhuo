@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_66000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/shape_left_20_fff">
+
+        <View
+            android:id="@+id/top"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/icon_ebook_read_catalog"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_temp1"
+            app:layout_constraintRight_toRightOf="@+id/tv_temp1"
+            app:layout_constraintTop_toTopOf="@+id/tv_temp1" />
+
+        <TextView
+            android:id="@+id/tv_temp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="19dp"
+            android:text="目录"
+            android:textColor="@color/color_222"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_c"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_temp1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

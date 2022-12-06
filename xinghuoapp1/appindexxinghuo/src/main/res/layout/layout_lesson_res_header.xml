@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_qq"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv_qq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icon_join_qq"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="点击添加QQ群"
+            android:textColor="@color/color_222831"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_qq_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_qq_title"
+            android:text="学习技巧交流群：66666666"
+            android:textColor="@color/color_c7cdd7"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40dp"
+            android:background="@color/color_edeff0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_listen"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rl_qq">
+
+        <TextView
+            android:id="@+id/tv_listen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icon_lesson_listen_program"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="虐耳朵"
+            android:textColor="@color/color_222831"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_listen_program"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="36dp"
+            android:layout_toRightOf="@+id/tv_listen_title"
+            android:drawableRight="@mipmap/icon_listen_program"
+            android:gravity="center_vertical"
+            android:text="星火虐耳精听"
+            android:textColor="@color/color_c7cdd7"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40dp"
+            android:background="@color/color_edeff0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_word"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rl_listen">
+
+        <TextView
+            android:id="@+id/tv_word_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icon_lesson_word_program"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="背单词"
+            android:textColor="@color/color_222831"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_word_program"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="36dp"
+            android:layout_toRightOf="@+id/tv_word_title"
+            android:drawableRight="@mipmap/icon_word_program"
+            android:gravity="center_vertical"
+            android:text="星火必刷词"
+            android:textColor="@color/color_c7cdd7"
+            android:textSize="11dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40dp"
+            android:background="@color/color_edeff0" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_res"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rl_word">
+
+        <TextView
+            android:id="@+id/tv_res_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icon_lesson_res"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="课程资料领取"
+            android:textColor="@color/color_222831"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/img_ques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_res_title"
+            android:src="@mipmap/icon_res_warming" />
+
+        <TextView
+            android:id="@+id/tv_copy_link"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_15_e8ebff"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:text="复制链接"
+            android:textColor="@color/color_5467ff"
+            android:textSize="11dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_share_link"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tv_copy_link"
+            android:background="@drawable/shape_15_e8ebff"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:text="分享链接"
+            android:textColor="@color/color_5467ff"
+            android:textSize="11dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40dp"
+            android:background="@color/color_edeff0" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geek.appindexdtcate">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/appindexdtcate"
+        android:supportsRtl="true">
+        <activity
+            android:name=".MkDemo1Act"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false">
+            <!--            android:windowSoftInputMode="stateVisible|adjustPan"-->
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MkDemo1Act" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

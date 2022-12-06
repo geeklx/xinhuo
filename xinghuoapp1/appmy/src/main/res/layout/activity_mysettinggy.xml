@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_co_top" />
+
+    <com.geek.libglide47.base.GlideImageView
+        android:id="@+id/iv0"
+        android:layout_width="56mm"
+        android:layout_height="56mm"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8mm"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14mm"
+        android:text=""
+        android:textColor="@color/color333333"
+        android:textSize="16mm" />
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48mm"
+        android:paddingLeft="12mm"
+        android:paddingRight="12mm">
+
+        <TextView
+            style="@style/loginstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16mm"
+            android:layout_marginBottom="16mm"
+            android:text="@string/appmy9"
+            android:textColor="@color/color333333"
+            android:textSize="16mm" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="V0.0.0.1"
+            android:textColor="@color/color999999"
+            android:textSize="16mm" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="12mm"
+        android:layout_marginRight="12mm"
+        android:background="@color/colorE5E5E5" />
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12mm"
+        android:paddingRight="12mm">
+
+        <TextView
+            style="@style/loginstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16mm"
+            android:layout_marginBottom="16mm"
+            android:text="@string/appmy10"
+            android:textColor="@color/color333333"
+            android:textSize="16mm" />
+
+        <TextView
+            android:id="@+id/tv_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="10086"
+            android:textColor="@color/color999999"
+            android:textSize="16mm" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="12mm"
+        android:layout_marginRight="12mm"
+        android:background="@color/colorE5E5E5" />
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12mm"
+        android:paddingRight="12mm">
+
+        <TextView
+            style="@style/loginstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16mm"
+            android:layout_marginBottom="16mm"
+            android:text="@string/appmy11"
+            android:textColor="@color/color333333"
+            android:textSize="16mm" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_gy2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="12mm"
+        android:layout_marginRight="12mm"
+        android:background="@color/colorE5E5E5" />
+
+    <RelativeLayout
+        android:id="@+id/rl4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12mm"
+        android:paddingRight="12mm">
+
+        <TextView
+            style="@style/loginstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16mm"
+            android:layout_marginBottom="16mm"
+            android:text="@string/appmy12"
+            android:textColor="@color/color333333"
+            android:textSize="16mm" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_gy2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="12mm"
+        android:layout_marginRight="12mm"
+        android:background="@color/colorE5E5E5" />
+
+    <RelativeLayout
+        android:id="@+id/rl5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12mm"
+        android:paddingRight="12mm">
+
+        <TextView
+            style="@style/loginstyle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16mm"
+            android:layout_marginBottom="16mm"
+            android:text="@string/appmy13"
+            android:textColor="@color/color333333"
+            android:textSize="16mm" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_gy2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="12mm"
+        android:layout_marginRight="12mm"
+        android:background="@color/colorE5E5E5" />
+
+</LinearLayout>

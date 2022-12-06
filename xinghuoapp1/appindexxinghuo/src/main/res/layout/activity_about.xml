@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:title="">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:onClick="onBack"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_about"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_edeff0" />
+
+    <ImageView
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/about_logo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="67dp"
+        android:background="@color/color_edeff0" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:drawableEnd="@mipmap/ic_navigation_right"
+        android:gravity="center_vertical"
+        android:onClick="share"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="推荐给好友"
+        android:textColor="@color/color_222831"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/color_edeff0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:onClick="www">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="官方网址"
+            android:textColor="@color/color_222831"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableEnd="@mipmap/ic_navigation_right"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="www.sparke.cn"
+            android:textColor="@color/color_c3c7cb"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:background="@color/color_edeff0" />
+
+    <TextView
+        android:id="@+id/tv_service"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:drawableEnd="@mipmap/ic_navigation_right"
+        android:gravity="center_vertical"
+        android:onClick="share"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="用户服务协议"
+        android:textColor="@color/color_222831"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/divider" />
+
+    <TextView
+        android:id="@+id/tv_personal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:drawableEnd="@mipmap/ic_navigation_right"
+        android:gravity="center_vertical"
+        android:onClick="share"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="隐私政策"
+        android:textColor="@color/color_222831"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/divider" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/app_about_1"
+        android:textColor="@color/color_666666"
+        android:textSize="11dp" />
+</LinearLayout>

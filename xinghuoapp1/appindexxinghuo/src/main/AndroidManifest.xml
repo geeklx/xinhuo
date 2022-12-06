@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingLeanbackLauncher">
+
+    <!--    package="tuoyan.com.xinghuo_daying"-->
+
+    <!--
+    从Android 11开始，必须要在AndroidManifest.xml清单文件中加入query权限申请，
+    才能检测到手机上安装的三方应用包安装状态    在应用的AndroidManifest.xml添加如下<queries>标签
+    1）Android Studio 需要升级至 3.3 及以上，建议升级至 4.0 及以上版本；
+    2）Android SDK Build-Tools 需要升级至 30 及以上版本；
+    3）com.android.tools.build:gradle 需要升级至 3.6.0 版本，建议升级至最新的 3.6.4 版本。
+    -->
+    <!-- <queries> -->
+    <!-- <package android:name="com.tencent.mm" /> -->
+    <!-- <package android:name="com.tencent.mobileqq" /> -->
+    <!-- <package android:name="com.sina.weibo" /> -->
+    <!-- <package android:name="com.qzone" /> -->
+    <!-- </queries> -->
+    <!-- <permission -->
+    <!-- android:name="tuoyan.com.xinghuo_daying.permission.JPUSH_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> &lt;!&ndash; 允许应用可以接收点亮屏幕或解锁广播。 &ndash;&gt; -->
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- <uses-permission android:name="tuoyan.com.xinghuo_daying.permission.JPUSH_MESSAGE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 音频播放Wifi锁需要用到 -->
+    <!-- 允许应用在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission android:name="android.permission.DEVICE_POWER" />
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" /> <!-- <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SETTINGS" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+<!--        android:name=".MyApp"-->
+        <!--        android:hardwareAccelerated="true"-->
+        <!--        android:icon="@mipmap/logo"-->
+        <!--        android:label="@string/app_name"-->
+        <!--        android:largeHeap="true"-->
+        <!--        android:requestLegacyExternalStorage="true"-->
+        <!--        android:theme="@style/AppThemexh"-->
+        <!--        android:usesCleartextTraffic="true"-->
+        <!--        tools:replace="android:allowBackup,android:label,android:theme"-->
+
+        <activity
+            android:name=".ui.mine.spoken.SpokenListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="四六级口语模考"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.mine.spoken.SpokenDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="口语详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.lesson.video.VideoPortraitActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="视频播放"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.exam.ExamTimeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="考试倒计时"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.word.EbookCatalogListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="巧记速记目录"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.word.EBookWordExerciseAnalysisActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="巧记速记测试解析"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.word.EBookWordExerciseActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="巧记速记测试"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.word.EBookWordPracticeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="巧记速记练习"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.word.EBookWordImgActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="巧记速记单词"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cc.GoodsLiveActivity"
+            android:configChanges="orientation|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="带货CC直播"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ui.home.word.words.ScanWordListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="单词列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.word.words.ScanWordsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="扫码单词"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.book.SentenceListenActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="false"
+            android:label="逐句精听"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.listen.EBookJianReadActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="简听力阅读"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ht.ReplayHTActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="欢拓回放页面"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ht.LiveHTActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="欢拓直播页面"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.ebook.EBookAudioActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书听力"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookListenActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书听力练习"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.fragment.EBookWordListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书词汇学习"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookWordsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书词汇扫盲"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookExerciseAnalysisActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书解析"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookDataActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书学习数据"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookReportActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书答题报告"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookExerciseActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="点读书模考"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookListenExerciseActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="简听力进阶篇特训篇做题"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookPracticeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="精练列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="口袋题库详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ebook.EBookListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="口袋题库"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.scan.ScanHistoryActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="扫码历史"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.ReceiverToViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="广播过渡"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.ReceiverToViewActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.list.LessonRecListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="限免好课列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.coupon.MainCouponActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="优惠券列表"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.MainCouponActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.cc.ReplayCCActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="CC回放"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cc.LocalReplayCCActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="CC本地播放"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.cc.LiveCCActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="CC直播"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ui.netLesson.myLesson.WorkPreListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="预习列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.user.SearchSchoolActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="学校专业搜索"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.user.YanMessageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="考研档案"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.myLesson.StudyMonthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="月报列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.myLesson.MonthDataActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="月报数据"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.myLesson.StudyDataActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="学习数据"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.LessonListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="网课专题列表"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.LessonListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.SelectGradeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="首页-选择学段"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.books.report.RecommedNewsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="备考干货列表"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.RecommedNewsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.book.BasicWordActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="基础巩固"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.book.TestListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="试卷列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.NewsAndAudioActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="备考干货详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StartActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.StartActivityxh" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.StartActivityxh"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <action android:name="android.intent.action.VIEW" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--                &lt;!&ndash; <data android:scheme="spark"/> &ndash;&gt;-->
+            <!--                &lt;!&ndash; <category android:name="android.intent.category.DEFAULT"/> &ndash;&gt;-->
+            <!--                &lt;!&ndash; <action android:name="android.intent.action.VIEW"/> &ndash;&gt;-->
+            <!--                &lt;!&ndash; <category android:name="android.intent.category.BROWSABLE"/> &ndash;&gt;-->
+            <!--            </intent-filter>-->
+        </activity> <!-- <activity -->
+        <!-- android:name=".ui.GuideActivity" -->
+        <!-- android:label="APP引导" /> -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="首页"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemexh">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.MainActivityXH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sparke" />
+            </intent-filter>
+        </activity> <!-- Android 12 需添加 android:exported="true" -->
+        <activity
+            android:name="com.sensorsdata.analytics.android.sdk.dialog.SchemeActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 神策正式 -->
+                <data android:scheme="sad0d4d2c5" />
+                <!-- 神策测试 -->
+                <!-- <data android:scheme="sa95a5a37d" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.common.code_login.CodeLoginActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="短信验证码登录"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.login.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="登录"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.register.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="注册"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.recover.RecoverPasswordActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="找回密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.user.UserActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="个人信息列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.user.sign.ChangeSignActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="个性签名修改"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.user.nickname.ChangeNicknameActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="昵称修改"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.books.list.BookListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="图书配套列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.video.AudioActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="音频播放"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".ui.netLesson.overPackage.OverPackageActivity" /> -->
+        <activity
+            android:name=".ui.books.detail.BookDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="图书配套详情"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".ui.practice.PracticeActivity" /> -->
+        <!-- <activity android:name=".ui.practice.special.SpecialActivity" /> -->
+        <activity
+            android:name=".ui.netLesson.overPackage.evaluation.EntryActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="电子答题卡"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".ui.netLesson.overPackage.report.ReportActivity" /> -->
+        <activity
+            android:name=".ui.home.word.BackWordActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="单词"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.word.core.CoreWordActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="单词列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.word.words.WordsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="单词列表1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.word.back.BackActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="组单词列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.word.detail.WordDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="单词详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.word.common.CommonWordActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="单词列表"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".ui.mine.address.AddressActivity" /> -->
+        <!-- <activity android:name=".ui.mine.address.add.AddAddressActivity" /> -->
+        <activity
+            android:name=".ui.mine.collection.CollectionActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="我的收藏列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.wrong.WrongActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="错题本列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.lesson.detail.LessonDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="课程详情"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.LessonDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.netLesson.myLesson.LessonComActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="课程评价列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.lesson.video.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="视频播放"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.mine.setting.SettingActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="设置列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.practice.real.RealActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.myLesson.download.DownloadActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="课程下载"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.MessageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="消息列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.detail.MessageDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="消息详情"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.MessageDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.mine.coupon.CouponsActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:label="我的优惠券列表"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.CouponsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.mine.offline.OfflineActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="离线中心列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.changePassword.ChangePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="修改密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.changePhone.ChangePhoneActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="更换手机号"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.common.changePhone.ChangePwdActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="修改密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.exercise.detail.ExerciseDetailKActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="试卷详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.exercise.parsing.ExerciseParsingActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="题目解析"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.exercise.report.ReportActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="成绩报告"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.offline.OfflineResActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="网课离线列表"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".ui.mine.history.HistoryActivity" /> -->
+        <activity
+            android:name=".ui.mine.wrong.WrongDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="错题详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.setting.AboutActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="关于我们列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.bookstore.post.PostActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.PostActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.mine.order.PaymentOrderActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="订单支付"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.order.PaymentSuccessActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="支付成功"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name="cn.jpush.android.ui.PushActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:exported="false" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.ui.PushActivity" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="tuoyan.com.xinghuo_daying" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="cn.jpush.android.ui.PopWinActivity" -->
+        <!-- android:configChanges="orientation|keyboardHidden" -->
+        <!-- android:exported="false" -->
+        <!-- android:theme="@style/MyDialogStyle"> -->
+        <!-- <intent-filter> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="tuoyan.com.xinghuo_daying" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.umeng.socialize.media.WBShareCallBackActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation" -->
+        <!-- android:exported="false" -->
+        <!-- android:windowSoftInputMode="adjustResize" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.sina.weibo.sdk.share.WbShareTransActivity" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" /> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> &lt;!&ndash; Required SDK 核心功能 &ndash;&gt; -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <!-- <receiver android:name=".utlis.NetStateReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" /> <!-- since 3.0.9 Required SDK 核心功能 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:replace="android:configChanges" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- Required SDK核心功能 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            tools:replace="android:configChanges"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- Required SDK核心功能 -->
+        <activity
+            android:name=".ui.practice.special.SpCatalogActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="试卷目录"
+            android:screenOrientation="portrait" /> <!-- SDK核心功能 -->
+        <activity
+            android:name=".ui.ScannerActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="扫码"
+            android:screenOrientation="portrait" /> <!-- Required SDK核心功能 -->
+        <!-- <activity android:name=".ui.netLesson.order.LessonOrderActivity" /> &lt;!&ndash; Required SDK核心功能 &ndash;&gt; -->
+        <!-- <activity android:name=".ui.exercise.history.ExHistoryActivity" /> -->
+        <activity
+            android:name=".ui._public.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui._public.PDFActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="PDF详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui._public.ImageActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="图片详情"
+            android:screenOrientation="portrait" /> <!-- 3234008698f6191293503e4c -->
+        <activity
+            android:name=".ui._public.ScanResListActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="子码资源列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.myLesson.LessonWorksActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="课后作业列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.collection.CollectQuestionActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="试题收藏"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.setting.feedback.FeedbackActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="意见反馈填写"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.overPackage.EvalCardActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="电子试卷成绩报告"
+            android:screenOrientation="portrait" /> <!-- <activity android:name=".ui.exercise.special.SpecialTRActivity" /> -->
+        <!-- <activity android:name=".ui.mine.evaluation.EvaluationActivity" /> -->
+        <activity
+            android:name=".ui.books.report.BookReportActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="测评报告"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.practice.TeacherModifyDetailActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="人工批改服务介绍"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.practice.PracticeRankActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="排行榜"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.book.BookTranActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="能力强化训练"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.practice.composition.CompositionDetailWebActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="单个主观题批改中"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.practice.real.RealCETActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="智能模考列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.video.AudioLessonActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="音频课播放"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.setting.feedback.FeedActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="意见反馈列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.netLesson.myLesson.MineLessonActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="网课学习详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.spoken.MineSpokenActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize|layoutDirection|smallestScreenSize|screenLayout|mnc|uiMode|fontScale|locale|mcc|keyboard"
+            android:label="口语考试"
+            android:screenOrientation="portrait" /> <!-- 正式：698be8ff956a7e8f2ea10073     测试：beb645d59babd9ed4a5e9df6 -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="698be8ff956a7e8f2ea10073" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5785f5ae67e58eb942000341" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- <provider -->
+        <!-- android:name="cn.jpush.android.service.DataProvider" -->
+        <!-- android:authorities="tuoyan.com.xinghuo_daying.DataProvider" -->
+        <!-- android:exported="false" /> -->
+        <!-- <provider -->
+        <!-- android:name="cn.jpush.android.service.DownloadProvider" -->
+        <!-- android:authorities="tuoyan.com.xinghuo_daying.DownloadProvider" -->
+        <!-- android:exported="true" /> -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="tuoyan.com.xinghuo_dayingindex.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <receiver
+            android:name=".ui.video.MusicReceiver"
+            android:enabled="true"
+            android:exported="true" /> <!-- <receiver -->
+        <!-- android:name="cn.jpush.android.service.PushReceiver" -->
+        <!-- android:enabled="true"> -->
+        <!-- <intent-filter android:priority="1000"> -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> -->
+        <!-- <category android:name="tuoyan.com.xinghuo_daying" /> -->
+        <!-- </intent-filter> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.USER_PRESENT" /> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- &lt;!&ndash; Optional &ndash;&gt; -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.PACKAGE_ADDED" /> -->
+        <!-- <action android:name="android.intent.action.PACKAGE_REMOVED" /> -->
+        <!-- <data android:scheme="package" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver android:name="cn.jpush.android.service.AlarmReceiver" /> &lt;!&ndash; new &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name=".jpush.CustomJpushRecevier" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" /> -->
+        <!-- <category android:name="tuoyan.com.xinghuo_daying" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <service -->
+        <!-- android:name=".jpush.JPushService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:process=":pushcore"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jiguang.user.service.action" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> &lt;!&ndash; new &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name=".jpush.JPushReceiver" -->
+        <!-- android:enabled="true"> -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash; Required 用户注册SDK的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.REGISTRATION" /> -->
+        <!-- &lt;!&ndash; Required 用户接收SDK消息的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> -->
+        <!-- &lt;!&ndash; Required 用户接收SDK通知栏信息的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> -->
+        <!-- &lt;!&ndash; Required 用户打开自定义通知栏的intent &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> -->
+        <!-- &lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt; -->
+        <!-- <action android:name="cn.jpush.android.intent.CONNECTION" /> -->
+        <!-- <category android:name="tuoyan.com.xinghuo_daying" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <service -->
+        <!-- android:name=".tinker.SampleResultService" -->
+        <!-- android:exported="false" /> -->
+        <service
+            android:name=".ui.video.AudioService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.SentenceService"
+            android:enabled="true"
+            android:exported="false" /> <!-- <service android:name=".ui.video.AudioSessionService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.media.browse.MediaBrowserService" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name="cn.jpush.android.service.PushService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.REGISTER" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.REPORT" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.PushService" /> -->
+        <!-- <action android:name="cn.jpush.android.intent.PUSH_TIME" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name="cn.jpush.android.service.DaemonService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="cn.jpush.android.intent.DaemonService" /> -->
+        <!-- <category android:name="tuoyan.com.xinghuo_daying" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name="cn.jpush.android.service.DownloadService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

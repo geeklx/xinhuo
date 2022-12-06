@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10mm"
+    android:layout_marginRight="10mm"
+    android:orientation="vertical">
+
+
+    <com.geek.libglide47.base.GlideImageView
+        android:id="@+id/iv1"
+        android:layout_width="50mm"
+        android:layout_height="50mm"
+        android:layout_marginLeft="2mm"
+        android:layout_marginTop="5mm"
+        android:layout_marginRight="2mm"
+        android:layout_marginBottom="5mm"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon11"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10mm"
+        android:layout_marginTop="4mm"
+        android:layout_marginBottom="0mm"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="true"
+        android:text="ces"
+        android:textColor="@color/black"
+        android:textSize="16mm"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintLeft_toRightOf="@+id/iv1"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1mm"
+        android:layout_marginLeft="6mm"
+        android:layout_marginRight="6mm"
+        android:background="@color/view_line_color"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="@+id/iv1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

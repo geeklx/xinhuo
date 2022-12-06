@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:background="@mipmap/bg_composition_correct">
+
+        <TextView
+            android:id="@+id/tv_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/icon_detail_sort"
+            android:paddingLeft="2dp"
+            android:paddingTop="2dp"
+            android:text="02"
+            android:textColor="@color/color_8e"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_sort"
+            android:text="人工只能应用场景"
+            android:textColor="@color/color_222"
+            android:textSize="14dp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="tuoyan.com.xinghuo_dayingindex.ui.practice.special.SpecialActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_special"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="专项练习"
+            android:textColor="#222831"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_special"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_below="@+id/tb_special"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#4C84FF"
+        app:tabSelectedTextColor="#222831"
+        app:tabTextColor="#c3c7cb" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_special"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tl_special" />
+
+</RelativeLayout>

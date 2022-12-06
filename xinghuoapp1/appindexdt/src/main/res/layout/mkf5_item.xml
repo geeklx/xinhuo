@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.haier.cellarette.baselibrary.widget.LxLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6mm"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.geek.libglide47.base.GlideImageView
+        android:id="@+id/iv1"
+        android:layout_width="40mm"
+        android:layout_height="40mm"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        app:siv_border_color="@color/red"
+        app:siv_border_width="2dp"
+        app:siv_pressed_alpha="0.5"
+        app:siv_pressed_color="@color/transparent90_white"
+        app:siv_shape_type="circle" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="cecesssssss"
+        android:textColor="@color/black"
+        android:textSize="14mm" />
+
+</com.haier.cellarette.baselibrary.widget.LxLinearLayout>
+

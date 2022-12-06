@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<!--    package="com.geek.appsearch"-->
+    <application
+        android:supportsRtl="true">
+<!--        android:label="@string/app_nameappsearch"-->
+
+        <activity
+            android:name=".SearchListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <!--            android:windowSoftInputMode="stateVisible|adjustPan"-->
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.SearchListActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SearchListActivity1"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <!--            android:windowSoftInputMode="stateVisible|adjustPan"-->
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.SearchListActivity1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

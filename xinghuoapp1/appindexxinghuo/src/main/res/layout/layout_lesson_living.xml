@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:lines="1"
+        android:text="1."
+        android:textColor="@color/color_c7cad2"
+        android:textFontWeight="800"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_num"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@+id/tv_num"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="小标题小小题小标题小标题小小题小标题小标题小小题小标标题小小题小标题小标题小小题小标题"
+        android:textColor="@color/color_222"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@mipmap/icon_teacher"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="讲师姓名"
+        android:textColor="@color/color_8e"
+        android:textSize="12dp" />
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_teacher_name"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/icon_time"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:text="2020.12.12 19:00"
+        android:textColor="@color/color_8e"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_28_5467ff"
+        android:drawableLeft="@mipmap/icon_lesson_living"
+        android:drawablePadding="7dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="维护中"
+        android:textColor="@android:color/white"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_work_pre"
+        android:layout_width="70dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/tv_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/shape_14_e8ebff"
+        android:gravity="center"
+        android:text="预习"
+        android:textColor="@color/color_5467ff"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_time"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_edeff0" />
+</RelativeLayout>

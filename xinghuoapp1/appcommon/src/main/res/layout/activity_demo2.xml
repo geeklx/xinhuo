@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0mm"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_co_top1" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/page_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70mm"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/class_img"
+                        android:layout_width="35mm"
+                        android:layout_height="35mm"
+                        android:layout_marginLeft="21mm"
+                        android:layout_marginTop="24mm"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20mm"
+                        android:layout_marginTop="24mm"
+                        android:layout_toRightOf="@+id/class_img"
+                        android:text="页面1"
+                        android:textColor="#323C47"
+                        android:textSize="24mm" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15mm" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="15mm"
+                    android:background="#F8F8F8" />
+
+                <RelativeLayout
+                    android:id="@+id/page_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70mm"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/basics_img"
+                        android:layout_width="35mm"
+                        android:layout_height="35mm"
+                        android:layout_marginLeft="21mm"
+                        android:layout_marginTop="24mm"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20mm"
+                        android:layout_marginTop="24mm"
+                        android:layout_toRightOf="@+id/basics_img"
+                        android:text="页面2"
+                        android:textColor="#323C47"
+                        android:textSize="24mm" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15mm" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="15mm"
+                    android:background="#F8F8F8" />
+
+                <RelativeLayout
+                    android:id="@+id/page_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70mm"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/school_img"
+                        android:layout_width="35mm"
+                        android:layout_height="35mm"
+                        android:layout_marginLeft="21mm"
+                        android:layout_marginTop="24mm"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20mm"
+                        android:layout_marginTop="24mm"
+                        android:layout_toRightOf="@+id/school_img"
+                        android:text="页面3"
+                        android:textColor="#323C47"
+                        android:textSize="24mm" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15mm" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:layout_marginLeft="15mm"
+                    android:background="#F8F8F8" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1mm"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60mm"
+        android:background="#F6F6F6" />
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="0mm"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:fitsSystemWindows="true" />
+</LinearLayout>

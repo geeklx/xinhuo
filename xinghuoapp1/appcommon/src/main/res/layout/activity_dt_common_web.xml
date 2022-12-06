@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorE60000"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:text=""
+        android:textSize="40mm" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="60mm"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10mm"
+        android:layout_marginRight="4mm"
+        android:background="@drawable/welcome_gray111"
+        android:gravity="center"
+        android:paddingLeft="10mm"
+        android:paddingTop="4mm"
+        android:paddingRight="10mm"
+        android:paddingBottom="4mm"
+        android:text="跳过(3)"
+        android:textColor="@color/color999999"
+        android:textSize="10mm"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <include
+        layout="@layout/toorbar_common_dt"
+         />
+
+</RelativeLayout>

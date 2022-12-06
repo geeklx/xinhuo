@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.MainActivity">
+
+    <View
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_rg"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_grade"
+        app:layout_constraintTop_toBottomOf="@+id/top">
+
+        <RadioGroup
+            android:id="@+id/rg_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <RadioButton
+                android:id="@+id/rb_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:checked="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="四六级"
+                android:textColor="@color/color_222_7d"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="考研"
+                android:textColor="@color/color_222_7d"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="专四专八"
+                android:textColor="@color/color_222_7d"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="专四专八"
+                android:textColor="@color/color_222_7d"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_shadow_ff"
+        app:layout_constraintBottom_toBottomOf="@+id/hs_rg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hs_rg" />
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/hs_rg"
+        app:layout_constraintRight_toRightOf="@+id/hs_rg"
+        app:layout_constraintTop_toTopOf="@+id/hs_rg" />
+
+    <ImageView
+        android:id="@+id/img_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="切换学段"
+        android:padding="10dp"
+        android:src="@mipmap/icon_grade"
+        app:layout_constraintBottom_toBottomOf="@+id/hs_rg"
+        app:layout_constraintRight_toLeftOf="@+id/img_scan"
+        app:layout_constraintTop_toTopOf="@+id/hs_rg" />
+
+    <ImageView
+        android:id="@+id/img_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:contentDescription="扫码"
+        android:padding="10dp"
+        android:src="@mipmap/icon_scan_home"
+        app:layout_constraintBottom_toBottomOf="@+id/hs_rg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hs_rg" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hs_rg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

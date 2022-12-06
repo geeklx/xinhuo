@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_15_fff">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="17dp"
+        android:text="老师评价"
+        android:textColor="#ff222222"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="收集你的真实反馈，\n
+动动手指点亮小星星哦~"
+        android:textColor="#ff222222"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+    <LinearLayout
+        android:layout_marginTop="28dp"
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程内容"
+            android:textColor="#ff222222"
+            android:textSize="14sp" />
+
+        <tuoyan.com.xinghuo_dayingindex.widegt.ratingbar.AndRatingBar
+            android:id="@+id/rb_1"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            app:bgDrawable="@drawable/ic_appraise_no_check"
+            app:keepOriginColor="true"
+            app:starDrawable="@drawable/ic_appraise_check"
+            app:starSpacing="8dp"></tuoyan.com.xinghuo_dayingindex.widegt.ratingbar.AndRatingBar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/ll_1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程方法"
+            android:textColor="#ff222222"
+            android:textSize="14sp" />
+
+        <tuoyan.com.xinghuo_dayingindex.widegt.ratingbar.AndRatingBar
+            android:id="@+id/rb_2"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            app:bgDrawable="@drawable/ic_appraise_no_check"
+            app:keepOriginColor="true"
+            app:starDrawable="@drawable/ic_appraise_check"
+            app:starSpacing="8dp"></tuoyan.com.xinghuo_dayingindex.widegt.ratingbar.AndRatingBar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingBottom="16dp"
+        android:id="@+id/ll_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/ll_2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="课程效果"
+            android:textColor="#ff222222"
+            android:textSize="14sp" />
+
+        <tuoyan.com.xinghuo_dayingindex.widegt.ratingbar.AndRatingBar
+            android:id="@+id/rb_3"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="15dp"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            app:bgDrawable="@drawable/ic_appraise_no_check"
+            app:keepOriginColor="true"
+            app:starDrawable="@drawable/ic_appraise_check"
+            app:starSpacing="8dp"></tuoyan.com.xinghuo_dayingindex.widegt.ratingbar.AndRatingBar>
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_notice"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ll_3"
+        tools:text="您“课程内容/课程方法/课程效果”未打分，请打分后提交哦！"
+        android:textColor="#ffff2e00"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/shape_21_gradient_32caff_008aff"
+        android:paddingLeft="67dp"
+        android:paddingTop="10dp"
+        android:paddingRight="67dp"
+        android:paddingBottom="10dp"
+        android:text="提交"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notice" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_close_appraise"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"></ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

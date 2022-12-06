@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_content"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginLeft="7.5dp"
+    android:layout_marginRight="7.5dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/shape_30_f5f6f9"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:maxLines="2"
+    android:textColor="@color/color_222_c4cbde"
+    android:textSize="17dp"
+    tools:text="单词" />

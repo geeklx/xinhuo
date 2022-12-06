@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+#/settings.gradle
+.DS_Store
+/build
+/yewulibs-demo1/atinkerbakApk/
+.idea
+/captures
+.externalNativeBuild
+*.bat
+/tmpmob
+/biz-libs

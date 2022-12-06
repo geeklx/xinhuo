@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="60dp"
+    android:layout_height="60dp">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/shape_12_0d000000_fff">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/free_lav_play"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/shape_gradient_ff9400_ff0000"
+            android:padding="5dp"
+            app:lottie_imageAssetsFolder="images"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/free_audition" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/free_lav_play"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="免费试听"
+            android:textColor="#ff222222"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

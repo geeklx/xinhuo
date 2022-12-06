@@ -1,0 +1,9 @@
+apply from: './../../commonlibsapks.gradle'
+def librarys = rootProject.ext.dependencies //
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.github.GeekCodesTeam.geeklibs:libgeek:3.5.6'
+    bxnt_nationImplementation project(':yewulibs1:yewulibs1-bizyewu2')
+    bxny_nationImplementation project(':yewulibs1:yewulibs1-bizyewu2')
+    bxn_nationImplementation project(':yewulibs1:yewulibs1-bizyewu2')
+}

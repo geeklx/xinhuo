@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF1F2F4"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50mm"
+        android:background="@color/defaultred"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_co_top2" />
+
+        <RelativeLayout
+            android:id="@+id/ll_jbxx"
+            android:layout_width="match_parent"
+            android:layout_height="114mm"
+            android:layout_marginTop="10mm"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/edt_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/content_num"
+                android:layout_alignParentTop="true"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:minLines="4"
+                android:paddingLeft="10mm"
+                android:paddingTop="6mm"
+                android:paddingRight="10mm"
+                android:textColor="#555555"
+                android:hint="请输入..."
+                android:textSize="14mm" />
+
+            <TextView
+                android:id="@+id/content_num"
+                android:layout_width="wrap_content"
+                android:layout_height="15mm"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10mm"
+                android:layout_marginTop="5mm"
+                android:layout_marginRight="10mm"
+                android:layout_marginBottom="10mm"
+                android:layout_toLeftOf="@+id/tv_clear"
+                android:text="0/50"
+                android:textColor="#BBBBBB"
+                android:textSize="13mm" />
+
+            <TextView
+                android:id="@+id/tv_clear"
+                android:layout_width="12mm"
+                android:layout_height="12mm"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10mm"
+                android:layout_marginBottom="10mm"
+                android:background="@drawable/icon_my_close"
+                 />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

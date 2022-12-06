@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E60000"
+        android:paddingTop="6mm"
+        android:paddingBottom="6mm">
+
+        <com.haier.cellarette.baselibrary.shuaxinviewanimation.LxShimmerLayout
+            android:id="@+id/shimmer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            app:shimmer_animation_duration="6200"
+            app:shimmer_auto_start="true"
+            app:shimmer_color="#FFE7B6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_bkg2" />
+        </com.haier.cellarette.baselibrary.shuaxinviewanimation.LxShimmerLayout>
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="20mm"
+            android:layout_height="20mm"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10mm"
+            android:src="@drawable/ssdk_country_search_icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/mkdemo1_page_0_item_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:background="@color/line_gray" />
+
+                <FrameLayout
+                    android:id="@+id/mkdemo1_page_0_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:background="@color/line_gray" />
+
+                <FrameLayout
+                    android:id="@+id/mkdemo1_page_0_item_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:background="@color/line_gray" />
+
+                <FrameLayout
+                    android:id="@+id/mkdemo1_page_0_item_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:background="@color/line_gray" />
+
+                <FrameLayout
+                    android:id="@+id/mkdemo1_page_0_item_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1mm"
+                    android:background="@color/line_gray" />
+
+                <FrameLayout
+                    android:id="@+id/mkdemo1_page_0_item_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

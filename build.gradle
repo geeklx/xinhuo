@@ -1,0 +1,109 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "buildconfig.gradle"
+buildscript {
+    ext.kotlin_version = '1.7.20'
+    ext.anko_version = '0.10.8'
+    repositories {
+        google()
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "https://mvn.mob.com/android" }
+        maven { url "https://frontjs-static.pgyer.com/dist/sdk/pgyersdk" }  //主力仓库
+        //
+        maven { url 'https://repo1.maven.org/maven2/' }
+        // 线上maven
+        maven {
+            allowInsecureProtocol = true
+            url 'http://nexus-app.bokecc.com/repository/sdk-group/'
+        }
+        maven { url 'https://plugins.gradle.org/m2/' }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+//        classpath 'com.meituan.android.walle:plugin:1.1.7'
+        classpath 'com.github.Petterpx.walle:plugin:1.0.4'
+        classpath "io.realm:realm-gradle-plugin:4.3.0"
+//        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0' // add plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // 集成MobPush
+        classpath "com.mob.sdk:MobSDK:+"
+//        // hms
+//        classpath 'com.huawei.agconnect:agcp:1.4.1.300'
+        //
+//        classpath "com.alibaba:arouter-register:1.0.2"
+    }
+//configurations.all {
+//    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+//}
+}
+
+allprojects {
+    repositories {
+        //
+        google()
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url "https://mvn.mob.com/android" }
+        maven { url "https://frontjs-static.pgyer.com/dist/sdk/pgyersdk" }  //主力仓库
+        //
+        maven { url 'https://repo1.maven.org/maven2/' }
+        // 线上maven
+        maven {
+            allowInsecureProtocol = true
+            url 'http://nexus-app.bokecc.com/repository/sdk-group/'
+        }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        //
+//        google()
+//        jcenter()
+//        mavenCentral()
+//        maven { url 'https://repo1.maven.org/maven2/' }
+//        // 线上maven
+//        maven {
+//            allowInsecureProtocol = true
+//            url 'http://nexus-app.bokecc.com/repository/sdk-group/'
+//        }
+//        maven { url 'https://plugins.gradle.org/m2/' }
+//        maven { url "https://jitpack.io" }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/public' }
+//        maven { url "https://mvn.mob.com/android" }
+//        maven { url "https://frontjs-static.pgyer.com/dist/sdk/pgyersdk" }  //主力仓库
+        //
+//        maven {
+//            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+//        }
+//        maven {
+//            url "http://maven.rongcloud.cn/repository/maven-releases/"
+//            allowInsecureProtocol = true
+//        }
+//        maven {
+//            url 'http://developer.huawei.com/repo/'
+//            allowInsecureProtocol = true
+//        }
+
+//        flatDir {
+//            dirs project(':libsCenter').file('./')
+//            dirs project(':biz-libs').file('./')
+//        }
+    }
+//configurations.all {
+//    resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds'
+//}
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

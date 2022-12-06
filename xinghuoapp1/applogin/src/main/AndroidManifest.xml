@@ -1,0 +1,152 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    package="com.geek.applogin"-->
+    <application android:supportsRtl="true">
+        <!--        android:allowBackup="true"-->
+        <!--        android:label="@string/app_namelogin"-->
+
+        <!--        <activity-->
+        <!--            android:name=".LoginActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="portrait">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="${applicationId}.hs.act.slbapp.LoginActivity" />-->
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+        <activity
+            android:name=".demo.LoginOutActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.LoginOutActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.ZhuceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.ZhuceActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.WangjiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.WangjiActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".demo.ChongzhiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.ChongzhiActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--登录bufen-->
+        <activity
+            android:name=".SlbLoginNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.SlbLoginActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:pathPattern="/${applicationId}.hs.act.slbapp.SlbLoginActivity"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <!--        <activity-->
+        <!--            android:name=".winter.SlbLoginTelActivity"-->
+        <!--            android:exported="false"-->
+        <!--            android:screenOrientation="portrait">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="${applicationId}.hs.act.slbapp.SlbLoginTelActivity" />-->
+        <!--                <category android:name="android.intent.category.DEFAULT" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+        <activity
+            android:name=".SlbLoginOutActivity"
+            android:exported="true"
+            android:theme="@style/ThemeTransparent2">
+<!--            android:theme="@style/Theme.AppCompat.Translucent"-->
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.SlbLoginOutActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".phone.PhoneAct1"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.PhoneAct1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".phone.PhoneAct2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.PhoneAct2" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.PhoneAct2"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".phone.PhoneAct3"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.PhoneAct3" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MyChangePwdAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.MyChangePwdAct" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

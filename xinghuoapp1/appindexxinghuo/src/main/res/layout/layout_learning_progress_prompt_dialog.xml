@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:paddingBottom="183dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="183dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cl"></View>
+
+        <ImageView
+            android:layout_width="230dp"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_learning_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_learning_text"
+            android:layout_width="230dp"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:src="@drawable/ic_learning_good_job"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_emo"
+            android:layout_width="230dp"
+            android:layout_height="170dp"
+            android:src="@drawable/ic_learning_notice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"></ImageView>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            tools:ignore="MissingConstraints"></View>
+
+        <RelativeLayout
+            android:id="@+id/cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="29dp"
+                android:background="@drawable/shape_12_fffac8"
+                tools:ignore="MissingConstraints"></TextView>
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#FFC800"
+                android:textSize="18sp"
+                tools:text="你已完成所有必修课"></TextView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_40px_fff"
+            android:gravity="center"
+            android:paddingTop="23dp"
+            android:paddingBottom="54dp"
+            android:textColor="#222222"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl"
+            tools:ignore="MissingConstraints"
+            tools:text="恭喜你\n 距离过级更近喽!"></TextView>
+
+
+        <ImageView
+
+            android:id="@+id/ic_close"
+            android:layout_width="44dp"
+            android:layout_height="74dp"
+            android:paddingTop="30dp"
+            android:src="@drawable/ic_learning_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_2"
+            tools:ignore="MissingConstraints"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv_flower"
+        android:layout_width="375dp"
+        android:layout_height="360dp"
+       >
+
+    </ImageView>
+
+</RelativeLayout>

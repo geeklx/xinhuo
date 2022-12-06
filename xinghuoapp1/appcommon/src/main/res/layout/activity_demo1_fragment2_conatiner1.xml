@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--    <com.geek.libbase.emptyview.EmptyViewNewNew-->
+<!--        android:id="@+id/emptyView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:visibility="gone"-->
+<!--        app:errornet_layout="@layout/empty_error1"-->
+<!--        app:loading_layout="@layout/empty_loading"-->
+<!--        app:nodata_layout="@layout/empty_nodata"-->
+<!--        app:unreachable_layout="@layout/empty_error" />-->
+
+    <FrameLayout
+        android:id="@+id/fl_demo2_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geek.appindexdt">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_nameappindexdt"
+        android:supportsRtl="true">
+        <activity
+            android:name=".IndexAct"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false">
+            <!--            android:windowSoftInputMode="stateVisible|adjustPan"-->
+            <intent-filter>
+                <action android:name="${applicationId}.hs.act.slbapp.IndexAct1" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cs.znclass.com"
+                    android:path="/${applicationId}.hs.act.slbapp.IndexAct1"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="app" />
+                <data android:scheme="dataability" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

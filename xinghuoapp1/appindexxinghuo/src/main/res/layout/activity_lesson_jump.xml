@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_lesson_jump">
+
+
+    <TextView
+        android:id="@+id/tv_lesson_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:textColor="@android:color/white"
+        android:textSize="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_lesson_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="即将进入课程..."
+        android:textColor="@color/color_aec7ff"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:src="@mipmap/img_lesson_jump" />
+</RelativeLayout>

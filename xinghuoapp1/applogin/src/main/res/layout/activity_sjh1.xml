@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorE5E5E5">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_co_top" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1mm"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/loginstyle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54mm"
+                android:gravity="center"
+                android:text="@string/applogin16"
+                android:textSize="15mm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="56mm"
+                android:layout_marginRight="30mm"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/applogin17"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15mm" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10mm"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textinputlayout1"
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applogin10"
+                        android:orientation="vertical"
+                        android:textColorHint="@color/color_dcdcdc"
+                        app:errorEnabled="false"
+                        app:errorTextAppearance="@style/ErrorText"
+                        app:hintAnimationEnabled="false"
+                        app:hintTextAppearance="@style/ErrorText">
+
+                        <!--            android:fontFamily="sans-serif-light"-->
+                        <!--            android:textStyle="italic"-->
+
+
+                        <EditText
+                            android:id="@+id/edt1"
+                            android:layout_width="200mm"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10mm"
+                            android:background="@null"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:paddingTop="10mm"
+                            android:paddingBottom="10mm"
+                            android:text=""
+                            android:textAllCaps="true"
+                            android:textColor="@color/black_000"
+                            android:textCursorDrawable="@drawable/common_ed_bg1"
+                            android:textSize="16mm" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5mm"
+                            android:background="#D8D8D8" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_xx"
+                        android:layout_width="20mm"
+                        android:layout_height="20mm"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="20mm"
+                        android:src="@drawable/hxkt_icon_xx"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="33mm"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/applogin18"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15mm" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10mm"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textinputlayout2"
+                        style="@style/Widget.Design.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/applogin19"
+                        android:orientation="vertical"
+                        android:textColorHint="@color/color_dcdcdc"
+                        app:hintAnimationEnabled="false"
+                        app:hintTextAppearance="@style/ErrorText">
+
+                        <!--            android:fontFamily="sans-serif-light"-->
+                        <!--            android:textStyle="italic"-->
+
+                        <EditText
+                            android:id="@+id/edt2"
+                            android:layout_width="200mm"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10mm"
+                            android:background="@null"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:paddingTop="10mm"
+                            android:paddingBottom="10mm"
+                            android:text=""
+                            android:textAllCaps="true"
+                            android:textColor="@color/black_000"
+                            android:textCursorDrawable="@drawable/common_ed_bg1"
+                            android:textSize="16mm" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5mm"
+                            android:background="#D8D8D8" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/tv_hqyzm"
+                        android:layout_width="104mm"
+                        android:layout_height="30mm"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10mm"
+                        android:background="@drawable/bg_hqyzm1"
+                        android:gravity="center"
+                        android:text="@string/applogin20"
+                        android:textColor="@color/color1376F6"
+                        android:textSize="12mm" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/tv1"
+                android:layout_width="308mm"
+                android:layout_height="50mm"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25mm"
+                android:background="@drawable/btn_denglu2_enpressed"
+                android:gravity="center"
+                android:text="@string/applogin4"
+                android:textColor="@color/tv_comm2"
+                android:textSize="16mm" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

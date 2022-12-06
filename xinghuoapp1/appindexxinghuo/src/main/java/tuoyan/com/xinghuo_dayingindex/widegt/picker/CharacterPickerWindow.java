@@ -1,0 +1,113 @@
+package tuoyan.com.xinghuo_dayingindex.widegt.picker;
+
+import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
+import androidx.annotation.NonNull;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.PopupWindow;
+
+import java.util.List;
+
+import tuoyan.com.xinghuo_dayingindex.R;
+
+
+/**
+ * @version 0.1 king 2015-11
+ */
+public class CharacterPickerWindow extends PopupWindow implements View.OnClickListener {
+    private final View rootView; // 总的布局
+    private final View btnSubmit, btnCancel;
+    private final CharacterPickerView pickerView;
+    private OnOptionChangedListener optionsSelectListener;
+    private static final String TAG_SUBMIT = "submit";
+    private static final String TAG_CANCEL = "cancel";
+
+    public CharacterPickerWindow(Context context) {
+        super(context);
+        this.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+        this.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+        this.setBackgroundDrawable(new BitmapDrawable());// 这样设置才能点击屏幕外dismiss窗口
+        this.setOutsideTouchable(true);
+        this.setAnimationStyle(R.style.j_timepopwindow_anim_style);
+
+        LayoutInflater mLayoutInflater = LayoutInflater.from(context);
+        rootView = mLayoutInflater.inflate(R.layout.picker_dialog, null);
+        // -----确定和取消按钮
+        btnSubmit = rootView.findViewById(R.id.j_btnSubmit);
+        btnSubmit.setTag(TAG_SUBMIT);
+        btnCancel = rootView.findViewById(R.id.j_btnCancel);
+        btnCancel.setTag(TAG_CANCEL);
+        btnSubmit.setOnClickListener(this);
+        btnCancel.setOnClickListener(this);
+        // ----转轮
+        pickerView = (CharacterPickerView) rootView.findViewById(R.id.j_optionspicker);
+        setContentView(rootView);
+    }
+
+    public CharacterPickerView getPickerView() {
+        return pickerView;
+    }
+
+    public void setPicker(@NonNull List<? extends Option> optionsItems) {
+        pickerView.setPicker(optionsItems);
+    }
+
+
+    /**
+     * 设置选中的item位置
+     *
+     * @param option1
+     */
+    public void setSelectOptions(int option1) {
+        pickerView.setCurrentItems(option1, 0, 0);
+    }
+
+    /**
+     * 设置选中的item位置
+     *
+     * @param option1
+     * @param option2
+     */
+    public void setSelectOptions(int option1, int option2) {
+        pickerView.setCurrentItems(option1, option2, 0);
+    }
+
+    /**
+     * 设置选中的item位置
+     *
+     * @param option1
+     * @param option2
+     * @param option3
+     */
+    public void setSelectOptions(int option1, int option2, int option3) {
+        pickerView.setCurrentItems(option1, option2, option3);
+    }
+
+    /**
+     * 设置是否循环滚动
+     *
+     * @param cyclic
+     */
+    public void setCyclic(boolean cyclic) {
+        pickerView.setCyclic(cyclic);
+    }
+
+    @Override
+    public void onClick(View v) {
+        String tag = (String) v.getTag();
+        if (!tag.equals(TAG_CANCEL)) {
+            if (optionsSelectListener != null) {
+                int[] optionsCurrentItems = pickerView.getCurrentItems();
+                optionsSelectListener.onOptionChanged(optionsCurrentItems[0], optionsCurrentItems[1], optionsCurrentItems[2]);
+            }
+        }
+        dismiss();
+    }
+
+    public void setOnoptionsSelectListener(
+            OnOptionChangedListener optionsSelectListener) {
+        this.optionsSelectListener = optionsSelectListener;
+    }
+}

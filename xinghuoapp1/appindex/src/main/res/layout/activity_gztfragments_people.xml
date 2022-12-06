@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50mm"
+        android:background="@color/colorE60000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_co_top2" />
+
+        <FrameLayout
+            android:id="@+id/container_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--    <fragment-->
+            <!--        android:id="@+id/f1"-->
+            <!--        android:name="com.geek.appindex.index.ShouyeF5"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="match_parent" />-->
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

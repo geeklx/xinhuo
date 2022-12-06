@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_top_15_fff">
+
+    <TextView
+        android:id="@+id/tv_speed_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="倍速设置"
+        android:textColor="@color/color_222"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_15_f5f6f9"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_speed_title"
+        app:spanCount="7"
+        tools:itemCount="7"
+        tools:listitem="@layout/layout_speed" />
+
+    <TextView
+        android:id="@+id/tv_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="间隔时间"
+        android:textColor="@color/color_222"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlv_speed" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_15_f5f6f9"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_title"
+        app:spanCount="7"
+        tools:itemCount="7"
+        tools:listitem="@layout/layout_speed" />
+
+    <TextView
+        android:id="@+id/tv_num_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="循环次数"
+        android:textColor="@color/color_222"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlv_time" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_15_f5f6f9"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num_title"
+        app:spanCount="7"
+        tools:itemCount="7"
+        tools:listitem="@layout/layout_speed" />
+
+    <TextView
+        android:id="@+id/temp1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="循环结束后，继续播放下一句"
+        android:textColor="@color/color_222"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlv_num" />
+
+    <ImageView
+        android:id="@+id/img_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="center"
+        android:src="@drawable/icon_switch"
+        app:layout_constraintBottom_toBottomOf="@id/temp1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp1" />
+
+    <TextView
+        android:id="@+id/temp2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:text="句末播放提示音"
+        android:textColor="@color/color_222"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp1" />
+
+    <ImageView
+        android:id="@+id/img_warming"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:scaleType="center"
+        android:src="@drawable/icon_switch"
+        app:layout_constraintBottom_toBottomOf="@id/temp2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp2" />
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:scaleType="center"
+        android:src="@mipmap/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

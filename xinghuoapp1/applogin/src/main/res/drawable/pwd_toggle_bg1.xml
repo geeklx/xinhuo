@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/visible" android:drawable="@drawable/icon_eyes22" android:state_checked="true" />
+
+    <item android:id="@+id/masked" android:drawable="@drawable/icon_eyes11" />
+
+    <transition android:drawable="@drawable/icon_eyes22" android:fromId="@id/masked" android:toId="@id/visible" />
+
+    <transition android:drawable="@drawable/icon_eyes11" android:fromId="@id/visible" android:toId="@id/masked" />
+
+</selector>

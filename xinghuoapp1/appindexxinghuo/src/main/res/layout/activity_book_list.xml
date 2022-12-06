@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f6f9"
+    android:orientation="vertical"
+    tools:context=".ui.books.list.BookListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_book_list"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="44dp"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#222831"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <tuoyan.com.xinghuo_dayingindex.widegt.FlyBanner
+        android:id="@+id/banner_book"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        app:dimensionRatio="w,100:335"
+        app:default_banner="@android:color/white"
+        app:radius1="12"
+        app:points_visibility="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_book_list"
+        app:layout_scrollFlags="scroll" />
+
+    <HorizontalScrollView
+        android:id="@+id/hs_b"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_goneMarginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:scrollbars="none"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner_book">
+
+        <RadioGroup
+            android:id="@+id/rg_book"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RadioButton
+                android:id="@+id/rb_one"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawableLeft="@drawable/shape_book"
+                android:checked="true"
+                android:gravity="center"
+                android:text="四级"
+                android:textStyle="bold"
+                android:textColor="@drawable/color_008aff_c4cbde"
+                android:textSize="16dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/v_1"
+                android:layout_width="2dp"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_edeff0" />
+
+            <RadioButton
+                android:id="@+id/rb_two"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textStyle="bold"
+                android:paddingRight="15dp"
+                android:text="六级"
+                android:textColor="@drawable/color_008aff_c4cbde"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/v_2"
+                android:layout_width="2dp"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_edeff0" />
+
+            <RadioButton
+                android:id="@+id/rb_three"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textStyle="bold"
+                android:paddingRight="15dp"
+                android:text="考研"
+                android:textColor="@drawable/color_008aff_c4cbde"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/v_3"
+                android:layout_width="2dp"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_edeff0" />
+
+            <RadioButton
+                android:id="@+id/rb_four"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="专四"
+                android:textColor="@drawable/color_008aff_c4cbde"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/v_4"
+                android:layout_width="2dp"
+                android:layout_height="13dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_edeff0" />
+
+            <RadioButton
+                android:id="@+id/rb_five"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:textStyle="bold"
+                android:paddingRight="15dp"
+                android:text="专八"
+                android:textColor="@drawable/color_008aff_c4cbde"
+                android:textSize="16dp"
+                android:visibility="gone" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_book_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hs_b" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:title="">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:onClick="onBack"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="3dp"
+            android:text="核心词汇"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:paddingStart="15dp" />
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="@drawable/bg_shadow_up"-->
+    <!--android:layout_height="3dp"/>-->
+    <LinearLayout
+        android:id="@+id/ll_core"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_ffffff"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <Button
+            android:id="@+id/btn_learn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_5_4c84ff"
+            android:onClick="learn"
+            android:text="去学习"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15dp" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_review"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_5_c3c7cb"
+            android:onClick="review"
+            android:text="复习"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wrong"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/color_ffffff"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_5_4c84ff"
+            android:onClick="eliminate"
+            android:text="消灭错词"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/srfl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctl_search"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@android:color/white"
+                app:layout_scrollFlags="scroll">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_10_f9fafc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/et_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toLeftOf="@+id/tv_sub"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入网课/过级包激活码"
+                        android:textColor="@color/color_222831"
+                        android:textColorHint="@color/color_c4cbde"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_sub"
+                        android:background="@color/color_edeff0" />
+
+                    <TextView
+                        android:id="@+id/tv_sub"
+                        android:layout_width="66dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="兑换"
+                        android:textColor="@color/color_222"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:text="今日课程"
+                android:textColor="@color/color_222"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_scrollFlags="scroll" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_today_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:layout_scrollFlags="scroll"
+                tools:itemCount="3"
+                tools:listitem="@layout/layout_today_class_item" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_n_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="我的课程"
+                    android:textColor="@color/color_222"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_all_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（0）"
+                    android:textColor="@color/color_222"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_n_title"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_n_title"
+                    app:layout_constraintTop_toTopOf="@+id/tv_n_title" />
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="管理"
+                    android:textColor="@color/color_afb3bf_ff5200"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_n_title"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_n_title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/layout_study_class_item" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</tuoyan.com.xinghuo_dayingindex.widegt.MySwipeRefreshLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_download"
+        android:drawableLeft="@drawable/ic_table_play"
+        android:drawablePadding="15dp"
+        android:textColor="#222831"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/ic_table_load"
+        android:drawablePadding="5dp"
+        android:text="录播 xxxxx"
+        android:textColor="#c7c7cb"
+        android:textSize="11dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_download_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/tv_download"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_download_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#c7c7cb"
+            android:textSize="11dp"
+            android:visibility="visible"
+            tools:text="42M / 187M  1.2MB/s" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="删除"
+            android:textColor="#c7c7cb"
+            android:textSize="11dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/tv_download_info"
+            android:layout_marginTop="3dp"
+            android:max="100"
+            android:progress="10"
+            android:progressDrawable="@drawable/bg_progress_special" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_download_info"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:background="#edeff0" />
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="40dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_download_start"
+        android:gravity="center"
+        android:text="下载"
+        android:textColor="#4c84ff"
+        android:textSize="12dp" />
+</RelativeLayout>

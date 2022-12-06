@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_lesson_name"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/selector_f5f6f9_e7f4ff"
+    android:gravity="center"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    android:textColor="@drawable/color_008aff_222"
+    android:textSize="14dp"
+    android:textStyle="bold"
+    tools:text="课程课程课程" />

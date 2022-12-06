@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tv_sort"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="01"
+        android:textColor="@color/color_c4cbde"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_invisible"
+        app:layout_constraintRight_toLeftOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_invisible" />
+
+    <TextView
+        android:id="@+id/tv_invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="用于确定位置"
+        android:textColor="@color/color_222"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="标题"
+        android:textColor="@color/color_222"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="35dp"
+        android:layout_height="18dp"
+        android:background="@drawable/shape_9_ffea00"
+        android:gravity="center"
+        android:text="必修"
+        android:textColor="@color/color_222"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_invisible" />
+
+    <ImageView
+        android:id="@+id/img_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/icon_learned_two"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_invisible"
+        app:layout_constraintLeft_toRightOf="@id/tv_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_invisible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_living_state"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:background="@drawable/shape_8_5467ff"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_teacher"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_teacher">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lav_living"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_living_state"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/lottie_living" />
+
+        <TextView
+            android:id="@+id/tv_living_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="直播中"
+            android:textColor="@android:color/white"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="老师姓名"
+        android:textColor="@color/color_afb3bf"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@+id/ctl_living_state"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_goneMarginLeft="0dp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="2020.11.11 00:00"
+        android:textColor="@color/color_afb3bf"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_teacher" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_pre"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_12_f9fafc"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time">
+
+        <TextView
+            android:id="@+id/tv_pre_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="预习"
+            android:textColor="@color/color_222"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_pre_state"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pre_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未学习"
+            android:textColor="@color/color_c4cbde"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pre_t"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_12_f9fafc"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctl_common"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/v1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@color/color_222"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_1_state"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_1_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/color_c4cbde"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_1"
+                app:layout_constraintRight_toRightOf="@+id/tv_1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="@drawable/shape_1_edeff0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ctl_common"
+            app:layout_constraintRight_toLeftOf="@+id/ctl_b_pre"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctl_b_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/v1"
+            app:layout_constraintRight_toLeftOf="@+id/v2"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:text="预习"
+                android:textColor="@color/color_222"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_2_state"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_2_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未学习"
+                android:textColor="@color/color_c4cbde"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_2"
+                app:layout_constraintRight_toRightOf="@+id/tv_2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="@drawable/shape_1_edeff0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ctl_b_pre"
+            app:layout_constraintRight_toLeftOf="@+id/ctl_work"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctl_work"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/v2"
+            app:layout_constraintRight_toLeftOf="@+id/v3"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:text="课后作业"
+                android:textColor="@color/color_222"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tv_3_state"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_3_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未学习"
+                android:textColor="@color/color_c4cbde"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_3"
+                app:layout_constraintRight_toRightOf="@+id/tv_3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/v3"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="@drawable/shape_1_edeff0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ctl_work"
+            app:layout_constraintRight_toLeftOf="@+id/tv_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="上课"
+            android:textColor="@color/color_222"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_4_state"
+            app:layout_constraintLeft_toRightOf="@+id/v3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_4_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未学习"
+            android:textColor="@color/color_c4cbde"
+            android:textSize="10dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_4"
+            app:layout_constraintRight_toRightOf="@+id/tv_4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/icon_lesson_end"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/ctl_bottom"
+        app:layout_constraintRight_toRightOf="@+id/ctl_bottom"
+        app:layout_goneMarginBottom="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

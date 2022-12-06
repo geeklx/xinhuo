@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F6F6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.geek.libbase.widgets.XRecyclerView
+            android:id="@+id/rv_others"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10mm"
+            android:layout_marginRight="10mm"
+            android:overScrollMode="never"
+            android:paddingBottom="10mm"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_go"
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_18_fff"
+        android:gravity="center"
+        android:text="去完成"
+        android:textStyle="bold"
+        android:textColor="@drawable/color_5467ff_c4cbde"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:lineHeight="20dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:text="小节小节小节小节小节小节小节小节小节小节小节小节小节小节小节小节"
+        android:textColor="@color/color_222"
+        android:textSize="16dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_go"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_work_state"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/shape_10_5467ff"
+        android:gravity="center"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="直播"
+        android:textColor="@android:color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="开课时间"
+        android:textColor="@color/color_afb3bf"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_work_state"
+        app:layout_constraintLeft_toRightOf="@+id/tv_work_state"
+        app:layout_constraintTop_toTopOf="@+id/tv_work_state" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

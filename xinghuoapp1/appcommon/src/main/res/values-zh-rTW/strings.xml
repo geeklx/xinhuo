@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_nameappcommon" translatable="false">繁體</string>
+    <string name="appmy1" translatable="false">設定</string>
+    <string name="appmy2" translatable="false">安全中心</string>
+    <string name="appmy3" translatable="false">字體大小</string>
+    <string name="appmy4" translatable="false">語言切換</string>
+    <string name="appmy5" translatable="false">清除緩存</string>
+    <string name="appmy6" translatable="false">關於</string>
+    <string name="appmy7" translatable="false">新消息通知</string>
+    <string name="appmy8" translatable="false">退出</string>
+    <string name="appmy9" translatable="false">版本號</string>
+    <string name="appmy10" translatable="false">客服電話</string>
+    <string name="appmy11" translatable="false">功能簡介</string>
+    <string name="appmy12" translatable="false">用戶協議</string>
+    <string name="appmy13" translatable="false">隱私政策</string>
+    <string name="appmy14" translatable="false">安全中心</string>
+    <string name="appmy15" translatable="false">修改密碼</string>
+    <string name="appmy16" translatable="false">手機號碼變更</string>
+    <string name="appmy17" translatable="false">座機變更</string>
+    <string name="appmy18" translatable="false">郵箱變更</string>
+    <string name="appmy19" translatable="false">未設定</string>
+    <string name="appmy20" translatable="false">我的二維碼</string>
+    <string name="appmy21" translatable="false">請填寫…</string>
+    <string name="appmy22" translatable="false">指紋登入</string>
+    <string name="appmy23" translatable="false">頭像</string>
+    <string name="appmy24" translatable="false">姓名</string>
+    <string name="appmy25" translatable="false">手機號</string>
+    <string name="appmy26" translatable="false">性別</string>
+    <string name="appmy27" translatable="false">個人簽名</string>
+    <string name="appmy28" translatable="false">所屬組織</string>
+    <string name="appmy29" translatable="false">職位</string>
+    <string name="appmy30" translatable="false">個人資料</string>
+
+    <string name="applogin1" translatable="false">提示</string>
+    <string name="applogin2" translatable="false">是否登出？</string>
+    <string name="applogin3" translatable="false">取消</string>
+    <string name="applogin4" translatable="false">確定</string>
+    <string name="applogin5" translatable="false">歡迎使用</string>
+    <string name="applogin6" translatable="false">登录即代表同意</string>
+    <string name="applogin7" translatable="false">用戶協議</string>
+    <string name="applogin8" translatable="false">及</string>
+    <string name="applogin9" translatable="false">隱私政策</string>
+    <string name="applogin10" translatable="false">請輸入手機號</string>
+    <string name="applogin11" translatable="false">請輸入密碼</string>
+    <string name="applogin12" translatable="false">登入</string>
+    <string name="applogin13" translatable="false">忘記密碼？</string>
+    <string name="applogin14" translatable="false">立即注册</string>
+    <string name="applogin15" translatable="false">綁定手機號</string>
+    <string name="applogin16" translatable="false">為了您的帳號更加安全，請先綁定手機</string>
+    <string name="applogin17" translatable="false">手機號</string>
+    <string name="applogin18" translatable="false">驗證碼</string>
+    <string name="applogin19" translatable="false">請輸入驗證碼</string>
+    <string name="applogin20" translatable="false">獲取驗證碼</string>
+    <string name="applogin21" translatable="false">忘記密碼</string>
+    <string name="applogin22" translatable="false">請輸入新密碼</string>
+    <string name="applogin23" translatable="false">請再次輸入新密碼</string>
+    <string name="applogin24" translatable="false">登入密碼必須包含大小寫字母、數位，8-18比特</string>
+    <string name="applogin25" translatable="false">請再次輸入新密碼</string>
+    <string name="applogin26" translatable="false">重置密碼</string>
+    <string name="applogin27" translatable="false">注册</string>
+    <string name="applogin28" translatable="false">兩次密碼不一致請重新輸入</string>
+    <string name="applogin29" translatable="false">請勾選用戶須知及隱私權政策</string>
+    <string name="applogin30" translatable="false">未登录</string>
+
+    <string name="appindex1" translatable="false">我的收藏</string>
+    <string name="appindex2" translatable="false">企業/組織</string>
+    <string name="appindex3" translatable="false">我的消息</string>
+    <string name="appindex4" translatable="false">設定</string>
+    <string name="appindex5" translatable="false">無簽名，請填寫…</string>
+    <string name="appindex6" translatable="false">搜索</string>
+
+    <string name="appcommon1" translatable="false">工作台</string>
+
+</resources>
+
+
+

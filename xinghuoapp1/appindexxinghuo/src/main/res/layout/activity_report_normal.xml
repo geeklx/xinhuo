@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".ui.exercise.report.ReportActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_report"
+        style="@style/tool_bar"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="成绩报告"
+            android:textColor="#1e1e1e"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:contentDescription="分享"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/ic_share" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/tb_report"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_scor"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_report_scor">
+
+                <TextView
+                    android:id="@+id/scor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="39dp"
+                    android:text="得分"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/scor"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/tv_scor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:textSize="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_scor_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_scor"
+                        android:layout_toRightOf="@+id/tv_scor"
+                        android:text="分"
+                        android:textColor="#fff"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mark"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_below="@+id/rl_scor"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_mark_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="正确率"
+                        android:textColor="#999"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_right_ret"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#666"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom"
+                    android:background="#e6e6e6" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="做题用时"
+                        android:textColor="#999"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#666"
+                        android:textSize="24dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_paper_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp" />
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@+id/ll_mark"
+                android:layout_marginTop="22dp"
+                android:background="#f7f7f7" />
+
+            <RelativeLayout
+                android:id="@+id/rl_answer_info"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/v_line">
+
+                <TextView
+                    android:id="@+id/tv_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="答题卡："
+                    android:textColor="#1e1e1e"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/tv_report_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_card"
+                    android:layout_toRightOf="@+id/tv_card"
+                    android:textColor="#1e1e1e"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_below="@+id/rl_answer_info" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_answer_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rl_answer_info"
+                android:descendantFocusability="blocksDescendants"
+                android:paddingTop="15dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fa7062"
+            android:gravity="center"
+            android:text="查看解析"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            android:id="@+id/tv_continue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#1482ff"
+            android:gravity="center"
+            android:text="再做一遍"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+</RelativeLayout>

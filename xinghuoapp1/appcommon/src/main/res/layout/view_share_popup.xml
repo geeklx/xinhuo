@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50mm"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/view_share_shape_header"
+    android:clipChildren="true">
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20mm"
+        android:text="分享"
+        android:textColor="@color/color333333"
+        android:textStyle="bold"
+        android:textSize="16mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20mm"
+        android:background="@drawable/icon_share_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="45mm"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header">
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_qq"
+            android:drawablePadding="10mm"
+            android:text="QQ"/>
+
+        <TextView
+            android:id="@+id/tv_vx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_vx"
+            android:drawablePadding="10mm"
+            android:text="微信"/>
+
+        <TextView
+            android:id="@+id/tv_vxpyq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_pyq"
+            android:drawablePadding="10mm"
+            android:text="朋友圈"/>
+
+        <TextView
+            android:id="@+id/tv_dingding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_dingding"
+            android:drawablePadding="10mm"
+            android:text="钉钉"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20mm"
+        android:paddingStart="20mm"
+        android:paddingEnd="20mm"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+        <TextView
+            android:id="@+id/tv_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_copy"
+            android:drawablePadding="10mm"
+            android:text="复制链接"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_vx"
+            android:drawablePadding="10mm"
+            android:visibility="invisible"
+            android:text="微信"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_pyq"
+            android:drawablePadding="10mm"
+            android:visibility="invisible"
+            android:text="朋友圈"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color666666"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_dingding"
+            android:drawablePadding="10mm"
+            android:visibility="invisible"
+            android:text="钉钉"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    
+

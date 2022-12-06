@@ -1,0 +1,17 @@
+apply from: './../../commonlibs2.gradle'
+apply from: './../../assemble_dolast.gradle'
+def librarys = rootProject.ext.dependencies
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.github.geeklx.libbase2:libutils:2.3.1'//核心库
+    bxnt_nationImplementation project(':xinghuoapp1:appvariants')
+    bxny_nationImplementation project(':xinghuoapp1:appvariants')
+    bxn_nationImplementation project(':xinghuoapp1:appvariants')
+}
+android {
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    namespace 'com.geek.biz1'
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="109.68mm"
+            android:layout_height="29.4mm"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_head" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20mm"
+            android:layout_toRightOf="@+id/iv_head"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv1"
+                    android:background="@drawable/dp_shape1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="30mm"
+                        android:layout_height="30mm"
+                        android:layout_marginLeft="24mm"
+                        android:layout_marginTop="11mm"
+                        android:layout_marginRight="11mm"
+                        android:layout_marginBottom="11mm"
+                        android:src="@drawable/dp_icon2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="24mm"
+                        android:text="搜索"
+                        android:textColor="@color/white"
+                        android:textSize="24mm" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="20mm"
+            android:layout_height="20mm"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="635mm"
+            android:src="@drawable/dp_icon3"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="19.52mm"
+            android:layout_height="19.52mm"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/dp_icon4" />
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="19.52mm"
+            android:layout_height="19.52mm"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10mm"
+            android:layout_toLeftOf="@id/iv4"
+            android:src="@drawable/dp_icon5" />
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/iv3"
+            android:text="获取中..."
+            android:layout_marginRight="10mm"
+            android:textColor="@color/white"
+            android:textSize="10mm" />
+
+        <TextClock
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10mm"
+            android:layout_toLeftOf="@id/tv2"
+            android:format24Hour="yyyy年MM月dd日  EEEE  HH:mm"
+            android:textColor="@color/white"
+            android:textSize="10mm" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

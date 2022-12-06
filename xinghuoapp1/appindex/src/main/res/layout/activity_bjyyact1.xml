@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorF6F6F6"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100mm"
+        android:background="@color/colorE60000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorF6F6F6"
+            android:orientation="horizontal"
+            android:padding="10mm">
+
+            <TextView
+                android:id="@+id/tv_qx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="取消"
+                android:textColor="@color/gray4A4A4A"
+                android:textSize="16mm" />
+
+            <TextView
+                android:id="@+id/tv_bjyy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="编辑应用"
+                android:textColor="@color/black"
+                android:textSize="20mm" />
+
+            <TextView
+                android:id="@+id/tv_bc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/common_shape_red_co1"
+                android:paddingLeft="10mm"
+                android:paddingTop="4mm"
+                android:paddingRight="10mm"
+                android:paddingBottom="4mm"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="12mm" />
+        </RelativeLayout>
+
+        <com.geek.libbase.itemtouchhelper.RecyclerViewScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/bjyyact1_page_0_item_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/bjyyact1_page_0_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </com.geek.libbase.itemtouchhelper.RecyclerViewScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item"
+        android:padding="15dp"
+        tools:context=".ui.books.report.RecommedNewsActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:cardBackgroundColor="@color/color_f5f5f9"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/img_news"
+                android:layout_width="92dp"
+                android:layout_height="69dp"
+                android:scaleType="fitXY" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cv_img"
+            android:layout_toLeftOf="@+id/cv_img"
+            android:text="希丁克就卡山附近大开杀戒"
+            android:textColor="@color/color_222"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_see_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cv_img"
+            android:drawableLeft="@mipmap/icon_news_see"
+            android:drawablePadding="5dp"
+            android:text="66666人已经学习"
+            android:textColor="@color/color_85"
+            android:textSize="11dp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12mm"
+        >
+
+        <com.geek.libglide47.base.GlideImageView
+            android:id="@+id/iv_live"
+            android:layout_width="36mm"
+            android:layout_height="36mm"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_ytx_live"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10mm"
+            android:layout_marginRight="6mm"
+            android:layout_toRightOf="@+id/iv_live"
+            android:layout_toLeftOf="@+id/tv_live"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="主任选举任职大会"
+            android:textColor="#FF333333"
+            android:textSize="15mm" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10mm"
+            android:layout_marginRight="6mm"
+            android:layout_marginTop="2mm"
+            android:layout_toRightOf="@+id/iv_live"
+            android:layout_toLeftOf="@+id/tv_live"
+            android:layout_below="@+id/tv_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="2022-03-09 15:09:20    发起人：张新"
+            android:textSize="12mm"
+            android:textColor="#FFBDBDBD" />
+
+        <TextView
+            android:id="@+id/tv_live"
+            android:layout_width="76mm"
+            android:layout_height="26mm"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:background="@drawable/btn_common_shape_red3"
+            android:text="进入直播"
+            android:textSize="12mm"
+            android:textColor="#FFFFFFFF"/>
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="0.5mm"
+        android:layout_marginLeft="12mm"
+        android:layout_marginRight="12mm"
+        android:background="#E5E5E5"
+        />
+
+</RelativeLayout>

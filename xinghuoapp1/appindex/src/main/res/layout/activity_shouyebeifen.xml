@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/white"
+        android:scaleType="fitCenter" />
+    <!--    android:src="@mipmap/img_bkg"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50mm"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="#F9F8F8"
+                android:orientation="vertical">
+                <!--            android:background="@drawable/slbtab1"-->
+
+            </LinearLayout>
+
+            <com.geek.tablib.tablayout.CommonTabLayout
+                android:id="@+id/tl_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F9F8F8"
+                tl:tl_iconHeight="23mm"
+                tl:tl_iconWidth="23mm"
+                tl:tl_indicator_color="#2C97DE"
+                tl:tl_indicator_height="0dp"
+                tl:tl_textSelectColor="#2C97DE"
+                tl:tl_textUnselectColor="#66000000"
+                tl:tl_textsize="12mm"
+                tl:tl_underline_color="#DDDDDD"
+                tl:tl_underline_height="0mm" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_theme1"
+        style="@style/loginstyle1"
+        android:layout_width="30mm"
+        android:layout_height="30mm"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50mm"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/transparent" />
+</RelativeLayout>

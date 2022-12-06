@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp"
+    android:id="@+id/cl"
+    android:background="@drawable/shape_12_ff"
+    android:paddingBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/color_f5f5f9"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_222"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/cv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv_img"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:textColor="@color/color_afb3bf"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_img"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2022.2.2"
+        android:textColor="@color/color_ffaf00"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintLeft_toRightOf="@+id/tv1"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+    <!--  shape_9_f9fafc  -->
+    <View
+        android:id="@+id/v1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/shape_ebook_b"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_img" />
+
+    <ImageView
+        android:id="@+id/img_l"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/shape_ebook_l"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintLeft_toLeftOf="@+id/v1"
+        app:layout_constraintTop_toTopOf="@+id/v1" />
+
+    <TextView
+        android:id="@+id/tv_buy_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/color_008aff_ff5200"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintLeft_toLeftOf="@+id/v1"
+        app:layout_constraintTop_toTopOf="@+id/v1"
+        tools:text="已购 66666" />
+
+    <TextView
+        android:id="@+id/tv_line"
+        android:layout_width="2dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="6dp"
+        android:background="@drawable/selector_ffe5d9_d9edff"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintLeft_toRightOf="@+id/tv_buy_num"
+        app:layout_constraintTop_toTopOf="@+id/v1"></TextView>
+<!--    #FFE5D9 #D9EDFF-->
+    <TextView
+        android:id="@+id/tv_limit_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:textColor="@color/color_008aff_ff5200"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintLeft_toRightOf="@+id/tv_line"
+        app:layout_constraintTop_toTopOf="@+id/v1"
+        tools:text="限购666666" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ebook_r"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:textColor="@android:color/white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintRight_toRightOf="@+id/v1"
+        tools:text="免费领取" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.5dp"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:textColor="@android:color/white"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_right"
+        app:layout_constraintRight_toRightOf="@+id/tv_right"
+        app:layout_constraintTop_toTopOf="@+id/tv_right"
+        tools:text="￥66.66" />
+
+    <TextView
+        android:id="@+id/tv_disprice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6.5dp"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:textColor="@color/color_99fff"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_right"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_right"
+        app:layout_constraintRight_toRightOf="@+id/tv_right"
+        tools:text="￥66.66" />
+
+    <TextView
+        android:id="@+id/tv_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:text="已过期"
+        android:textColor="@color/color_c4cbde"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintRight_toRightOf="@+id/v1"
+        app:layout_constraintTop_toTopOf="@+id/v1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pop_white1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20mm"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="70mm"
+            android:layout_height="70mm"
+            android:layout_marginTop="25mm"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_pyq"
+             />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25mm"
+            android:layout_marginTop="20mm"
+            android:layout_marginRight="25mm"
+            android:layout_marginBottom="20mm"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="5mm"
+                android:text="ces"
+                android:textColor="@color/color666666"
+                android:textSize="14mm" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40mm"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="25mm"
+            android:layout_marginRight="25mm"
+            android:layout_marginBottom="25mm"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/color666666"
+                android:textSize="16mm"
+                android:background="@drawable/popview_shape_gray"/>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20mm"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="15mm"
+                android:background="@drawable/popview_shape_red"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

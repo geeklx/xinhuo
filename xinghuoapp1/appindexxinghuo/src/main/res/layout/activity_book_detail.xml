@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="tuoyan.com.xinghuo_dayingindex.ui.books.detail.BookDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_book_detail"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:background="@color/color_f5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <ImageView
+            android:id="@+id/ic_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:contentDescription="分享"
+            android:src="@mipmap/ic_share" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_book_detail">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_f5"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                app:layout_scrollFlags="scroll">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_cover"
+                    android:layout_width="116dp"
+                    android:layout_height="147dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv_cover_book"
+                        android:layout_width="106dp"
+                        android:layout_height="137dp"
+                        android:layout_gravity="center" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_title_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="艾派简系列 新题型2018大学英语四级听力1000题 DTJ18"
+                    android:textColor="#222831"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/cv_cover"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cv_cover" />
+
+                <TextView
+                    android:id="@+id/tv_remark1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_remark"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="四级"
+                    android:textColor="@color/color_7a"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/tv_title_book"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_book" />
+
+                <TextView
+                    android:id="@+id/tv_remark2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/shape_remark"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="备战2019.6"
+                    android:textColor="@color/color_7a"
+                    android:textSize="12dp"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_remark1"
+                    app:layout_constraintTop_toTopOf="@+id/tv_remark1" />
+
+                <TextView
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_add_learn"
+                    android:drawableLeft="@drawable/ic_add"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="加入学习"
+                    android:textColor="@color/color_white"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cv_cover"
+                    app:layout_constraintLeft_toLeftOf="@+id/tv_title_book" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_book_detail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/shape_20_white"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/color_5467ff"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/color_222831"
+                app:tabTextColor="@color/color_8e" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dee1e7" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_book_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <include
+            android:id="@+id/view_empty"
+            layout="@layout/layout_empty"
+            android:visibility="gone" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
