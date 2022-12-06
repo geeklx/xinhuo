@@ -140,7 +140,7 @@ public class YewuApplicationAndroid extends AndroidApplication {
         if (SpUtil.INSTANCE.getAgreement()) {
 
         }
-        SpUtil.INSTANCE.setAgreement(true);
+//        SpUtil.INSTANCE.setAgreement(true);
         LiveSDKHelper.initSDK(this);
         CrashReport.initCrashReport(this, "51dd7ab1b2", false);
         Realm.init(this);

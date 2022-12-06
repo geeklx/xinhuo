@@ -390,12 +390,12 @@ open class BasePresenter(private val progress: OnProgress) {
                 }
 
                 override fun onSuccess(index: Int, file: File?) {
-                    TODO("Not yet implemented")
+//                    TODOs("Not yet implemented")
                     onNext(file)
                 }
 
                 override fun onError(index: Int, e: Throwable?) {
-                    TODO("Not yet implemented")
+//                    TODOs("Not yet implemented")
                 }
 
 //                override fun onSuccess(file: File?) {

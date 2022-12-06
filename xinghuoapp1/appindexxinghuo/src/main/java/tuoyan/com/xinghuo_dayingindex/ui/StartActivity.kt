@@ -219,6 +219,7 @@ class StartActivity : LifeActivity<HomePresenter>() {
 
             override fun onResponse(call: Call, response: Response) {
                 SpUtil.ipStr = response.body()?.string().toString()
+                var aaa = ""
             }
         })
     }
