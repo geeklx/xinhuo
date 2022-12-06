@@ -110,7 +110,7 @@ public class YewuApplicationAndroid extends AndroidApplication {
             return;
         }
         //TODO commonbufen
-        configBugly(BuildConfigyewu.versionNameConfig, "468802b350", "468802b350", "468802b350");
+        configBugly(BuildConfigyewu.versionNameConfig, "b6ee75e0d4", "b6ee75e0d4", "b6ee75e0d4");
         configHios();
 //        HiosHelperNew.config(com.blankj.utilcode.util.AppUtils.getAppPackageName() + ".web.page3.js2");
         configmmkv();
@@ -140,9 +140,9 @@ public class YewuApplicationAndroid extends AndroidApplication {
         if (SpUtil.INSTANCE.getAgreement()) {
 
         }
-        SpUtil.INSTANCE.setAgreement(true);
+//        SpUtil.INSTANCE.setAgreement(true);
         LiveSDKHelper.initSDK(this);
-        CrashReport.initCrashReport(this, "51dd7ab1b2", false);
+//        CrashReport.initCrashReport(this, "51dd7ab1b2", false);
         Realm.init(this);
         L.INSTANCE.init("日志").logLevel(L.LogLevel.NONE).methodCount(2).methodOffset(0).bulid();
         FileDownloader.setup(this);
