@@ -7,15 +7,13 @@ import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.community.post.PostActivity
-import com.spark.peak.ui.dialog.AlertDialog
 import com.spark.peak.ui.dialog.CGCompleteDialog
 import com.spark.peak.ui.practice.PapersActivity
-import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_cg_pass.*
+import kotlinx.android.synthetic.main.activity_cg_passdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
-class CGPassActivity(override val layoutResId: Int = R.layout.activity_cg_pass) : LifeActivity<CGPresenter>() {
+class CGPassActivity(override val layoutResId: Int = R.layout.activity_cg_passdf) : LifeActivity<CGPresenter>() {
     override val presenter by lazy { CGPresenter(this) }
     private val key by lazy { intent.getStringExtra(KEY)?:"" }
     private val title by lazy { intent.getStringExtra(TITLE)?:"" }

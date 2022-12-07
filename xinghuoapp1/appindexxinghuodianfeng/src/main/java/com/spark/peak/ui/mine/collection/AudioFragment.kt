@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.blankj.utilcode.util.SPUtils
 import com.google.gson.Gson
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.base.BaseAdapter
 import com.spark.peak.base.LifeFragment
@@ -21,7 +20,7 @@ import com.spark.peak.bean.Audio
 import com.spark.peak.bean.AudioRes
 import com.spark.peak.ui.dialog.AlertDialog
 import com.spark.peak.ui.video.AudioActivity
-import kotlinx.android.synthetic.main.fragment_lesson.*
+import kotlinx.android.synthetic.main.fragment_lessondf.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.support.v4.startActivity
 
@@ -35,7 +34,7 @@ import org.jetbrains.anko.support.v4.startActivity
  */
 class AudioFragment : LifeFragment<CollectionPresenter>() {
     override val presenter = CollectionPresenter(this)
-    override val layoutResId = R.layout.fragment_lesson
+    override val layoutResId = R.layout.fragment_lessondf
     private var page = 0
     private val adapter by lazy {
         AudioAdapter({
@@ -145,7 +144,7 @@ class AudioAdapter(
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_scan_history, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_scan_historydf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View = with(context) {

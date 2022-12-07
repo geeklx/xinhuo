@@ -19,6 +19,6 @@ class NetListAdapter : BaseAdapter<ResourceItem>() {
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_catalog, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_catalogdf, parent, false)
     }
 }

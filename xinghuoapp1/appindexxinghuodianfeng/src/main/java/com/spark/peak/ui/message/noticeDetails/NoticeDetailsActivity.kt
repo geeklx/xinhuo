@@ -4,13 +4,13 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
-import kotlinx.android.synthetic.main.activity_notice_details.*
+import kotlinx.android.synthetic.main.activity_notice_detailsdf.*
 
 /**
  * 创建者：
  * 时间：
  */
-class NoticeDetailsActivity(override val layoutResId: Int = R.layout.activity_notice_details)
+class NoticeDetailsActivity(override val layoutResId: Int = R.layout.activity_notice_detailsdf)
     : LifeActivity<NoticeDetailsPresenter>() {
     override val presenter by lazy { NoticeDetailsPresenter(this) }
     private val url by lazy { intent.getStringExtra(URL) }

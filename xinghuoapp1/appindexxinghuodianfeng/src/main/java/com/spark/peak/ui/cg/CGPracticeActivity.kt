@@ -2,17 +2,14 @@ package com.spark.peak.ui.cg
 
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import android.view.View
 import com.spark.peak.R
-import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.LifeActivity
-import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_cg_practice.*
+import kotlinx.android.synthetic.main.activity_cg_practicedf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
-class CGPracticeActivity(override val layoutResId: Int = R.layout.activity_cg_practice) : LifeActivity<CGPresenter>() {
+class CGPracticeActivity(override val layoutResId: Int = R.layout.activity_cg_practicedf) : LifeActivity<CGPresenter>() {
     override val presenter by lazy { CGPresenter(this) }
 //    private val key by lazy { intent.getStringExtra(KEY) }
     private var page = 0

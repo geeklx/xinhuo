@@ -9,7 +9,7 @@ import com.spark.peak.ui.exercise.adapter.HistoryAdapter
 import com.spark.peak.ui.exercise.detail.ExerciseDetailActivity
 import com.spark.peak.ui.exercise.detail_list.ExerciseListPresenter
 import com.spark.peak.ui.exercise.report.ReportActivity
-import kotlinx.android.synthetic.main.activity_ex_history.*
+import kotlinx.android.synthetic.main.activity_ex_historydf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -18,7 +18,7 @@ class ExHistoryActivity : LifeActivity<ExerciseListPresenter>() {
     override val presenter: ExerciseListPresenter
         get() = ExerciseListPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_ex_history
+        get() = R.layout.activity_ex_historydf
 
     val step = 10
     var page = 1

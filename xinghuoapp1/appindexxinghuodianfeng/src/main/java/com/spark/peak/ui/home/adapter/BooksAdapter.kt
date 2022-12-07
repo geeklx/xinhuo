@@ -23,11 +23,11 @@ class BooksAdapter(var onclick: (book: HomeBook) -> Unit, val scanClick: () -> U
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_book, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_bookdf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_empty, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_emptydf, parent, false)
     }
 
     override fun empty(holder: ViewHolder) {

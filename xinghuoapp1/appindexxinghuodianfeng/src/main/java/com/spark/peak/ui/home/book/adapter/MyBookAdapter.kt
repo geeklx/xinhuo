@@ -39,7 +39,7 @@ class MyBookAdapter(val onItemClick: (item: MyBookNetClass) -> Unit, val scanCli
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_my_book, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_my_bookdf, parent, false)
     }
 
     override fun header(holder: ViewHolder) {

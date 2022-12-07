@@ -33,7 +33,7 @@ class OfflineAdapter(var click: (String, BookRes) -> Unit) : BaseAdapter<BookRes
 
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_offline, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_offlinedf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View = with(context) {

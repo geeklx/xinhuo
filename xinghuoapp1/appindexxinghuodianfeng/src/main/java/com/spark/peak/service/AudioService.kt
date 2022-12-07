@@ -327,7 +327,7 @@ class AudioService : Service() {
 
     private fun initNotification() {
         if (mData.isEmpty() || position >= mData.size) return
-        var contentView = RemoteViews(packageName, R.layout.view_player_notification)
+        var contentView = RemoteViews(packageName, R.layout.view_player_notificationdf)
         contentView.setTextViewText(R.id.tv_music_name, mData[position].name)
         contentView.setTextViewText(R.id.tv_total, time(mediaPlayer?.duration ?: 0L))
         contentView.setProgressBar(
@@ -376,7 +376,7 @@ class AudioService : Service() {
 
         var builder = NotificationCompat.Builder(this, CHANNAL_ID)
 
-        var smallContentView = RemoteViews(packageName, R.layout.view_player_notification_small)
+        var smallContentView = RemoteViews(packageName, R.layout.view_player_notification_smalldf)
         smallContentView.setTextViewText(R.id.tv_music_name, mData[position].name)
         smallContentView.setTextViewText(R.id.tv_total, time(mediaPlayer?.duration ?: 0L))
         smallContentView.setOnClickPendingIntent(R.id.btn_play, pIntentPause)//TODO 设置点击事件

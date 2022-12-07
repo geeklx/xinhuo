@@ -16,7 +16,7 @@ import com.spark.peak.ui.home.sa.SaEvent
 import com.spark.peak.ui.study.StudyPresenter
 import com.spark.peak.ui.study.book.adapter.BookDetailPagerAdapter
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_book_detail.*
+import kotlinx.android.synthetic.main.activity_book_detaildf.*
 import org.jetbrains.anko.toast
 import org.json.JSONObject
 
@@ -24,7 +24,7 @@ class BookDetailActivity : LifeActivity<StudyPresenter>() {
     override val presenter: StudyPresenter
         get() = StudyPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_book_detail
+        get() = R.layout.activity_book_detaildf
 
     var dataList = ArrayList<Fragment>()
     val bookKey by lazy { intent.getStringExtra(KEY) ?: "" }

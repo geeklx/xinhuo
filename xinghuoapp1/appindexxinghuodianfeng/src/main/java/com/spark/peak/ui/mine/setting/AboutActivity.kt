@@ -8,16 +8,15 @@ import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import com.blankj.utilcode.util.AppUtils
-import com.spark.peak.BuildConfig
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.community.post.PostActivity
-import kotlinx.android.synthetic.main.activity_about.*
+import kotlinx.android.synthetic.main.activity_aboutdf.*
 import org.jetbrains.anko.startActivity
 
-class AboutActivity(override val layoutResId: Int = R.layout.activity_about) : LifeActivity<BasePresenter>() {
+class AboutActivity(override val layoutResId: Int = R.layout.activity_aboutdf) : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
 

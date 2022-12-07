@@ -7,7 +7,6 @@ import com.blankj.utilcode.util.SPUtils
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.sensorsdata.analytics.android.sdk.SensorsDataAPI
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.base.BaseActivity
 import com.spark.peak.bean.AudioRes
@@ -20,13 +19,13 @@ import com.spark.peak.ui.video.SparkVideoActivity
 import com.spark.peak.utlis.DownloadManager
 import com.spark.peak.utlis.FileUtils
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_offline_res.*
+import kotlinx.android.synthetic.main.activity_offline_resdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 import java.io.File
 
-class OfflineResActivity(override val layoutResId: Int = R.layout.activity_offline_res) :
+class OfflineResActivity(override val layoutResId: Int = R.layout.activity_offline_resdf) :
     BaseActivity() {
     companion object {
         const val NAME = "name"

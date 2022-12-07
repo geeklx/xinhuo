@@ -6,10 +6,10 @@ import com.spark.peak.R
 import com.spark.peak.base.EventMsg
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.widegt.StarBar
-import kotlinx.android.synthetic.main.activity_order_comment.*
+import kotlinx.android.synthetic.main.activity_order_commentdf.*
 import org.greenrobot.eventbus.EventBus
 
-class OrderCommentActivity(override val layoutResId: Int = R.layout.activity_order_comment) : LifeActivity<OrderCommentPresenter>() {
+class OrderCommentActivity(override val layoutResId: Int = R.layout.activity_order_commentdf) : LifeActivity<OrderCommentPresenter>() {
     override val presenter = OrderCommentPresenter(this)
     private val key by lazy { intent.getStringExtra(KEY)?:"" }
     private val position by lazy { intent.getIntExtra(POSITION, -1) }

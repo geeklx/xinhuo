@@ -9,7 +9,7 @@ import com.spark.peak.R
 import com.spark.peak.base.BaseAdapter
 import com.spark.peak.base.ViewHolder
 import com.spark.peak.bean.AudioRes
-import kotlinx.android.synthetic.main.layout_dialog_list.*
+import kotlinx.android.synthetic.main.layout_dialog_listdf.*
 import org.jetbrains.anko.matchParent
 
 /**
@@ -54,7 +54,7 @@ class ListDialog(context: Context, val data: List<AudioRes>?, val click: (Int) -
 //                }.lparams(matchParent, dip(55))
 //            }
 //        })
-        setContentView(R.layout.layout_dialog_list)
+        setContentView(R.layout.layout_dialog_listdf)
         rlv.layoutManager = LinearLayoutManager(context)
         rlv.adapter = adapter
         close.setOnClickListener { dismiss() }
@@ -96,7 +96,7 @@ class ListAdapter(data: List<AudioRes>?, val click: (Int) -> Unit) : BaseAdapter
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_dialog_item, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_dialog_itemdf, parent, false)
     }
 
     fun setPos(pos: Int) {

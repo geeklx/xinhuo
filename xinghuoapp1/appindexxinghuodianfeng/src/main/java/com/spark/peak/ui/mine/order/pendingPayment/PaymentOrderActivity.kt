@@ -11,14 +11,14 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_payment_order.*
+import kotlinx.android.synthetic.main.activity_payment_orderdf.*
 import org.jetbrains.anko.startActivity
 
 /**
  * 创建者：
  * 时间：
  */
-class PaymentOrderActivity(override val layoutResId: Int = R.layout.activity_payment_order)
+class PaymentOrderActivity(override val layoutResId: Int = R.layout.activity_payment_orderdf)
     : LifeActivity<PaymentOrderPresenter>() {
     override val presenter by lazy { PaymentOrderPresenter(this) }
     private val key by lazy { intent.getStringExtra(KEY)?:"" }

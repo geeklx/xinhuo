@@ -7,13 +7,13 @@ import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.mine.order.OrderPresenter
 import com.spark.peak.ui.study.book.adapter.BookDetailPagerAdapter
-import kotlinx.android.synthetic.main.activity_collection.*
+import kotlinx.android.synthetic.main.activity_collectiondf.*
 
 /**
  * 创建者：
  * 时间：
  */
-class CollectionActivity(override val layoutResId: Int = R.layout.activity_collection) : LifeActivity<OrderPresenter>() {
+class CollectionActivity(override val layoutResId: Int = R.layout.activity_collectiondf) : LifeActivity<OrderPresenter>() {
     override val presenter by lazy { OrderPresenter(this) }
     private val fragmentList by lazy { arrayListOf<Fragment>() }
     private val fragmentPagerAdapter by lazy { BookDetailPagerAdapter(fragmentList, supportFragmentManager) }

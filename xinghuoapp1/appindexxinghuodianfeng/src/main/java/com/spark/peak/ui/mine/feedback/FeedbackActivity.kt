@@ -9,7 +9,7 @@ import com.spark.peak.R
 import com.spark.peak.ui.dialog.SelectedDialog
 import com.spark.peak.utlis.ImageSeletedUtil
 import com.spark.peak.utlis.PermissionUtlis
-import kotlinx.android.synthetic.main.activity_feedback.*
+import kotlinx.android.synthetic.main.activity_feedbackdf.*
 import org.jetbrains.anko.ctx
 import java.io.File
 
@@ -17,7 +17,7 @@ import java.io.File
  * 创建者：
  * 时间：
  */
-class FeedbackActivity(override val layoutResId: Int = R.layout.activity_feedback)
+class FeedbackActivity(override val layoutResId: Int = R.layout.activity_feedbackdf)
     : LifeActivity<FeedbackPresenter>() {
     override val presenter by lazy { FeedbackPresenter(this) }
     private val files = mutableListOf<File>()

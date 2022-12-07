@@ -5,7 +5,6 @@ import android.text.TextWatcher
 import android.view.View
 import android.widget.TextView
 import com.blankj.utilcode.util.SPUtils
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.MainActivity
@@ -14,7 +13,7 @@ import com.spark.peak.utlis.RegularUtils
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import kotlinx.android.synthetic.main.activity_change_phone.*
+import kotlinx.android.synthetic.main.activity_change_phonedf.*
 import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.textColor
@@ -24,7 +23,7 @@ import java.util.concurrent.TimeUnit
  * 创建者：
  * 时间：
  */
-class ChangePhoneActivity(override val layoutResId: Int = R.layout.activity_change_phone) :
+class ChangePhoneActivity(override val layoutResId: Int = R.layout.activity_change_phonedf) :
     LifeActivity<ChangePhonePresenter>() {
     override val presenter by lazy { ChangePhonePresenter(this) }
     var disposable: Disposable? = null

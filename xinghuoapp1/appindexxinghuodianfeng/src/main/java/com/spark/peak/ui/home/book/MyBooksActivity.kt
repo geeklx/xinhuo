@@ -14,7 +14,7 @@ import com.spark.peak.ui.study.StudyPresenter
 import com.spark.peak.ui.study.book.BookDetailActivity
 import com.spark.peak.utlis.PermissionUtlis
 import com.zxing.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.activity_my_books.*
+import kotlinx.android.synthetic.main.activity_my_booksdf.*
 import org.jetbrains.anko.startActivity
 
 class MyBooksActivity : LifeActivity<StudyPresenter>() {
@@ -22,7 +22,7 @@ class MyBooksActivity : LifeActivity<StudyPresenter>() {
     override val presenter: StudyPresenter
         get() = StudyPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_my_books
+        get() = R.layout.activity_my_booksdf
     private val bookAdapter by lazy {
         MyBookAdapter({//item.click
             startActivity<BookDetailActivity>(

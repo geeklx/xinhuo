@@ -6,14 +6,14 @@ import com.bumptech.glide.Glide
 import com.spark.peak.R
 import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.LifeActivity
-import kotlinx.android.synthetic.main.activity_image.*
+import kotlinx.android.synthetic.main.activity_imagedf.*
 import org.jetbrains.anko.ctx
 
 class ImageActivity : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_image
+        get() = R.layout.activity_imagedf
 
     override fun onCreate(savedInstanceState: Bundle?) {
         fullScreen = true

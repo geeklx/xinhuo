@@ -3,14 +3,14 @@ package com.spark.peak.ui._public
 import android.view.View
 import com.spark.peak.R
 import com.spark.peak.base.BaseFragment
-import kotlinx.android.synthetic.main.fragment_net_error.*
+import kotlinx.android.synthetic.main.fragment_net_errordf.*
 
 /**
  * Created by 李昊 on 2018/7/18.
  */
 class NetErrorFragment: BaseFragment(){
     override val layoutResId: Int
-        get() = R.layout.fragment_net_error
+        get() = R.layout.fragment_net_errordf
 
 
     var listener: Listener ?= null

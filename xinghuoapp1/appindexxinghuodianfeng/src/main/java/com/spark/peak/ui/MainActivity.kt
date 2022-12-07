@@ -26,7 +26,7 @@ import com.spark.peak.utlis.SpUtil
 import com.zxing.google.zxing.integration.android.IntentIntegrator
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_maindf.*
 import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
 
@@ -34,7 +34,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_main
+        get() = R.layout.activity_maindf
 
     private val homeFragment by lazy { HomeFullFragment() }
     private val mineFragment by lazy { MineFragment() }

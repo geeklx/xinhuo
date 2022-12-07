@@ -8,7 +8,7 @@ import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.ui.grammar.adapter.GrammarSearchAdapter
-import kotlinx.android.synthetic.main.activity_grammar_search.*
+import kotlinx.android.synthetic.main.activity_grammar_searchdf.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 
@@ -16,7 +16,7 @@ class GrammarSearchActivity : LifeActivity<GrammarPresenter>() {
     override val presenter: GrammarPresenter
         get() = GrammarPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_grammar_search
+        get() = R.layout.activity_grammar_searchdf
     private val parentKey by lazy { intent.getStringExtra("key") ?: "" }
     private val parentName by lazy { intent.getStringExtra("parentName") ?: "语法词典" }
     private val searchAdapter by lazy {

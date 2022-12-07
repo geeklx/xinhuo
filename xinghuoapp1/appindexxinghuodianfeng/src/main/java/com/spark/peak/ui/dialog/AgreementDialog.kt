@@ -25,7 +25,7 @@ class AgreementDialog(context: Context,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        setContentView(R.layout.dialog_agreement)
+        setContentView(R.layout.dialog_agreementdf)
         setCanceledOnTouchOutside(false)
         setCancelable(false)
         initView()

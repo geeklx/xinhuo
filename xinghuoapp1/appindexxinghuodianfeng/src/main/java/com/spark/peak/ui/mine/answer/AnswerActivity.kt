@@ -9,10 +9,10 @@ import com.spark.peak.ui.common.login.LoginActivity
 import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.ui.mine.user.UserPresenter
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_answer.*
+import kotlinx.android.synthetic.main.activity_answerdf.*
 import org.jetbrains.anko.startActivity
 
-class AnswerActivity(override val layoutResId: Int = R.layout.activity_answer)
+class AnswerActivity(override val layoutResId: Int = R.layout.activity_answerdf)
     : LifeActivity<UserPresenter>() {
     override val presenter by lazy { UserPresenter(this) }
 

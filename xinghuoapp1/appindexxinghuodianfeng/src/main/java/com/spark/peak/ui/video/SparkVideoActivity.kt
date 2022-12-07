@@ -12,13 +12,13 @@ import com.shuyu.gsyvideoplayer.utils.OrientationUtils
 import com.spark.peak.R
 import com.spark.peak.base.BaseActivity
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_spark_video.*
+import kotlinx.android.synthetic.main.activity_spark_videodf.*
 import org.json.JSONObject
 
 class SparkVideoActivity : BaseActivity() {
 
     override val layoutResId: Int
-        get() = R.layout.activity_spark_video
+        get() = R.layout.activity_spark_videodf
 
     private val videoUrl by lazy { intent.getStringExtra(URL) ?: "" }
     private val title: String by lazy { intent.getStringExtra(TITLE) ?: "" }

@@ -35,6 +35,6 @@ class HomeBookSelectAdapter(val onItemClick: (GradeBean) -> Unit) : BaseAdapter<
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_select, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_selectdf, parent, false)
     }
 }

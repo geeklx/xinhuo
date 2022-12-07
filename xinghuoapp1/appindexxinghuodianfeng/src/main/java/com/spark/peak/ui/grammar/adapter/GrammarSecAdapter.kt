@@ -42,7 +42,7 @@ class GrammarSecAdapter(val onItemClick: (Grammar,Grammar) -> Unit) : BaseAdapte
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_grammar_sec, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_grammar_secdf, parent, false)
     }
 }
 
@@ -55,6 +55,6 @@ class GrammarThreeAdapter(val onItemClick: (Grammar) -> Unit) : BaseAdapter<Gram
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_grammar_three, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_grammar_threedf, parent, false)
     }
 }

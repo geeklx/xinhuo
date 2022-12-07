@@ -9,7 +9,7 @@ import com.spark.peak.ui.dialog.AlertDialog
 import com.spark.peak.ui.mine.order.comment.OrderCommentActivity
 import com.spark.peak.ui.mine.order.pendingPayment.PaymentOrderActivity
 import com.spark.peak.ui.mine.order.pendingPayment.PendingPaymentActivity
-import kotlinx.android.synthetic.main.activity_order.*
+import kotlinx.android.synthetic.main.activity_orderdf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -20,7 +20,7 @@ import org.jetbrains.anko.startActivity
  * 创建者：
  * 时间：
  */
-class OrderActivity(override val layoutResId: Int = R.layout.activity_order)
+class OrderActivity(override val layoutResId: Int = R.layout.activity_orderdf)
     : LifeActivity<OrderPresenter>() {
     override val presenter by lazy { OrderPresenter(this) }
     var type: Int? = null

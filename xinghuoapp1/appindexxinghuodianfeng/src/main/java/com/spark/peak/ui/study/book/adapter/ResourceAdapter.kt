@@ -72,7 +72,7 @@ class ResourceAdapter(
     }
 
 
-    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.item_study_resourse, parent, false)
+    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.item_study_resoursedf, parent, false)
 
     /**
      * 节点
@@ -89,7 +89,7 @@ class ResourceAdapter(
     }
 
     private fun nodeView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_node_view, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_node_viewdf, parent, false)
     }
 
 

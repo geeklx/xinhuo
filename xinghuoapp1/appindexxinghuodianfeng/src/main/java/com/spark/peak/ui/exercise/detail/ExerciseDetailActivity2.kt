@@ -20,7 +20,7 @@ import com.spark.peak.ui.dialog.FeedbackDialog
 import com.spark.peak.ui.exercise.report.ReportActivity
 import com.spark.peak.utlis.DownloadManager
 import com.spark.peak.utlis.PermissionUtlis
-import kotlinx.android.synthetic.main.activity_exercise_detail2.*
+import kotlinx.android.synthetic.main.activity_exercise_detail2df.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -29,7 +29,7 @@ import java.io.File
 
 class ExerciseDetailActivity2 : LifeActivity<ExerciseDetailPresenter>() {
     override val presenter = ExerciseDetailPresenter(this)
-    override val layoutResId = R.layout.activity_exercise_detail2
+    override val layoutResId = R.layout.activity_exercise_detail2df
     val practisekey by lazy { intent.getStringExtra(KEY) ?: "" }
     val paperName by lazy { intent.getStringExtra(NAME) ?: "" }
     val parentKey by lazy { intent.getStringExtra(PARENT_KEY) ?: "" }

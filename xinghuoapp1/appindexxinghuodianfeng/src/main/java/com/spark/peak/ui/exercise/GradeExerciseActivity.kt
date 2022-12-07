@@ -10,8 +10,8 @@ import com.spark.peak.bean.Grade
 import com.spark.peak.ui.exercise.listen.ExerciseListActivity
 import com.spark.peak.ui.lesson.adapter.GradeAdapter
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_grade_exercise.*
-import kotlinx.android.synthetic.main.layout_lesson_select.*
+import kotlinx.android.synthetic.main.activity_grade_exercisedf.*
+import kotlinx.android.synthetic.main.layout_lesson_selectdf.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 
@@ -19,7 +19,7 @@ class GradeExerciseActivity : LifeActivity<ExercisePresenter>() {
     override val presenter: ExercisePresenter
         get() = ExercisePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_grade_exercise
+        get() = R.layout.activity_grade_exercisedf
     private val exerciseAdapter by lazy {
         GradeExerciseAdapter() {
             startActivity<ExerciseListActivity>("key" to it.key, "title" to it.name)

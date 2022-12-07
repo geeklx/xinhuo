@@ -19,7 +19,7 @@ import com.spark.peak.ui.wrongbook.adapter.SelecteAdapter
 import com.spark.peak.ui.wrongbook.adapter.WrongDateAdapter
 import com.spark.peak.ui.wrongbook.adapter.WrongExAdapter
 import com.spark.peak.utlis.GradUtil
-import kotlinx.android.synthetic.main.activity_wrong_book.*
+import kotlinx.android.synthetic.main.activity_wrong_bookdf.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.recyclerview.v7.recyclerView
 
@@ -27,7 +27,7 @@ class WrongBookActivity : LifeActivity<WrongBookPresenter>() {
     override val presenter: WrongBookPresenter
         get() = WrongBookPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_wrong_book
+        get() = R.layout.activity_wrong_bookdf
 
     var subjectKey = "" //科目或试卷分类主键
     var wrongDateList: List<WrongBookDate>? = null

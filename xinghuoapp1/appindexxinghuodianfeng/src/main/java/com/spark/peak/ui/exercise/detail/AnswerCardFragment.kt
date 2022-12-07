@@ -5,13 +5,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.spark.peak.R
 import com.spark.peak.base.LifeFragment
 import com.spark.peak.ui.exercise.adapter.AnswerCardAdapter
-import kotlinx.android.synthetic.main.fragment_answer_card.*
+import kotlinx.android.synthetic.main.fragment_answer_carddf.*
 
 class AnswerCardFragment : LifeFragment<ExerciseDetailPresenter>(){
     override val presenter: ExerciseDetailPresenter
         get() = ExerciseDetailPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_answer_card
+        get() = R.layout.fragment_answer_carddf
 
     val activity : ExerciseDetailActivity by lazy { getActivity() as ExerciseDetailActivity}
     var oAdapter = AnswerCardAdapter{ qPosition, mPosition ->

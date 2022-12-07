@@ -7,13 +7,13 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.bean.Grade
 import com.spark.peak.ui.lesson.adapter.GradeAdapter
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_grade.*
+import kotlinx.android.synthetic.main.activity_gradedf.*
 
 /**
  * 创建者：
  * 时间：
  */
-class GradeActivity(override val layoutResId: Int = R.layout.activity_grade) : LifeActivity<GradePresenter>() {
+class GradeActivity(override val layoutResId: Int = R.layout.activity_gradedf) : LifeActivity<GradePresenter>() {
     override val presenter by lazy { GradePresenter(this) }
     private val gradeAdapter by lazy {
         GradeAdapter {

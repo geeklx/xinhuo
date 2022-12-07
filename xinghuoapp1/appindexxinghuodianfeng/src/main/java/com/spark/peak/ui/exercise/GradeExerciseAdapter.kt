@@ -29,7 +29,7 @@ class GradeExerciseAdapter(var onItemClick: (GradeExercise) -> Unit) : BaseAdapt
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_grade_exercise, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_grade_exercisedf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View = with(context) {

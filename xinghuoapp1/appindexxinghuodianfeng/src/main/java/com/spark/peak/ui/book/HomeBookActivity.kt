@@ -12,15 +12,15 @@ import com.spark.peak.ui.book.adapter.HomeBookAdapter
 import com.spark.peak.ui.book.adapter.HomeBookSelectAdapter
 import com.spark.peak.ui.video.AudioActivity
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_home_book.*
-import kotlinx.android.synthetic.main.layout_book_select.*
+import kotlinx.android.synthetic.main.activity_home_bookdf.*
+import kotlinx.android.synthetic.main.layout_book_selectdf.*
 import kotlin.math.floor
 
 class HomeBookActivity : LifeActivity<HomeBookPresenter>() {
     override val presenter: HomeBookPresenter
         get() = HomeBookPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_home_book
+        get() = R.layout.activity_home_bookdf
 
     private val datalist = arrayListOf<AudioRes>()
     private var bookName = "jctb"

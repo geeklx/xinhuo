@@ -32,7 +32,6 @@ import com.liulishuo.filedownloader.BaseDownloadTask
 import com.liulishuo.filedownloader.FileDownloadListener
 import com.liulishuo.filedownloader.FileDownloader
 import com.sensorsdata.analytics.android.sdk.SensorsDataAPI
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.LifeActivity
@@ -44,7 +43,7 @@ import com.spark.peak.service.AudioService
 import com.spark.peak.ui.dialog.ListDialog
 import com.spark.peak.ui.video.adapter.LyricAdapter
 import com.spark.peak.utlis.*
-import kotlinx.android.synthetic.main.activity_audio.*
+import kotlinx.android.synthetic.main.activity_audiodf.*
 import org.jetbrains.anko.sp
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.wrapContent
@@ -56,7 +55,7 @@ import java.text.SimpleDateFormat
 class AudioActivity : LifeActivity<BasePresenter>(), ServiceConnection {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
-    override val layoutResId = R.layout.activity_audio
+    override val layoutResId = R.layout.activity_audiodf
 
     private var currentRes: ResourceInfo? = null
     private var position = 0
@@ -264,7 +263,7 @@ class AudioActivity : LifeActivity<BasePresenter>(), ServiceConnection {
 
 
     private val popupWindow by lazy {
-        val view = LayoutInflater.from(this).inflate(R.layout.layout_pop_speed, null)
+        val view = LayoutInflater.from(this).inflate(R.layout.layout_pop_speeddf, null)
         view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED)
         width = view.measuredWidth
         height = view.measuredHeight

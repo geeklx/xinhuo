@@ -24,7 +24,7 @@ class GrammarSearchAdapter(val onItemClick: (GrammarSearch) -> Unit) : BaseAdapt
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_grammar_search, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_grammar_searchdf, parent, false)
     }
 
     private fun replaceContent(content: String): Spanned {

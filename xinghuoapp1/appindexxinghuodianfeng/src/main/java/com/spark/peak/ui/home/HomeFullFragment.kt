@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.liulishuo.filedownloader.BaseDownloadTask
 import com.liulishuo.filedownloader.FileDownloadListener
 import com.liulishuo.filedownloader.FileDownloader
-import com.sensorsdata.analytics.android.sdk.SensorsDataAPI
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.WX_MINI_ID
@@ -39,10 +38,9 @@ import com.spark.peak.utlis.FileUtils
 import com.spark.peak.utlis.PermissionUtlis
 import com.spark.peak.utlis.WxMini
 import com.zxing.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.fragment_home_full.*
+import kotlinx.android.synthetic.main.fragment_home_fulldf.*
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
-import org.json.JSONObject
 
 const val FRESH_FLAG = "receiver_flag" //切换学段时，需要刷新首页数据
 
@@ -50,7 +48,7 @@ class HomeFullFragment : LifeFragment<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_home_full
+        get() = R.layout.fragment_home_fulldf
 
     private val bookAdapter by lazy {
         BooksAdapter({

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.spark.peak.R
 import com.spark.peak.base.LifeFragment
 import com.spark.peak.ui.netLessons.adapter.NetListAdapter
-import kotlinx.android.synthetic.main.fragment_net_list.*
+import kotlinx.android.synthetic.main.fragment_net_listdf.*
 
 /**
  */
@@ -24,7 +24,7 @@ class NetListFragment : LifeFragment<NetLessonsPresenter>() {
     override val presenter: NetLessonsPresenter
         get() = NetLessonsPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_net_list
+        get() = R.layout.fragment_net_listdf
 
     private val netListAdapter by lazy { NetListAdapter() }
 

@@ -20,7 +20,7 @@ import com.spark.peak.ui.mine.changeSign.ChangeSignActivity
 import com.spark.peak.utlis.ImageSeletedUtil
 import com.spark.peak.utlis.PermissionUtlis
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_user.*
+import kotlinx.android.synthetic.main.activity_userdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.matchParent
 import org.jetbrains.anko.startActivity
@@ -33,7 +33,7 @@ import java.util.*
  * 创建者：
  * 时间：
  */
-class UserActivity(override val layoutResId: Int = R.layout.activity_user)
+class UserActivity(override val layoutResId: Int = R.layout.activity_userdf)
     : LifeActivity<UserPresenter>() {
     override val presenter by lazy { UserPresenter(this) }
 

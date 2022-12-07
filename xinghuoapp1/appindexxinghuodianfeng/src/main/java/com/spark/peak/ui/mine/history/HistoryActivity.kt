@@ -6,12 +6,12 @@ import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.exercise.detail.ExerciseDetailActivity
 import com.spark.peak.ui.exercise.report.ReportActivity
-import kotlinx.android.synthetic.main.activity_history.*
+import kotlinx.android.synthetic.main.activity_historydf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
-class HistoryActivity(override val layoutResId: Int = R.layout.activity_history)
+class HistoryActivity(override val layoutResId: Int = R.layout.activity_historydf)
     : LifeActivity<HistoryPresenter>() {
     override val presenter = HistoryPresenter(this)
     private var page = 0

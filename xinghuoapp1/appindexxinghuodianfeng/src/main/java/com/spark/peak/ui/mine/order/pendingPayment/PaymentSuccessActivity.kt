@@ -6,7 +6,7 @@ import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.EventMsg
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.MainActivity
-import kotlinx.android.synthetic.main.activity_payment_success.*
+import kotlinx.android.synthetic.main.activity_payment_successdf.*
 import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.startActivity
 
@@ -14,7 +14,7 @@ import org.jetbrains.anko.startActivity
  * 创建者：
  * 时间：
  */
-class PaymentSuccessActivity(override val layoutResId: Int = R.layout.activity_payment_success) : LifeActivity<BasePresenter>() {
+class PaymentSuccessActivity(override val layoutResId: Int = R.layout.activity_payment_successdf) : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
     private val key by lazy { intent.getStringExtra(KEY) }

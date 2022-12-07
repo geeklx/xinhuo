@@ -1,7 +1,6 @@
 package com.spark.peak.ui.mine.setting.changePassword
 
 import android.text.Editable
-import android.text.SpannableStringBuilder
 import android.text.TextWatcher
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
@@ -10,14 +9,13 @@ import android.widget.TextView
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.R
 import com.spark.peak.bean.Register
-import com.spark.peak.bean.SMSCode
 import com.spark.peak.ui.dialog.CodeDialog
 import com.spark.peak.utlis.MD5Util
 import com.spark.peak.utlis.RegularUtils
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import kotlinx.android.synthetic.main.activity_change_password.*
+import kotlinx.android.synthetic.main.activity_change_passworddf.*
 import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.textColor
 import java.util.concurrent.TimeUnit
@@ -26,7 +24,7 @@ import java.util.concurrent.TimeUnit
  * 创建者：
  * 时间：
  */
-class ChangePasswordActivity(override val layoutResId: Int = R.layout.activity_change_password)
+class ChangePasswordActivity(override val layoutResId: Int = R.layout.activity_change_passworddf)
     : LifeActivity<ChangePasswordPresenter>() {
     override val presenter by lazy { ChangePasswordPresenter(this) }
     var disposable: Disposable? = null

@@ -7,7 +7,6 @@ import android.net.Uri
 import android.os.Environment
 import android.view.View
 import com.blankj.utilcode.util.AppUtils
-import com.spark.peak.BuildConfig
 import com.spark.peak.R
 import com.spark.peak.base.EventMsg
 import com.spark.peak.base.LifeActivity
@@ -24,7 +23,7 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_setting.*
+import kotlinx.android.synthetic.main.activity_settingdf.*
 import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
@@ -33,7 +32,7 @@ import org.jetbrains.anko.startActivity
  * 创建者：
  * 时间：
  */
-class SettingActivity(override val layoutResId: Int = R.layout.activity_setting)
+class SettingActivity(override val layoutResId: Int = R.layout.activity_settingdf)
     : LifeActivity<SettingPresenter>() {
     override val presenter: SettingPresenter = SettingPresenter(this)
     private var subscribe: Disposable? = null

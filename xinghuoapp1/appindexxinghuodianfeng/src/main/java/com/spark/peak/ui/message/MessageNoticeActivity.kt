@@ -8,14 +8,14 @@ import com.spark.peak.bean.WrongBook
 import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.ui.netLessons.NetLessonsActivity
 import com.spark.peak.ui.wrongbook.WrongDetailActivity
-import kotlinx.android.synthetic.main.activity_message_notice.*
+import kotlinx.android.synthetic.main.activity_message_noticedf.*
 import org.jetbrains.anko.startActivity
 
 /**
  * 创建者：
  * 时间：
  */
-class MessageNoticeActivity(override val layoutResId: Int = R.layout.activity_message_notice) : LifeActivity<MessageNoticePresenter>() {
+class MessageNoticeActivity(override val layoutResId: Int = R.layout.activity_message_noticedf) : LifeActivity<MessageNoticePresenter>() {
     override val presenter by lazy { MessageNoticePresenter(this) }
     private var page = 1
     private var step = 20

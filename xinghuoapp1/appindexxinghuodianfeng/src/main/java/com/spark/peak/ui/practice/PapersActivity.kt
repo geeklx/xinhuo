@@ -5,11 +5,11 @@ import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.exercise.detail.ExerciseDetailActivity2
 import com.spark.peak.ui.practice.adapter.PapersAdapter
-import kotlinx.android.synthetic.main.activity_papers.*
+import kotlinx.android.synthetic.main.activity_papersdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
-class PapersActivity(override val layoutResId: Int = R.layout.activity_papers) : LifeActivity<PapersPresenter>() {
+class PapersActivity(override val layoutResId: Int = R.layout.activity_papersdf) : LifeActivity<PapersPresenter>() {
     override val presenter = PapersPresenter(this)
     private val key by lazy { intent.getStringExtra(KEY) ?:""}
     private val queue by lazy { intent.getBooleanExtra(QUEUE, false) }

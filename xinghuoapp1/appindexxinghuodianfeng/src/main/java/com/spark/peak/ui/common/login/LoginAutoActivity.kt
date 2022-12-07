@@ -7,12 +7,11 @@ import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import androidx.core.content.ContextCompat
-import cn.jiguang.verifysdk.api.JVerificationInterface
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.community.post.PostActivity
-import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_logindf.*
 import org.jetbrains.anko.startActivity
 
 class LoginAutoActivity : LifeActivity<LoginPresenter>() {
@@ -20,7 +19,7 @@ class LoginAutoActivity : LifeActivity<LoginPresenter>() {
     override val presenter: LoginPresenter
         get() = LoginPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_login_auto
+        get() = R.layout.activity_login_autodf
 
     override fun configView() {
         super.configView()

@@ -25,7 +25,7 @@ class HomeBookAdapter(val onItemClick: (Int) -> Unit) : BaseAdapter<AudioRes>(is
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_home_book, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_home_bookdf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View = with(context) {

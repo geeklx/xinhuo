@@ -10,7 +10,7 @@ import com.spark.peak.bean.Report
 import com.spark.peak.ui.exercise.adapter.ASTypeAdapter
 import com.spark.peak.ui.exercise.detail.ExerciseDetailActivity2
 import com.spark.peak.ui.exercise.parsing.ExerciseParsingActivity
-import kotlinx.android.synthetic.main.activity_report.*
+import kotlinx.android.synthetic.main.activity_reportdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
@@ -18,7 +18,7 @@ class ReportActivity : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_report
+        get() = R.layout.activity_reportdf
 
 
     val report: Report by lazy { intent.getSerializableExtra(DATA) as Report }

@@ -8,7 +8,7 @@
 //import com.spark.peak.base.BasePresenter
 //import com.spark.peak.base.LifeActivity
 //import com.spark.peak.utlis.NetWorkUtils
-//import kotlinx.android.synthetic.main.activity_video.*
+//import kotlinx.android.synthetic.main.activity_videodf.*
 //import org.jetbrains.anko.toast
 //
 //class VideoActivity : LifeActivity<BasePresenter>() {

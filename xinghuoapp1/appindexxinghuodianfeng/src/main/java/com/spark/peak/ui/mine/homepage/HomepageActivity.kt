@@ -19,18 +19,17 @@ import com.spark.peak.ui.dialog.ShareDialog
 import com.spark.peak.ui.mine.user.UserActivity
 import com.spark.peak.utlis.ShareUtils
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_homepage.*
+import kotlinx.android.synthetic.main.activity_homepagedf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
-import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
 /**
  * 创建者：
  * 时间：
  */
-class HomepageActivity(override val layoutResId: Int = R.layout.activity_homepage)
+class HomepageActivity(override val layoutResId: Int = R.layout.activity_homepagedf)
     : LifeActivity<HomepagePresenter>() {
     override val presenter by lazy { HomepagePresenter(this) }
     private val url by lazy { intent.getStringExtra(URL) ?:""}

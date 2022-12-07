@@ -8,7 +8,7 @@ import com.spark.peak.base.LifeFragment
 import com.spark.peak.ui.lesson.adapter.LessonsAdapter
 import com.spark.peak.ui.netLessons.NetLessonsActivity
 import com.spark.peak.ui.study.StudyPresenter
-import kotlinx.android.synthetic.main.fragment_lesson.*
+import kotlinx.android.synthetic.main.fragment_lessondf.*
 import org.jetbrains.anko.support.v4.startActivity
 
 /**
@@ -33,7 +33,7 @@ class LessonFragment : LifeFragment<StudyPresenter>() {
     override val presenter: StudyPresenter
         get() = StudyPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_lesson
+        get() = R.layout.fragment_lessondf
     private val lessonsAdapter by lazy {
         LessonsAdapter() {
             startActivity<NetLessonsActivity>(NetLessonsActivity.KEY to it.key)

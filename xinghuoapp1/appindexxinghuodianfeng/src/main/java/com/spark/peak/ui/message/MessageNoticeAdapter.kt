@@ -31,7 +31,7 @@ class MessageNoticeAdapter(var toDetail: (MsgBean) -> Unit, var loadMore: () -> 
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_msg, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_msgdf, parent, false)
     }
 
     override fun empty(holder: ViewHolder) {

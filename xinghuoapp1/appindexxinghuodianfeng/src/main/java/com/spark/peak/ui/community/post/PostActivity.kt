@@ -14,7 +14,6 @@ import com.blankj.utilcode.util.SPUtils
 import com.geek.libutils.app.BaseApp
 import com.github.lzyzsd.jsbridge.BridgeWebViewClient
 import com.google.gson.Gson
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.appId
@@ -39,7 +38,7 @@ import com.tencent.sonic.sdk.SonicConfig
 import com.tencent.sonic.sdk.SonicEngine
 import com.tencent.sonic.sdk.SonicSession
 import com.tencent.sonic.sdk.SonicSessionConfig
-import kotlinx.android.synthetic.main.activity_post.*
+import kotlinx.android.synthetic.main.activity_postdf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -50,7 +49,7 @@ import org.json.JSONObject
  * 创建者：
  * 时间：
  */
-class PostActivity(override val layoutResId: Int = R.layout.activity_post) :
+class PostActivity(override val layoutResId: Int = R.layout.activity_postdf) :
     LifeActivity<PostPresenter>() {
     override val presenter by lazy { PostPresenter(this) }
     private val url by lazy { intent.getStringExtra(URL) ?: "" }

@@ -21,13 +21,13 @@ import com.spark.peak.ui.mine.user.UserActivity
 import com.spark.peak.ui.wrongbook.WrongBookActivity
 import com.spark.peak.utlis.PermissionUtlis
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.fragment_mine.*
+import kotlinx.android.synthetic.main.fragment_minedf.*
 import org.jetbrains.anko.support.v4.startActivity
 
 
 class MineFragment : LifeFragment<MinePresenter>() {
     override val presenter = MinePresenter(this)
-    override val layoutResId = R.layout.fragment_mine
+    override val layoutResId = R.layout.fragment_minedf
 
     override fun initData() {
         if (SpUtil.isLogin) {

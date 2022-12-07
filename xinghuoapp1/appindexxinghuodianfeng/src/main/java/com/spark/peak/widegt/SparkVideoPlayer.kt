@@ -87,7 +87,7 @@ class SparkVideoPlayer : NormalGSYVideoPlayer {
     }
 
     override fun getLayoutId(): Int {
-        return R.layout.layout_video_spark
+        return R.layout.layout_video_sparkdf
     }
 
     override fun changeUiToError() {

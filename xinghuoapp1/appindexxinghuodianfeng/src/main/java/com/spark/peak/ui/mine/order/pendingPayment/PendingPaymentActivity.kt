@@ -10,7 +10,7 @@ import com.spark.peak.base.EventMsg
 import com.spark.peak.bean.Order
 import com.spark.peak.ui.dialog.AlertDialog
 import com.spark.peak.ui.mine.order.comment.OrderCommentActivity
-import kotlinx.android.synthetic.main.activity_pending_payment.*
+import kotlinx.android.synthetic.main.activity_pending_paymentdf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -21,7 +21,7 @@ import org.jetbrains.anko.startActivity
  * 创建者：
  * 时间：
  */
-class PendingPaymentActivity(override val layoutResId: Int = R.layout.activity_pending_payment)
+class PendingPaymentActivity(override val layoutResId: Int = R.layout.activity_pending_paymentdf)
     : LifeActivity<PendingPaymentPresenter>() {
     override val presenter by lazy { PendingPaymentPresenter(this) }
     private val key by lazy { intent.getStringExtra(PendingPaymentActivity.KEY)?:"" }

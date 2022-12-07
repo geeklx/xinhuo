@@ -14,7 +14,6 @@ import android.view.View
 import android.widget.Toast
 import cn.jiguang.verifysdk.api.JVerificationInterface
 import com.blankj.utilcode.util.SPUtils
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.LifeActivity
@@ -32,7 +31,7 @@ import com.spark.peak.utlis.log.L
 import com.umeng.socialize.UMAuthListener
 import com.umeng.socialize.UMShareAPI
 import com.umeng.socialize.bean.SHARE_MEDIA
-import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_logindf.*
 import org.jetbrains.anko.startActivity
 
 
@@ -40,7 +39,7 @@ import org.jetbrains.anko.startActivity
  * 创建者：
  * 时间：
  */
-class LoginActivity(override val layoutResId: Int = R.layout.activity_login) :
+class LoginActivity(override val layoutResId: Int = R.layout.activity_logindf) :
     LifeActivity<LoginPresenter>() {
     override val presenter by lazy { LoginPresenter(this) }
     var phone = ""

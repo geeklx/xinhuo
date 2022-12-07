@@ -27,10 +27,10 @@ class LessonsAdapter(var onItemClick: (NetLessonItem) -> Unit) : BaseAdapter<Net
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_lesson, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_lessondf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_lesson_empty, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_lesson_emptydf, parent, false)
     }
 }

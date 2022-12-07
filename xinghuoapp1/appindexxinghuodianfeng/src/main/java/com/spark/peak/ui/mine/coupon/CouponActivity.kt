@@ -7,14 +7,14 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.R
 import com.spark.peak.ui.mine.coupon.detail.CouponDetailActivity
 import com.spark.peak.utlis.ItemDecoration
-import kotlinx.android.synthetic.main.activity_coupon.*
+import kotlinx.android.synthetic.main.activity_coupondf.*
 import org.jetbrains.anko.*
 
 /**
  * 创建者：
  * 时间：
  */
-class CouponActivity(override val layoutResId: Int = R.layout.activity_coupon)
+class CouponActivity(override val layoutResId: Int = R.layout.activity_coupondf)
     : LifeActivity<CouponPresenter>() {
     override val presenter by lazy { CouponPresenter(this) }
     private var status = 0

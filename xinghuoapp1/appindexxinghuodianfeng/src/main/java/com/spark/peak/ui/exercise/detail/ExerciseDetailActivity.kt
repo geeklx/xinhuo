@@ -13,7 +13,7 @@ import com.spark.peak.bean.AnswerSubmit
 import com.spark.peak.bean.ExerciseFrameItem
 import com.spark.peak.ui.exercise.adapter.ExercisePagerAdapter
 import com.spark.peak.ui.exercise.report.ReportActivity
-import kotlinx.android.synthetic.main.activity_exercise_detail.*
+import kotlinx.android.synthetic.main.activity_exercise_detaildf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.onPageChangeListener
@@ -27,7 +27,7 @@ class ExerciseDetailActivity : LifeActivity<ExerciseDetailPresenter>() {
     override val presenter: ExerciseDetailPresenter
         get() = ExerciseDetailPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_exercise_detail
+        get() = R.layout.activity_exercise_detaildf
 
     val practisekey by lazy { intent.getStringExtra(KEY)?:"" }
     val paperName by lazy { intent.getStringExtra(NAME) ?:""}

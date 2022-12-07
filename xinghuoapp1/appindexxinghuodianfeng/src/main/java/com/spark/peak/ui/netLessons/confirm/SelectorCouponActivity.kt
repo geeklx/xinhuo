@@ -8,14 +8,14 @@ import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.bean.Coupon
 import com.spark.peak.ui.mine.coupon.CouponAdapter
-import kotlinx.android.synthetic.main.activity_selector_coupon.*
+import kotlinx.android.synthetic.main.activity_selector_coupondf.*
 import org.jetbrains.anko.*
 
 /**
  * 创建者：
  * 时间：
  */
-class SelectorCouponActivity(override val layoutResId: Int = R.layout.activity_selector_coupon)
+class SelectorCouponActivity(override val layoutResId: Int = R.layout.activity_selector_coupondf)
     : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)

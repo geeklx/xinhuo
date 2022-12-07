@@ -7,14 +7,14 @@ import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.bean.Attention
 import com.spark.peak.ui.mine.homepage.HomepageActivity
-import kotlinx.android.synthetic.main.activity_fans.*
+import kotlinx.android.synthetic.main.activity_fansdf.*
 import org.jetbrains.anko.*
 
 /**
  * 创建者：
  * 时间：
  */
-class FansActivity(override val layoutResId: Int = R.layout.activity_fans)
+class FansActivity(override val layoutResId: Int = R.layout.activity_fansdf)
     : LifeActivity<FansPresenter>() {
     override val presenter by lazy { FansPresenter(this) }
 

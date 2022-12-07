@@ -5,10 +5,10 @@ import com.spark.peak.R
 import com.spark.peak.base.BaseActivity
 import com.spark.peak.bean.BookRes
 import com.spark.peak.utlis.DownloadManager
-import kotlinx.android.synthetic.main.activity_offline.*
+import kotlinx.android.synthetic.main.activity_offlinedf.*
 import org.jetbrains.anko.startActivity
 
-class OfflineActivity(override val layoutResId: Int = R.layout.activity_offline) : BaseActivity() {
+class OfflineActivity(override val layoutResId: Int = R.layout.activity_offlinedf) : BaseActivity() {
     private val adapter = OfflineAdapter { type, item ->
         startActivity<OfflineResActivity>(
             OfflineResActivity.NAME to item.name,

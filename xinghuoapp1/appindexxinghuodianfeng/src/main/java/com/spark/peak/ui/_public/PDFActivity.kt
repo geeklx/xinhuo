@@ -11,14 +11,14 @@ import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.bean.PdfImg
 import com.spark.peak.ui._public.adapter.PDFAdapter
-import kotlinx.android.synthetic.main.activity_pdf.*
+import kotlinx.android.synthetic.main.activity_pdfdf.*
 import org.jetbrains.anko.toast
 
 class PDFActivity : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_pdf
+        get() = R.layout.activity_pdfdf
 
     private val key by lazy { intent.getStringExtra(KEY) ?: "" }
     private val url by lazy { intent.getStringExtra(URL) ?: "" }

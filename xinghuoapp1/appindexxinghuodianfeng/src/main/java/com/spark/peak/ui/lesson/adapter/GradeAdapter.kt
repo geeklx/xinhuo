@@ -47,7 +47,7 @@ class GradeAdapter(val onItemClick: (Grade) -> Unit) : BaseAdapter<Grade>() {
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_select, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_selectdf, parent, false)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -59,7 +59,7 @@ class GradeAdapter(val onItemClick: (Grade) -> Unit) : BaseAdapter<Grade>() {
     }
 
     private fun titleView(parent: ViewGroup): View {
-        return LayoutInflater.from(parent.context).inflate(R.layout.layout_grade_list, parent, false)
+        return LayoutInflater.from(parent.context).inflate(R.layout.layout_grade_listdf, parent, false)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

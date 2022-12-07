@@ -15,7 +15,7 @@ import com.spark.peak.ui.dialog.FeedbackDialog
 import com.spark.peak.ui.exercise.detail.ExerciseDetailPresenter
 import com.spark.peak.utlis.DownloadManager
 import com.spark.peak.utlis.PermissionUtlis
-import kotlinx.android.synthetic.main.activity_parsing_detail.*
+import kotlinx.android.synthetic.main.activity_parsing_detaildf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.toast
 import java.io.BufferedReader
@@ -27,7 +27,7 @@ class ExerciseParsingActivity : LifeActivity<ExerciseDetailPresenter>() {
     override val presenter: ExerciseDetailPresenter
         get() = ExerciseDetailPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_parsing_detail
+        get() = R.layout.activity_parsing_detaildf
     private var dialog: FeedbackDialog? = null
 
     val practisekey by lazy { intent.getStringExtra(KEY)?:"" }

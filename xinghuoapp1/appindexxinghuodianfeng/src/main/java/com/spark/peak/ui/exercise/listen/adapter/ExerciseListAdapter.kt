@@ -20,5 +20,5 @@ class ExerciseListAdapter(val onItemClick: (SpacialPaper) -> Unit) : BaseAdapter
         }
     }
 
-    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.layout_exercise, parent, false)
+    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.layout_exercisedf, parent, false)
 }

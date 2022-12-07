@@ -7,8 +7,7 @@ import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.bean.Circle
 import com.spark.peak.ui.community.post.PostActivity
-import com.spark.peak.ui.mine.homepage.HomepageActivity
-import kotlinx.android.synthetic.main.activity_circle.*
+import kotlinx.android.synthetic.main.activity_circledf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
@@ -16,7 +15,7 @@ import org.jetbrains.anko.startActivity
  * 创建者：
  * 时间：
  */
-class CircleActivity(override val layoutResId: Int = R.layout.activity_circle)
+class CircleActivity(override val layoutResId: Int = R.layout.activity_circledf)
     : LifeActivity<CirclePresenter>() {
     override val presenter by lazy { CirclePresenter(this) }
     private val adapter = CircleAdapter ({ position, item, isFollow ->

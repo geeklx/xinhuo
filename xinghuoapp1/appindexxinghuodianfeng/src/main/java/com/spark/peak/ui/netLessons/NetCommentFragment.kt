@@ -17,7 +17,7 @@ import com.spark.peak.ui.common.login.LoginActivity
 import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.utlis.SpUtil
 import com.spark.peak.utlis.WebCameraHelper
-import kotlinx.android.synthetic.main.activity_image.view.*
+import kotlinx.android.synthetic.main.activity_imagedf.view.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.support.v4.UI

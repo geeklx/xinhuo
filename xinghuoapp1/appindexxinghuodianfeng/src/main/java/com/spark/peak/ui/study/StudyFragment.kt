@@ -14,7 +14,7 @@ import com.spark.peak.ui.study.sign_in.SignInActivity
 import com.spark.peak.utlis.PermissionUtlis
 import com.spark.peak.utlis.SpUtil
 import com.zxing.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.fragment_study.*
+import kotlinx.android.synthetic.main.fragment_studydf.*
 import org.jetbrains.anko.support.v4.startActivity
 
 
@@ -22,7 +22,7 @@ class StudyFragment : LifeFragment<StudyPresenter>() {
     override val presenter: StudyPresenter
         get() = StudyPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_study
+        get() = R.layout.fragment_studydf
 
 
     private val booksFragment by lazy { MyBooksFragment() }

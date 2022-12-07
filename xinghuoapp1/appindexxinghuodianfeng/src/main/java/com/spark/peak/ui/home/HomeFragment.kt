@@ -38,7 +38,7 @@ import com.spark.peak.utlis.*
 import com.spark.peak.utlis.FileUtils.Companion.installAPK
 import com.spark.peak.widegt.FlyBanner.CENTER
 import com.zxing.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_homedf.*
 import org.jetbrains.anko.support.v4.runOnUiThread
 import org.jetbrains.anko.support.v4.startActivity
 import org.jetbrains.anko.support.v4.toast
@@ -51,7 +51,7 @@ class HomeFragment : LifeFragment<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_home
+        get() = R.layout.fragment_homedf
 
     var subjectList = ArrayList<Subject>()
     var broadcastKey: String = ""

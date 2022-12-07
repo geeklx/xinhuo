@@ -6,13 +6,13 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.R
 import com.spark.peak.bean.UserInfo
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_change_nickname.*
+import kotlinx.android.synthetic.main.activity_change_nicknamedf.*
 
 /**
  * 创建者：
  * 时间：
  */
-class ChangeNicknameActivity(override val layoutResId: Int = R.layout.activity_change_nickname)
+class ChangeNicknameActivity(override val layoutResId: Int = R.layout.activity_change_nicknamedf)
     : LifeActivity<ChangeNicknamePresenter>() {
     override val presenter by lazy { ChangeNicknamePresenter(this) }
     override fun handleEvent() {

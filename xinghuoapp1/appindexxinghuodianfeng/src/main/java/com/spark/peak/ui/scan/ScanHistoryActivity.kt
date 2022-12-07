@@ -7,14 +7,14 @@ import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.ui.home.HomePresenter
 import com.spark.peak.ui.scan.adapter.ScanHistoryAdapter
 import com.spark.peak.ui.study.book.BookDetailActivity
-import kotlinx.android.synthetic.main.activity_scan_history.*
+import kotlinx.android.synthetic.main.activity_scan_historydf.*
 import org.jetbrains.anko.startActivity
 
 class ScanHistoryActivity : LifeActivity<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_scan_history
+        get() = R.layout.activity_scan_historydf
 
     private val scanHistoryAdapter by lazy {
         ScanHistoryAdapter {

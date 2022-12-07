@@ -87,7 +87,7 @@
 
     <include
         android:id="@+id/v_book_select"
-        layout="@layout/layout_book_select"
+        layout="@layout/layout_book_selectdf"
         android:layout_width="0dp"
         android:visibility="gone"
         android:layout_height="0dp"

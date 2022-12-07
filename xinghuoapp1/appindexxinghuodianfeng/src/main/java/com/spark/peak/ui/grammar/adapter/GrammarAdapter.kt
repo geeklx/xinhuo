@@ -21,7 +21,7 @@ class GrammarAdapter(val onItemClick: (Grammar) -> Unit) : BaseAdapter<Grammar>(
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_grammar, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_grammardf, parent, false)
     }
 
     private fun formatNumber(num: String): String {

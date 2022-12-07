@@ -13,14 +13,14 @@ import com.spark.peak.bean.SignInfo
 import com.spark.peak.ui.study.StudyPresenter
 import com.spark.peak.ui.study.adapter.SignInListAdapter
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_sing_in.*
+import kotlinx.android.synthetic.main.activity_sing_indf.*
 import org.jetbrains.anko.ctx
 
 class SignInActivity : LifeActivity<StudyPresenter>() {
     override val presenter: StudyPresenter
         get() = StudyPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_sing_in
+        get() = R.layout.activity_sing_indf
 
     private var signInfo : SignInfo ?= null
     val oAdapter by lazy { SignInListAdapter{

@@ -17,7 +17,7 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.bean.WrongBook
 import com.spark.peak.utlis.DownloadManager
 import com.spark.peak.utlis.PermissionUtlis
-import kotlinx.android.synthetic.main.activity_wrong_detail.*
+import kotlinx.android.synthetic.main.activity_wrong_detaildf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.toast
 import org.json.JSONObject
@@ -30,7 +30,7 @@ class WrongDetailActivity : LifeActivity<WrongBookPresenter>() {
     override val presenter: WrongBookPresenter
         get() = WrongBookPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_wrong_detail
+        get() = R.layout.activity_wrong_detaildf
 
     val wrongItem by lazy { intent.getSerializableExtra(WRONG_ITEM) as WrongBook }
     val type by lazy { intent.getStringExtra(TYPE) ?: "0" }

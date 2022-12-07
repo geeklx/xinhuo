@@ -6,13 +6,13 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.R
 import com.spark.peak.bean.UserInfo
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_change_sign.*
+import kotlinx.android.synthetic.main.activity_change_signdf.*
 
 /**
  * 创建者：
  * 时间：
  */
-class ChangeSignActivity(override val layoutResId: Int = R.layout.activity_change_sign)
+class ChangeSignActivity(override val layoutResId: Int = R.layout.activity_change_signdf)
     : LifeActivity<ChangeSignPresenter>() {
     override val presenter by lazy { ChangeSignPresenter(this) }
     override fun handleEvent() {

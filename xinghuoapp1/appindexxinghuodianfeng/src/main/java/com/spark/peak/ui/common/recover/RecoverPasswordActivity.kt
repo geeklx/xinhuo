@@ -10,14 +10,13 @@ import android.widget.TextView
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.R
 import com.spark.peak.bean.Register
-import com.spark.peak.bean.SMSCode
 import com.spark.peak.ui.dialog.CodeDialog
 import com.spark.peak.utlis.MD5Util
 import com.spark.peak.utlis.RegularUtils
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import kotlinx.android.synthetic.main.activity_recover_passeord.*
+import kotlinx.android.synthetic.main.activity_recover_passeorddf.*
 import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.textColor
 import java.util.concurrent.TimeUnit
@@ -26,7 +25,7 @@ import java.util.concurrent.TimeUnit
  * 创建者：
  * 时间：
  */
-class RecoverPasswordActivity(override val layoutResId: Int = R.layout.activity_recover_passeord)
+class RecoverPasswordActivity(override val layoutResId: Int = R.layout.activity_recover_passeorddf)
     : LifeActivity<RecoverPasswordPresenter>() {
     override val presenter by lazy { RecoverPasswordPresenter(this) }
     var disposable: Disposable? = null

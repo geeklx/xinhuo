@@ -20,7 +20,7 @@ import com.spark.peak.servicePhone
 import com.spark.peak.ui.dialog.ShareDialog
 import com.spark.peak.ui.lesson.LessonDetailActivity
 import com.spark.peak.utlis.ShareUtils
-import kotlinx.android.synthetic.main.activity_net_lessons.*
+import kotlinx.android.synthetic.main.activity_net_lessonsdf.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 
@@ -31,7 +31,7 @@ import org.json.JSONObject
  */
 class NetLessonsActivity() : LifeActivity<NetLessonsPresenter>() {
     override val presenter by lazy { NetLessonsPresenter(this) }
-    override val layoutResId: Int get() = R.layout.activity_net_lessons
+    override val layoutResId: Int get() = R.layout.activity_net_lessonsdf
     private val key by lazy { intent.getStringExtra(KEY) ?: "" }
     private val grade by lazy { intent.getStringExtra(GRADE) ?: "" }
     private var lesson: NetLesson? = null

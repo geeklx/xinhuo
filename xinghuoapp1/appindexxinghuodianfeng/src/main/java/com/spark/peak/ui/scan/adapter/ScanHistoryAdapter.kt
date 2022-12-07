@@ -20,5 +20,5 @@ class ScanHistoryAdapter(val onItemClick: (HomeQr) -> Unit) : BaseAdapter<HomeQr
         }
     }
 
-    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.layout_scan_history, parent, false)
+    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.layout_scan_historydf, parent, false)
 }

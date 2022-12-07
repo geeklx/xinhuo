@@ -10,7 +10,7 @@ import com.spark.peak.ui.exercise.adapter.VersionBooksAdapter
 import com.spark.peak.ui.exercise.adapter.VersionsAdapter
 import com.spark.peak.ui.exercise.detail_list.ExerciseListActivity
 import com.spark.peak.ui.exercise.history.ExHistoryActivity
-import kotlinx.android.synthetic.main.activity_sub_versions.*
+import kotlinx.android.synthetic.main.activity_sub_versionsdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
@@ -18,7 +18,7 @@ class SubVersionsActivity : LifeActivity<SubVersionPresenter>() {
     override val presenter: SubVersionPresenter
         get() = SubVersionPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_sub_versions
+        get() = R.layout.activity_sub_versionsdf
 
     private val subject by lazy { intent.getStringExtra(SUB_NAME)?:"" }
     private val subjectKey by lazy { intent.getStringExtra(SUB_KEY)?:"" }

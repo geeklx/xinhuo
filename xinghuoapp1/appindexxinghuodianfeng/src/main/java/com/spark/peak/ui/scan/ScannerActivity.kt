@@ -22,7 +22,7 @@ import io.reactivex.Observable
 import io.reactivex.ObservableOnSubscribe
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_scanner.*
+import kotlinx.android.synthetic.main.activity_scannerdf.*
 import java.io.File
 import java.util.*
 
@@ -31,7 +31,7 @@ class ScannerActivity : LifeActivity<BasePresenter>(), DecoratedBarcodeView.Torc
     override val presenter: BasePresenter
         get() = BasePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_scanner
+        get() = R.layout.activity_scannerdf
     private val captureManager by lazy { CaptureManager(this, db_code) }
     private var isCrop = true
     override fun onCreate(savedInstanceState: Bundle?) {

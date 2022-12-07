@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.spark.peak.R
-import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.BaseAdapter
 import com.spark.peak.base.ViewHolder
 import com.spark.peak.bean.EduInfo
@@ -24,6 +23,6 @@ class NewsAdapter(var itemClick: (EduInfo)->Unit) : BaseAdapter<EduInfo>(){
         }
     }
 
-    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.item_home_news,null)
+    override fun convertView(context: Context, parent: ViewGroup): View = LayoutInflater.from(context).inflate(R.layout.item_home_newsdf,null)
 
 }

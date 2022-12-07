@@ -9,7 +9,7 @@ import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.ui.dialog.ShareDialog
 import com.spark.peak.ui.grammar.adapter.GrammarSecAdapter
 import com.spark.peak.utlis.ShareUtils
-import kotlinx.android.synthetic.main.activity_grammar.*
+import kotlinx.android.synthetic.main.activity_grammardf.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 
@@ -17,7 +17,7 @@ class GrammarSecActivity : LifeActivity<GrammarPresenter>() {
     override val presenter: GrammarPresenter
         get() = GrammarPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_grammar
+        get() = R.layout.activity_grammardf
 
     private val grammar by lazy { intent.getSerializableExtra("grammar") as Grammar }
     private val dialog by lazy {

@@ -11,8 +11,8 @@ import com.spark.peak.ui.lesson.adapter.GradeAdapter
 import com.spark.peak.ui.lesson.adapter.LessonsAdapter
 import com.spark.peak.ui.netLessons.NetLessonsActivity
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_lesson_list.*
-import kotlinx.android.synthetic.main.layout_lesson_select.*
+import kotlinx.android.synthetic.main.activity_lesson_listdf.*
+import kotlinx.android.synthetic.main.layout_lesson_selectdf.*
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 
@@ -21,7 +21,7 @@ class LessonsActivity : LifeActivity<LessonPresenter>() {
     override val presenter: LessonPresenter
         get() = LessonPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_lesson_list
+        get() = R.layout.activity_lesson_listdf
 
     private val gradeList = arrayListOf<Grade>()
     private var grade: Grade? = null

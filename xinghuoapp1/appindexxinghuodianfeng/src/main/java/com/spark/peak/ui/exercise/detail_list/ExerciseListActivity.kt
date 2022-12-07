@@ -6,7 +6,7 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.exercise.adapter.ExUnitAdapter
 import com.spark.peak.ui.exercise.detail.ExerciseDetailActivity2
 import com.spark.peak.ui.exercise.report.ReportActivity
-import kotlinx.android.synthetic.main.activity_exercise_list.*
+import kotlinx.android.synthetic.main.activity_exercise_listdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
@@ -14,7 +14,7 @@ class ExerciseListActivity : LifeActivity<ExerciseListPresenter>() {
     override val presenter: ExerciseListPresenter
         get() = ExerciseListPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_exercise_list
+        get() = R.layout.activity_exercise_listdf
 
     val bookKey by lazy { intent.getStringExtra(BOOK_KEY)?:"" }
     val bookName by lazy { intent.getStringExtra(BOOK_NAME)?:"" }

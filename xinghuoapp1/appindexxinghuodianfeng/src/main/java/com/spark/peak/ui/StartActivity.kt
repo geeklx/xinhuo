@@ -6,7 +6,6 @@ import android.view.View
 import com.bumptech.glide.Glide
 import com.gyf.immersionbar.BarHide
 import com.gyf.immersionbar.ImmersionBar
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.LifeActivity
@@ -20,7 +19,7 @@ import com.spark.peak.ui.home.HomePresenter
 import com.spark.peak.ui.netLessons.NetLessonsActivity
 import com.spark.peak.utlis.SpUtil
 import com.spark.peak.utlis.UuidUtil
-import kotlinx.android.synthetic.main.activity_start.*
+import kotlinx.android.synthetic.main.activity_startdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
@@ -28,7 +27,7 @@ class StartActivity : LifeActivity<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_start
+        get() = R.layout.activity_startdf
 
     private var advert: Advert? = null
     private val handler by lazy { Handler() }

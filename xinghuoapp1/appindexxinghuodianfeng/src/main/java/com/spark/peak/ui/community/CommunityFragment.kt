@@ -20,7 +20,7 @@ import com.spark.peak.ui.community.post.PostActivity
 import com.spark.peak.ui.message.MessageNoticeActivity
 import com.spark.peak.utlis.SpUtil
 import com.spark.peak.utlis.WebCameraHelper
-import kotlinx.android.synthetic.main.fragment_community.*
+import kotlinx.android.synthetic.main.fragment_communitydf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -33,7 +33,7 @@ import org.jetbrains.anko.support.v4.startActivity
  */
 class CommunityFragment : LifeFragment<BasePresenter>() {
     override val presenter: BasePresenter = BasePresenter(this)
-    override val layoutResId: Int = R.layout.fragment_community
+    override val layoutResId: Int = R.layout.fragment_communitydf
     override fun configView(view: View?) {
         EventBus.getDefault().register(this)
         web_view.settings.javaScriptEnabled = true

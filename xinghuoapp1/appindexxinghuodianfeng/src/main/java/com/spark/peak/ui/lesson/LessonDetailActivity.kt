@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.Intent.ACTION_DIAL
 import android.net.Uri
 import android.widget.Toast
-import com.google.gson.Gson
 import com.sensorsdata.analytics.android.sdk.SensorsDataAPI
 import com.spark.peak.R
 import com.spark.peak.base.EventMsg
@@ -15,14 +14,14 @@ import com.spark.peak.servicePhone
 import com.spark.peak.ui.mine.order.comment.OrderCommentActivity
 import com.spark.peak.ui.netLessons.NetDownFragment
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_lessons.*
+import kotlinx.android.synthetic.main.activity_lessonsdf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 
-class LessonDetailActivity(override val layoutResId: Int = R.layout.activity_lessons) :
+class LessonDetailActivity(override val layoutResId: Int = R.layout.activity_lessonsdf) :
     LifeActivity<LessonDetailPresenter>() {
     override val presenter = LessonDetailPresenter(this)
     private val key by lazy { intent.getStringExtra(KEY) ?: "" }

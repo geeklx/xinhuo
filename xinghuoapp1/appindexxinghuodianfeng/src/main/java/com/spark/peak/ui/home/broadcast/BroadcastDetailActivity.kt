@@ -9,13 +9,13 @@ import com.spark.peak.R
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.bean.AnnouncementDetail
 import com.spark.peak.ui.home.HomePresenter
-import kotlinx.android.synthetic.main.activity_broadcast_detail.*
+import kotlinx.android.synthetic.main.activity_broadcast_detaildf.*
 
 class BroadcastDetailActivity : LifeActivity<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_broadcast_detail
+        get() = R.layout.activity_broadcast_detaildf
 
     private val key by lazy { intent.getStringExtra(KEY)?:"" }
 

@@ -4,14 +4,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.spark.peak.base.LifeActivity
 import com.spark.peak.R
 import com.spark.peak.utlis.ItemDecoration
-import kotlinx.android.synthetic.main.activity_coupon_detail.*
+import kotlinx.android.synthetic.main.activity_coupon_detaildf.*
 import org.jetbrains.anko.*
 
 /**
  * 创建者：
  * 时间：
  */
-class CouponDetailActivity(override val layoutResId: Int = R.layout.activity_coupon_detail)
+class CouponDetailActivity(override val layoutResId: Int = R.layout.activity_coupon_detaildf)
     : LifeActivity<CouponDetailPresenter>() {
     override val presenter by lazy { CouponDetailPresenter(this) }
     private val key by lazy { intent.getStringExtra(KEY)?:"" }

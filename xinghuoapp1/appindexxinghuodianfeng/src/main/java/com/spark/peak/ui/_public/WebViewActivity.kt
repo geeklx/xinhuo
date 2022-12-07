@@ -7,13 +7,13 @@ import android.webkit.*
 import com.spark.peak.R
 import com.spark.peak.base.BasePresenter
 import com.spark.peak.base.LifeActivity
-import kotlinx.android.synthetic.main.activity_progress_web_view.*
+import kotlinx.android.synthetic.main.activity_progress_web_viewdf.*
 
 class WebViewActivity : LifeActivity<BasePresenter>() {
     override val presenter: BasePresenter
         get() = BasePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_progress_web_view
+        get() = R.layout.activity_progress_web_viewdf
 
     private val title by lazy { intent.getStringExtra(TITLE) }
     private val url by lazy { intent.getStringExtra(URL) }

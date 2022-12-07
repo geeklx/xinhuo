@@ -7,14 +7,14 @@ import com.spark.peak.base.LifeActivity
 import com.spark.peak.ui.dialog.ShareDialog
 import com.spark.peak.ui.grammar.adapter.GrammarAdapter
 import com.spark.peak.utlis.ShareUtils
-import kotlinx.android.synthetic.main.activity_grammar.*
+import kotlinx.android.synthetic.main.activity_grammardf.*
 import org.jetbrains.anko.startActivity
 
 class GrammarActivity : LifeActivity<GrammarPresenter>() {
     override val presenter: GrammarPresenter
         get() = GrammarPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_grammar
+        get() = R.layout.activity_grammardf
     private val dialog by lazy {
         ShareDialog(this) {
             ShareUtils.share(this, it, "", "", "", "")

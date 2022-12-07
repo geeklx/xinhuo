@@ -13,7 +13,6 @@ import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.TextView
 import com.blankj.utilcode.util.SPUtils
-import com.spark.peak.MyApp
 import com.spark.peak.R
 import com.spark.peak.WEB_BASE_URL
 import com.spark.peak.base.EventMsg
@@ -27,7 +26,7 @@ import com.spark.peak.utlis.RegularUtils
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
-import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.activity_registerdf.*
 import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.startActivity
@@ -38,7 +37,7 @@ import java.util.concurrent.TimeUnit
  * 创建者：
  * 时间：
  */
-class RegisterActivity(override val layoutResId: Int = R.layout.activity_register) :
+class RegisterActivity(override val layoutResId: Int = R.layout.activity_registerdf) :
     LifeActivity<RegisterPresenter>() {
     override val presenter by lazy { RegisterPresenter(this) }
     var disposable: Disposable? = null

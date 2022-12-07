@@ -6,13 +6,13 @@ import com.example.questions.Question
 import com.spark.peak.R
 import com.spark.peak.base.LifeFragment
 import com.spark.peak.ui.exercise.adapter.AnswerCardAdapter2
-import kotlinx.android.synthetic.main.fragment_answer_card.*
+import kotlinx.android.synthetic.main.fragment_answer_carddf.*
 
 class AnswerCardFragment2 : LifeFragment<ExerciseDetailPresenter>() {
     override val presenter: ExerciseDetailPresenter
         get() = ExerciseDetailPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.fragment_answer_card
+        get() = R.layout.fragment_answer_carddf
     var data: MutableList<Question>? = null
     val activity: ExerciseDetailActivity2 by lazy { getActivity() as ExerciseDetailActivity2 }
     var oAdapter = AnswerCardAdapter2 {

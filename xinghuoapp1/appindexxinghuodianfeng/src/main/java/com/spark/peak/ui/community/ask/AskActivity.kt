@@ -9,7 +9,7 @@ import com.spark.peak.R
 import com.spark.peak.ui.dialog.SelectedDialog
 import com.spark.peak.utlis.ImageSeletedUtil
 import com.spark.peak.utlis.PermissionUtlis
-import kotlinx.android.synthetic.main.activity_ask.*
+import kotlinx.android.synthetic.main.activity_askdf.*
 import org.jetbrains.anko.*
 import java.io.File
 
@@ -17,7 +17,7 @@ import java.io.File
  * 创建者：
  * 时间：
  */
-class AskActivity(override val layoutResId: Int = R.layout.activity_ask)
+class AskActivity(override val layoutResId: Int = R.layout.activity_askdf)
     : LifeActivity<AskPresenter>() {
     override val presenter by lazy { AskPresenter(this) }
     private val phoneDialog by lazy {

@@ -17,7 +17,7 @@ import com.spark.peak.ui.study.adapter.StudyBaseAdapter
 import com.spark.peak.ui.study.book.BookDetailActivity
 import com.spark.peak.utlis.PermissionUtlis
 import com.zxing.google.zxing.integration.android.IntentIntegrator
-import kotlinx.android.synthetic.main.activity_books_config.*
+import kotlinx.android.synthetic.main.activity_books_configdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
@@ -27,7 +27,7 @@ class BooksConfigActivity : LifeActivity<StudyPresenter>() {
     override val presenter: StudyPresenter
         get() = StudyPresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_books_config
+        get() = R.layout.activity_books_configdf
 
 
     private val isBooks by lazy { intent.getBooleanExtra(IS_BOOKS, true) }

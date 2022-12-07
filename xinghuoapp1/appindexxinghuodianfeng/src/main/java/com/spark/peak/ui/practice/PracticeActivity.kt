@@ -7,13 +7,13 @@ import android.view.View
 import com.spark.peak.R
 import com.spark.peak.base.BaseActivity
 import com.spark.peak.ui.practice.adapter.PapersAdapter
-import kotlinx.android.synthetic.main.activity_practice.*
+import kotlinx.android.synthetic.main.activity_practicedf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
 class PracticeActivity : BaseActivity() {
     override val layoutResId: Int
-        get() = R.layout.activity_practice
+        get() = R.layout.activity_practicedf
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun configView() {

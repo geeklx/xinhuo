@@ -12,7 +12,7 @@ import com.spark.peak.ui.exercise.version.SubVersionsActivity
 import com.spark.peak.ui.home.HomePresenter
 import com.spark.peak.utlis.GradUtil
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_subjects.*
+import kotlinx.android.synthetic.main.activity_subjectsdf.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.startActivity
 
@@ -20,7 +20,7 @@ class SubjectsActivity : LifeActivity<HomePresenter>() {
     override val presenter: HomePresenter
         get() = HomePresenter(this)
     override val layoutResId: Int
-        get() = R.layout.activity_subjects
+        get() = R.layout.activity_subjectsdf
 
     private val subjectList by lazy { mutableListOf<Subject>() }
 

@@ -31,6 +31,6 @@ class LessonSelectAdapter(val onItemClick: (Grade) -> Unit) : BaseAdapter<Grade>
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_select, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_home_book_selectdf, parent, false)
     }
 }

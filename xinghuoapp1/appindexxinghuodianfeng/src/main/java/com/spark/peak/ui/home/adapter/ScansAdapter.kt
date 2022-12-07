@@ -23,7 +23,7 @@ class ScansAdapter(var onclick: (book: HomeQr) -> Unit) : BaseAdapter<HomeQr>(is
     }
 
     override fun convertView(context: Context, parent: ViewGroup): View {
-        return LayoutInflater.from(context).inflate(R.layout.layout_scan, parent, false)
+        return LayoutInflater.from(context).inflate(R.layout.layout_scandf, parent, false)
     }
 
     override fun emptyView(context: Context, parent: ViewGroup): View {

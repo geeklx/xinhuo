@@ -12,7 +12,7 @@ import com.spark.peak.bean.Coupon
 import com.spark.peak.bean.NetLesson
 import com.spark.peak.bean.SubmitOrder
 import com.spark.peak.ui.mine.order.pendingPayment.PaymentOrderActivity
-import kotlinx.android.synthetic.main.activity_confirm_order.*
+import kotlinx.android.synthetic.main.activity_confirm_orderdf.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -22,7 +22,7 @@ import org.jetbrains.anko.*
  * 创建者：
  * 时间：
  */
-class ConfirmOrderActivity(override val layoutResId: Int = R.layout.activity_confirm_order)
+class ConfirmOrderActivity(override val layoutResId: Int = R.layout.activity_confirm_orderdf)
     : LifeActivity<ConfirmOrderPresenter>() {
     override val presenter by lazy { ConfirmOrderPresenter(this) }
     private val key by lazy { intent.getStringExtra(KEY)?:"" }

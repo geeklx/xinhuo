@@ -12,12 +12,12 @@ import com.gyf.immersionbar.ImmersionBar
 import com.spark.peak.R
 import com.spark.peak.base.BaseActivity
 import com.spark.peak.utlis.SpUtil
-import kotlinx.android.synthetic.main.activity_guide.*
+import kotlinx.android.synthetic.main.activity_guidedf.*
 import org.jetbrains.anko.*
 
 class GuideActivity : BaseActivity() {
     override val layoutResId: Int
-        get() = R.layout.activity_guide
+        get() = R.layout.activity_guidedf
     private val images by lazy { ArrayList<Int>() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
