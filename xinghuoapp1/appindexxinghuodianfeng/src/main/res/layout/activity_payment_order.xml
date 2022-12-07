@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_payment_order"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/RMB"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="30sp"
+            tools:text="200" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center_horizontal"
+        android:paddingBottom="27dp"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        tools:text="商品撒法和莎莎给大家啊还是" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/payment_method"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_ali"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_ffffff"
+        android:drawableEnd="@drawable/ic_pay_method"
+        android:drawablePadding="15dp"
+        android:drawableStart="@mipmap/ic_ali_pay"
+        android:gravity="center_vertical"
+        android:onClick="aliPay"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/ali_pay" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <TextView
+        android:id="@+id/tv_we_chat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_ffffff"
+        android:drawableEnd="@drawable/ic_pay_method"
+        android:drawablePadding="15dp"
+        android:drawableStart="@mipmap/ic_we_chat_pay"
+        android:gravity="center_vertical"
+        android:onClick="weChatPay"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/we_chat_pay" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_1482ff"
+        android:gravity="center"
+        android:onClick="confirmPayment"
+        android:text="@string/confirm_payment"
+        android:textColor="@color/color_ffffff"
+        android:textSize="14sp" />
+</LinearLayout>

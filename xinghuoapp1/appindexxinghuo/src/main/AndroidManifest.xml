@@ -848,15 +848,17 @@
         <!-- android:name="cn.jpush.android.service.DownloadProvider" -->
         <!-- android:authorities="tuoyan.com.xinghuo_daying.DownloadProvider" -->
         <!-- android:exported="true" /> -->
+<!--        需要改的地方-->
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="tuoyan.com.xinghuo_dayingindex.fileprovider"
+            android:authorities="${applicationId}.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
+        <!--        需要改的地方-->
 
         <receiver
             android:name=".ui.video.MusicReceiver"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:paddingHorizontal="7.5dp"
+    android:layout_marginHorizontal="7.5dp"
+    android:layout_marginBottom="15dp"
+    android:background="@drawable/shape_book_select"
+    android:gravity="center"
+    android:text="Unit1"
+    android:textColor="@drawable/color_book_select"
+    android:textSize="14dp" />

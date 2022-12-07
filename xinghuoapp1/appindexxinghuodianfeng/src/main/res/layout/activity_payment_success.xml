@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:drawableStart="@mipmap/ic_pay_success"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="@string/payment_success"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="15sp"
+        tools:text="已付款￥200" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:padding="14dp"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        tools:text="《啊是否打算大苏打倒萨的》\n已加入“学习”模块" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_5_1482ff_ff"
+            android:onClick="home"
+            android:text="返回首页"
+            android:textColor="@color/color_1482ff"
+            android:textSize="15sp" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_5_1482ff"
+            android:onClick="detail"
+            android:text="查看订单"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

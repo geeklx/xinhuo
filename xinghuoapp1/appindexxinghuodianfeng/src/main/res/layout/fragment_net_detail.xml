@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="17sp"
+                tools:text="听力倍夺分" />
+
+            <TextView
+                android:id="@+id/tv_purchasers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginTop="15dp"
+                tools:text="15555人购买" />
+
+            <TextView
+                android:id="@+id/tv_expire_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@id/tv_purchasers"
+                tools:text="有效期：2018-02-55" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_purchasers"
+                android:layout_marginTop="14dp"
+                android:textColor="@color/color_ff5b35"
+                android:textSize="22sp"
+                tools:text="￥99" />
+
+            <TextView
+                android:id="@+id/tv_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_price"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/tv_price"
+                android:textColor="@color/color_999999"
+                android:visibility="gone"
+                android:textSize="12sp"
+                tools:text="￥599" />
+
+            <TextView
+                android:id="@+id/tv_not_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_price"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@id/tv_original_price"
+                android:drawablePadding="5dp"
+                android:drawableStart="@mipmap/ic_not_support"
+                android:text="暂不支持退订"
+                android:textColor="@color/color_999999"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ffffff"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:visibility="gone"
+                android:text="@string/introduction"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="15dp" />
+
+            <WebView
+                android:id="@+id/tv_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

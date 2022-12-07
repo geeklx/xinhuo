@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_webview"
+        style="@style/tool_bar"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            style="@style/tool_title"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="公告详情"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxEms="12"
+            android:maxWidth="180dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/pb_webview"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:max="100"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#323232"
+        android:padding="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#999"
+        android:layout_marginLeft="15dp"/>
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

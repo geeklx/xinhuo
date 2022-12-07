@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/audio_down_no" android:state_enabled="false" />
+    <item android:drawable="@mipmap/audio_down_ed" android:state_selected="true" />
+    <item android:drawable="@mipmap/audio_down_normal" />
+</selector>

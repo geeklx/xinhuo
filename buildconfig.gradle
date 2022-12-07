@@ -11,7 +11,7 @@ ext {
 //    applicationId = "com.fosung.lighthouse"  1000 1.0.0.0
 
     /*移动端app版本号*/
-    appversionCode = 160
+    appversionCode = 161
     appversionName = "5.1.6"
 
     versionNamePrefixT = "_T_V"

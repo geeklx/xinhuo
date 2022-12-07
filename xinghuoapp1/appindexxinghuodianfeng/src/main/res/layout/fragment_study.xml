@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.spark.peak.ui.study.StudyFragment"
+    android:background="#f7f7f7">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/color_white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学习"
+            android:layout_centerInParent="true"
+            android:textColor="#1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/ic_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scan"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/ic_message"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/ic_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_message"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"/>
+        <ImageView
+            android:id="@+id/iv_msg_red_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_alignTop="@+id/ic_message"
+            android:src="@mipmap/ic_msg_red_dot"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        style="@style/style_line"/>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+            app:elevation="0dp">
+            <RelativeLayout
+                android:id="@+id/rl_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@color/color_white"
+                app:layout_scrollFlags="scroll"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_card"
+                    android:layout_width="68dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_punch_card"
+                    android:scaleType="fitXY"
+                    android:layout_marginRight="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_card">
+                    <TextView
+                        android:id="@+id/day_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="28sp"
+                        android:textColor="#1482ff"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#999"
+                        android:text="累计打卡/天"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_punch_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/selector_punch_card_btn"
+                    android:layout_centerVertical="true"
+                    android:checked="false"/>
+
+            </RelativeLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/yl_study"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:tabBackground="@color/color_white"
+                app:tabSelectedTextColor="#1482ff"
+                app:tabTextColor="#747474"
+                app:tabIndicatorColor="#1482ff"
+                android:background="#fff"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_study"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

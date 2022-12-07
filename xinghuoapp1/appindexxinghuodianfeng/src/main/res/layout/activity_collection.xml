@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f7f9"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_collection"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/rg_collect"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RadioButton
+            android:id="@+id/rb_book"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/shape_lesson_radio_bottom"
+            android:gravity="center"
+            android:text="专项微课"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/color_book_select" />
+
+        <RadioButton
+            android:id="@+id/rb_lesson"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableBottom="@drawable/shape_lesson_radio_bottom"
+            android:gravity="center"
+            android:text="配套资源"
+            android:layout_height="match_parent"
+            android:textColor="@drawable/color_book_select" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_eee"
+        app:layout_constraintBottom_toBottomOf="@+id/rg_collect" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_collect" />
+</androidx.constraintlayout.widget.ConstraintLayout>

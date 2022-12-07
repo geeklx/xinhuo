@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/shape_5_fff_no_stroke">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/icon_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="15dp"
+        android:text="听力练习"
+        android:textColor="@color/color_333333"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toRightOf="@id/img_cover"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_cover" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/shape_learn_progress"
+        app:layout_constraintBottom_toBottomOf="@id/img_cover"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+        app:layout_constraintRight_toRightOf="@+id/tv_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spark.peak.ui.exercise.subjects.SubjectsActivity"
+    android:background="#f7f7f7">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_subjects"
+        style="@style/tool_bar"
+        app:navigationIcon="@mipmap/ic_back" >
+        <TextView
+            android:id="@+id/tv_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#1e1e1e"
+            android:textStyle="bold"
+            android:text="年级"
+            android:drawableRight="@drawable/angle_down"
+            android:drawablePadding="5dp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_history"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_subjects"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_subjects"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spark.peak.ui.practice.PracticeActivity"
+    android:background="#f7f7f7">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_practice"
+        style="@style/tool_bar"
+        app:navigationIcon="@mipmap/ic_back" >
+        <TextView
+            android:id="@+id/tv_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#1e1e1e"
+            android:textStyle="bold"
+            android:text="八年级"
+            android:drawableRight="@drawable/angle_down"
+            android:drawablePadding="5dp"/>
+
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_history"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_practice">
+
+        <RelativeLayout
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:src="@drawable/default_banner"
+                android:scaleType="fitXY"/>
+
+            <GridLayout
+                android:id="@+id/gl_subjects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner"
+                android:layout_centerHorizontal="true"
+                android:columnCount="2"
+                android:alignmentMode="alignBounds"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv_kouyu"
+                    android:layout_width="167dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bc_kouyu"
+                    android:text="口语"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#1e1e1e"
+                    android:paddingLeft="87dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="11dp"
+                    android:onClick="onSubjectClick"/>
+                <TextView
+                    android:id="@+id/tv_tingli"
+                    android:layout_width="167dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bc_tingli"
+                    android:text="听力"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#1e1e1e"
+                    android:paddingLeft="87dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="11dp"
+                    android:onClick="onSubjectClick"/>
+                <TextView
+                    android:id="@+id/tv_yuedu"
+                    android:layout_width="167dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bc_yuedu"
+                    android:text="阅读"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#1e1e1e"
+                    android:paddingLeft="87dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="11dp"
+                    android:onClick="onSubjectClick"/>
+                <TextView
+                    android:id="@+id/tv_cihui"
+                    android:layout_width="167dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bc_cihui"
+                    android:text="词汇"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#1e1e1e"
+                    android:paddingLeft="87dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onSubjectClick"/>
+                <TextView
+                    android:id="@+id/tv_xiezuo"
+                    android:layout_width="167dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bc_xiezuo"
+                    android:text="写作"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#1e1e1e"
+                    android:paddingLeft="87dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onSubjectClick"/>
+                <TextView
+                    android:id="@+id/tv_fanyi"
+                    android:layout_width="167dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/bc_fanyi"
+                    android:text="翻译"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#1e1e1e"
+                    android:paddingLeft="87dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onSubjectClick"/>
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/tv_papers"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/gl_subjects"
+                android:text="历年真题"
+                android:textColor="#999"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:background="@color/color_white"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_papers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_papers"
+                android:focusable="false"
+                android:background="@color/color_white"/>
+
+            <View style="@style/style_line"
+                android:layout_below="@+id/tv_papers"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

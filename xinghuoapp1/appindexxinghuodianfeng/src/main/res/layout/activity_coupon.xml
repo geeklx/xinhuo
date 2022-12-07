@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_coupon"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_shape_5_eeeeee"
+            android:gravity="center_vertical"
+            android:hint="@string/please_enter_the_redemption_code"
+            android:paddingEnd="7dp"
+            android:paddingStart="7dp"
+            android:textColor="@color/color_999999"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="27dp"
+            android:background="@drawable/bg_shape_5_1482ff"
+            android:gravity="center"
+            android:onClick="exchange"
+            android:text="@string/exchange"
+            android:textColor="@color/color_ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="5dp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:background="@color/color_ffffff"
+        app:tabIndicatorColor="@color/color_1482ff"
+        app:tabIndicatorHeight="3dp"
+        app:tabPaddingEnd="20dp"
+        app:tabPaddingStart="20dp"
+        app:tabSelectedTextColor="@color/color_1482ff"
+        app:tabTextAppearance="@style/collection"
+        app:tabTextColor="@color/color_747474">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/unused" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/used" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/expired" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

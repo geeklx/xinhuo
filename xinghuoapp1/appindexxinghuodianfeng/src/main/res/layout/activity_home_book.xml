@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f7f9"
+    tools:context=".ui.book.HomeBookActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="教材同步"
+            android:textColor="@color/color_333333"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/icon_toolbar_arrow"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="15dp"
+            android:text="三年级(全)"
+            android:textColor="@color/color_333333"
+            android:textSize="14dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/rg_book"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RadioButton
+            android:id="@+id/rb_unit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/shape_lesson_radio_bottom"
+            android:gravity="center"
+            android:text="课文朗读"
+            android:textColor="@drawable/color_book_select" />
+
+        <RadioButton
+            android:id="@+id/rb_word"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableBottom="@drawable/shape_lesson_radio_bottom"
+            android:gravity="center"
+            android:text="单词音频"
+            android:textColor="@drawable/color_book_select" />
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_unit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_book" />
+
+    <include
+        android:id="@+id/v_book_select"
+        layout="@layout/layout_book_select"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

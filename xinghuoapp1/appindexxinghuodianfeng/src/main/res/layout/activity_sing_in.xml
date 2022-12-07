@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spark.peak.ui.study.sign_in.SignInActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_sign_in"
+        style="@style/tool_bar"
+        app:navigationIcon="@mipmap/ic_back" >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#1e1e1e"
+            android:textStyle="bold"
+            android:text="打卡"/>
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_share"
+            android:visibility="gone"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_sign_in">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_back"
+            app:elevation="0dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll"
+                android:background="#fff"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_header"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/iv_header"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#1e1e1e"
+                    android:text="NameName"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_sign_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3"
+                    android:layout_below="@+id/tv_user_name"
+                    android:layout_marginTop="25dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_mark1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="连续打卡"
+                            android:textSize="12sp"
+                            android:textColor="#999"
+                            android:layout_centerHorizontal="true"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_mark1"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:id="@+id/tv_sign_continue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15"
+                                android:textSize="24sp"
+                                android:textColor="#666"
+                                android:layout_marginTop="8dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="天"
+                                android:textSize="12sp"
+                                android:textColor="#666"
+                                android:layout_marginTop="8dp"
+                                android:layout_toRightOf="@+id/tv_sign_continue"
+                                android:layout_alignBaseline="@+id/tv_sign_continue"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="25dp"
+                        android:background="#e6e6e6"
+                        android:layout_gravity="bottom"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_mark2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="累计打卡"
+                            android:textSize="12sp"
+                            android:textColor="#999"
+                            android:layout_centerHorizontal="true"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_mark2"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:id="@+id/tv_sign_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15"
+                                android:textSize="24sp"
+                                android:textColor="#666"
+                                android:layout_marginTop="8dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="天"
+                                android:textSize="12sp"
+                                android:textColor="#666"
+                                android:layout_marginTop="8dp"
+                                android:layout_toRightOf="@+id/tv_sign_count"
+                                android:layout_alignBaseline="@+id/tv_sign_count"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="25dp"
+                        android:background="#e6e6e6"
+                        android:layout_gravity="bottom"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv_mark3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="忘记打卡"
+                            android:textSize="12sp"
+                            android:textColor="#999"
+                            android:layout_centerHorizontal="true"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_mark3"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:id="@+id/tv_sign_forget"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15"
+                                android:textSize="24sp"
+                                android:textColor="#666"
+                                android:layout_marginTop="8dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="天"
+                                android:textSize="12sp"
+                                android:textColor="#666"
+                                android:layout_marginTop="8dp"
+                                android:layout_toRightOf="@+id/tv_sign_forget"
+                                android:layout_alignBaseline="@+id/tv_sign_forget"/>
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btn_sign_in"
+                    android:layout_width="295dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_btn_sign_in"
+                    android:layout_below="@+id/ll_sign_count"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="打卡"
+                    android:textColor="#fff"
+                    android:layout_marginBottom="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="#fff">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打卡排行榜"
+                    android:textSize="15sp"
+                    android:textColor="#1e1e1e"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="连续打卡 ( 天 )"
+                    android:textSize="12sp"
+                    android:textColor="#999"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View style="@style/style_line"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_signin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

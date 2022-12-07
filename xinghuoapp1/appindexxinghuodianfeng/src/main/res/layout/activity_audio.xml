@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_audio"
+        style="@style/tool_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/tool_title" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_eee"
+        app:layout_constraintBottom_toBottomOf="@+id/tb_audio"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <com.hw.lrcviewlib.LrcView
+        android:id="@+id/lrc_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_sort"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_audio" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_book_film"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/iv_sort"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_audio">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="102dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_book_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="70dp"
+                android:src="@mipmap/audio_book_shadow"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_film_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/audio_shadow"
+                app:layout_constraintBottom_toBottomOf="@+id/img_book_shadow"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_book_shadow" />
+
+            <ImageView
+                android:id="@+id/img_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/audio_film"
+                app:layout_constraintBottom_toBottomOf="@+id/img_film_shadow"
+                app:layout_constraintLeft_toLeftOf="@id/img_film_shadow"
+                app:layout_constraintRight_toRightOf="@+id/img_film_shadow"
+                app:layout_constraintTop_toTopOf="@+id/img_film_shadow" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cd"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_book_shadow"
+                app:layout_constraintLeft_toLeftOf="@id/img_book_shadow"
+                app:layout_constraintRight_toRightOf="@+id/img_book_shadow"
+                app:layout_constraintTop_toTopOf="@+id/img_book_shadow">
+
+                <ImageView
+                    android:id="@+id/img_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/audio_book_cover" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/audio_line_shadow"
+                app:layout_constraintBottom_toBottomOf="@+id/cd"
+                app:layout_constraintLeft_toLeftOf="@id/cd"
+                app:layout_constraintTop_toTopOf="@+id/cd" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_gradient_fff"
+        app:layout_constraintBottom_toTopOf="@+id/iv_sort"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:src="@drawable/ic_audio_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_audio_collection"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_download"
+        app:layout_constraintTop_toTopOf="@+id/iv_play" />
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/audio_down_normal"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play"
+        app:layout_constraintLeft_toRightOf="@+id/iv_collection"
+        app:layout_constraintRight_toLeftOf="@+id/iv_play"
+        app:layout_constraintTop_toTopOf="@+id/iv_play" />
+
+    <ImageView
+        android:id="@+id/iv_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/audio_speed_100"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play"
+        app:layout_constraintLeft_toRightOf="@+id/iv_play"
+        app:layout_constraintRight_toLeftOf="@+id/iv_list"
+        app:layout_constraintTop_toTopOf="@+id/iv_play" />
+
+    <ImageView
+        android:id="@+id/iv_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/audio_list"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_play"
+        app:layout_constraintLeft_toRightOf="@+id/iv_speed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_play" />
+
+    <SeekBar
+        android:id="@+id/sb_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="53dp"
+        android:layout_marginRight="53dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/pb_audio"
+        android:splitTrack="false"
+        android:thumb="@mipmap/ic_thumb"
+        app:layout_constraintBottom_toTopOf="@+id/iv_play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--:--"
+        android:textColor="@color/color_c3c7cb"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sb_progress"
+        app:layout_constraintRight_toLeftOf="@+id/sb_progress"
+        app:layout_constraintTop_toTopOf="@+id/sb_progress" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--:--"
+        android:textColor="@color/color_c3c7cb"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sb_progress"
+        app:layout_constraintLeft_toRightOf="@+id/sb_progress"
+        app:layout_constraintTop_toTopOf="@+id/sb_progress" />
+
+    <ImageView
+        android:id="@+id/iv_lrc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/audio_lrc"
+        app:layout_constraintRight_toRightOf="@+id/iv_list"
+        app:layout_constraintTop_toTopOf="@+id/iv_sort" />
+
+    <ImageView
+        android:id="@+id/iv_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/audio_sort"
+        app:layout_constraintBottom_toTopOf="@+id/sb_progress"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_collection" />
+</androidx.constraintlayout.widget.ConstraintLayout>

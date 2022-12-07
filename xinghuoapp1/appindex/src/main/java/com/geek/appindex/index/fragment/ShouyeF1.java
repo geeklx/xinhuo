@@ -55,6 +55,7 @@ public class ShouyeF1 extends SlbBaseLazyFragmentNew implements View.OnClickList
     private TextView tv_center_content19;
     private TextView tv_center_content20;
     private TextView tv_center_content21;
+    private TextView tv_center_content22;
     private MessageReceiverIndex mMessageReceiver;
 
     public class MessageReceiverIndex extends BroadcastReceiver {
@@ -175,6 +176,7 @@ public class ShouyeF1 extends SlbBaseLazyFragmentNew implements View.OnClickList
         tv_center_content19 = rootView.findViewById(R.id.shouyef1_tv19);
         tv_center_content20 = rootView.findViewById(R.id.shouyef1_tv20);
         tv_center_content21 = rootView.findViewById(R.id.shouyef1_tv21);
+        tv_center_content22 = rootView.findViewById(R.id.shouyef1_tv22);
         tv_center_content1.setOnClickListener(this);
         tv_center_content2.setOnClickListener(this);
         tv_center_content3.setOnClickListener(this);
@@ -196,6 +198,7 @@ public class ShouyeF1 extends SlbBaseLazyFragmentNew implements View.OnClickList
         tv_center_content19.setOnClickListener(this);
         tv_center_content20.setOnClickListener(this);
         tv_center_content21.setOnClickListener(this);
+        tv_center_content22.setOnClickListener(this);
         donetwork();
     }
 
@@ -329,6 +332,10 @@ public class ShouyeF1 extends SlbBaseLazyFragmentNew implements View.OnClickList
         if (id == R.id.shouyef1_tv21) {
             HiosHelperNew.resolveAd(getActivity(), getActivity(),
                     "dataability://" + AppUtils.getAppPackageName() + ".hs.act.slbapp.StartActivityxh{act}?query1=11111&query2={s}aaaaaa&query3={s}本地应用");
+        }
+        if (id == R.id.shouyef1_tv22) {
+            HiosHelperNew.resolveAd(getActivity(), getActivity(),
+                    "dataability://" + AppUtils.getAppPackageName() + ".hs.act.slbapp.StartActivityxhdf{act}?query1=11111&query2={s}aaaaaa&query3={s}本地应用");
         }
     }
 

@@ -1,0 +1,316 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spark.peak.ui.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_grad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:drawablePadding="3dp"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_bar"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:text="请输入关键字"
+            android:textColor="#999" />
+
+        <ImageView
+            android:id="@+id/ic_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_scan" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_message" />
+
+            <ImageView
+                android:id="@+id/iv_msg_red_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@mipmap/ic_msg_red_dot"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <com.spark.peak.widegt.MySwipeRefreshLayout
+        android:id="@+id/srl_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top">
+
+        <com.spark.peak.widegt.MyScrollView
+            android:id="@+id/scrollView_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.spark.peak.widegt.FlyBanner
+                    android:id="@+id/banner_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="172dp"
+                    android:background="@drawable/default_banner" />
+
+                <TextView
+                    android:id="@+id/tv_broadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_below="@+id/banner_home"
+                    android:background="#FFF5BD"
+                    android:drawableLeft="@drawable/ic_broadcast"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="#ff4945"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_home_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_broadcast"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/home_model1"
+                        android:layout_width="0dp"
+                        android:layout_height="83dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_chuangguan" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/home_model2"
+                        android:layout_width="0dp"
+                        android:layout_height="83dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_wrong" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <com.spark.peak.widegt.MenuView
+                    android:id="@+id/home_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_home_model"
+                    android:background="#fff" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_netclass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_menu"
+                    android:background="#fff"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_netclass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="精选课程"
+                        android:textColor="#1e1e1e"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_more_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_netclass"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@mipmap/ic_navigation_right"
+                        android:drawablePadding="5dp"
+                        android:text="更多"
+                        android:textColor="#666"
+                        android:textSize="13sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_netclass"
+                        android:layout_marginTop="15dp"
+                        android:scrollbars="none">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_netclass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_books"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_netclass"
+                    android:layout_marginTop="5dp"
+                    android:background="#fff"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_books"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="星火书城"
+                        android:textColor="#1e1e1e"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_more_books"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_books"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@mipmap/ic_navigation_right"
+                        android:drawablePadding="5dp"
+                        android:text="更多"
+                        android:textColor="#666"
+                        android:textSize="13sp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_books"
+                        android:layout_marginTop="15dp"
+                        android:scrollbars="none">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_books"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </HorizontalScrollView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_books"
+                    android:layout_marginTop="5dp"
+                    android:background="#fff"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="学习资讯"
+                        android:textColor="#1e1e1e"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_more_news"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_news"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:drawableRight="@mipmap/ic_navigation_right"
+                        android:drawablePadding="5dp"
+                        android:text="更多"
+                        android:textColor="#666"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/tv_news"
+                        android:layout_marginTop="20dp"
+                        android:background="#e6e6e6" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_news"
+                        android:layout_marginTop="15dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </com.spark.peak.widegt.MyScrollView>
+
+    </com.spark.peak.widegt.MySwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_netError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

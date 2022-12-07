@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f7f9"
+    tools:context=".ui.home.book.MyBooksActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:background="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@mipmap/ic_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的图书"
+            android:textColor="@color/color_333333"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_edit_book"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:paddingHorizontal="15dp"
+            android:text="编辑"
+            android:textColor="@color/color_333333"
+            android:textSize="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/srl_books"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginHorizontal="15dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/tv_num"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlv_book"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@color/color_e2e4e6"
+        android:gravity="center"
+        android:text="共4本图书"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/logo"
+        android:scaleType="centerCrop" />
+
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/notify_close"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toStartOf="@id/btn_close"
+        android:layout_toEndOf="@id/iv_logo"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/previous"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/notify_previous" />
+
+            <ImageView
+                android:id="@+id/btn_play"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/notify_play" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/notify_next" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_music_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/ll_options"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="asdasdasasdasdasasdasdasasdasdasasdasdas"
+            android:textColor="#000"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_music_name"
+            android:text="66:66"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

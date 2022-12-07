@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--tools:context=".ui.mine.setting.AboutActivity">-->
+
+
+<!--<ImageView--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:background="@color/color_ffffff"--><!--android:src="@mipmap/about" />-->
+
+<!--<android.support.v7.widget.Toolbar--><!--android:id="@+id/toolbar"--><!--android:layout_width="match_parent"--><!--android:layout_height="44dp"--><!--android:layout_marginTop="18dp"--><!--android:background="@color/color_ffffff"--><!--app:navigationIcon="@mipmap/ic_back"--><!--app:title="">-->
+
+<!--<TextView--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="center"--><!--android:text="@string/title_activity_about"--><!--android:textColor="@color/color_1e1e1e"--><!--android:textSize="18sp"--><!--android:textStyle="bold" />--><!--</android.support.v7.widget.Toolbar>--><!--</RelativeLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_about"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <ImageView
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/about_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="用心努力\u3000止于巅峰"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/color_1e1e1e"
+        android:textSize="12sp"
+        tools:text="v2.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="25dp"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/app_about"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_about_warming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="25dp"
+        android:text="您还可以了解我们的《用户服务协议》和《隐私政策》"
+        android:textColor="@color/color_666666"
+        android:textSize="13dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/app_about_1"
+        android:textColor="@color/color_666666"
+        android:textSize="11sp" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+             
+    <paths>
+        <external-path
+            name="sdcard_files"
+            path="" />
+        <external-files-path
+            name="camera_has_sdcard"
+            path="" />
+        <files-path
+            name="camera_no_sdcard"
+            path="" />
+        <external-path
+            name="spark_ns"
+            path="" />
+    </paths>
+
+</resources>

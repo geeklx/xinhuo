@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/rg_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_eee"
+        app:layout_constraintBottom_toTopOf="@+id/rg_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_home"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/radio_home"
+            android:drawableTop="@drawable/ic_selector_home"
+            android:text="首页"
+            android:layout_marginRight="69dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_study"
+            style="@style/radio_home"
+            android:drawableTop="@drawable/ic_selector_study"
+            android:text="学习"
+            android:visibility="gone"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/rb_community"
+            style="@style/radio_home"
+            android:drawableTop="@drawable/ic_selector_community"
+            android:text="社区"
+            android:visibility="gone"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/radio_home"
+            android:drawableTop="@drawable/ic_selector_mine"
+            android:text="我的" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/img_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_scanner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

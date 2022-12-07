@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.spark.peak.ui.study.config.BooksConfigActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_books_config"
+        style="@style/tool_bar"
+        app:navigationIcon="@mipmap/ic_back" >
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#1e1e1e"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/color_1482ff"
+            android:text="编辑"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"/>
+    </androidx.appcompat.widget.Toolbar>
+    <View style="@style/style_line"
+        android:layout_below="@+id/tb_books_config"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_config"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_books_config"
+        android:layout_above="@+id/btn_add">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_config_books"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    
+    <TextView
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_1482ff"
+        android:layout_alignParentBottom="true"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        android:text="添加"
+        android:gravity="center"
+        android:textStyle="bold"/>
+</RelativeLayout>

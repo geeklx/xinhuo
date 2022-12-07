@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_marginTop="15dp"
+        android:layout_width="140dp"
+        android:layout_height="79dp"
+        android:layout_marginLeft="15dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_lesson"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="高一语法精讲"
+        android:textColor="@color/color_333333"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/img_cover"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_cover" />
+
+    <TextView
+        android:id="@+id/tv_word"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/shape_9_e0f2fc"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+        android:text="12课时"
+        android:textColor="@color/color_2ca7ff"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9999人已学"
+        android:textColor="@color/color_999999"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cover"
+        app:layout_constraintLeft_toLeftOf="@id/tv_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:text="免费"
+        android:textColor="@color/color_ff5935"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cover"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_eee"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_cover" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_img"
+                    android:layout_width="145dp"
+                    android:layout_height="91dp"
+                    android:src="@drawable/default_lesson"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    android:layout_alignEnd="@id/iv_img"
+                    android:layout_alignStart="@id/iv_img"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_play" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/iv_img"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="16sp"
+                    tools:text="撒旦飞洒个飞洒dasd地方" />
+
+                <TextView
+                    android:id="@+id/tv_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/tv_name"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    tools:text="55课时" />
+
+                <TextView
+                    android:id="@+id/tv_purchasers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/tv_name"
+                    android:layout_below="@id/tv_lesson"
+                    android:layout_marginTop="18dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    tools:text="1555人购买" />
+
+                <TextView
+                    android:id="@+id/tv_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_purchasers"
+                    android:layout_marginEnd="3dp"
+                    android:layout_toStartOf="@id/tv_price"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    tools:text="￥599" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_original_price"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBaseline="@+id/tv_original_price"
+                    android:textColor="@color/color_ff5b35"
+                    android:textSize="16sp"
+                    tools:text="￥299" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:id="@+id/tv_validity_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    tools:text="有效期6个月" />
+
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_not_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@mipmap/ic_not_support"
+                    android:textColor="@color/color_999999"
+                    android:textSize="12sp"
+                    android:text="暂不支持退订" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:text="支付成功后，课程将自动加入“学习”模块"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="15sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_price"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="15sp"
+                    tools:text="￥299" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/offer"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="15sp"
+                    tools:text="-￥99" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/real_price"
+                    android:textColor="@color/color_1e1e1e"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_real_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_ff5b35"
+                    android:textSize="15sp"
+                    tools:text="￥200" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/tv_order_number"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                tools:text="订单编号：118654353535135"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                tools:text="创建时间：2018-06-20 11:59"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_payment_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                tools:text="付款时间：2018-06-20 11:59"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                tools:text="支付方式：支付宝支付"
+                android:textColor="@color/color_1e1e1e"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_ffffff"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="69dp"
+            android:layout_height="25dp"
+            android:background="@drawable/bg_shape_25_b4b4b4"
+            android:gravity="center"
+            android:onClick="cancel"
+            android:text="@string/cancel_order"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="69dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/bg_shape_25_b4b4b4"
+            android:gravity="center"
+            android:onClick="delete"
+            android:text="@string/delete_order"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="54dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/bg_shape_25_1482ff"
+            android:gravity="center"
+            android:onClick="pay"
+            android:text="@string/go_to_pay"
+            android:textColor="@color/color_1482ff"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="54dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/bg_shape_25_b4b4b4"
+            android:gravity="center"
+            android:onClick="commit"
+            android:text="@string/go_to_commit"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

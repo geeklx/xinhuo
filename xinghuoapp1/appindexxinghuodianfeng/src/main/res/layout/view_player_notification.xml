@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="#fff">
+
+    <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
+            android:background="@mipmap/logo"
+            android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/iv_logo"
+            android:layout_marginHorizontal="15dp"
+            android:layout_centerVertical="true">
+
+        <TextView
+                android:id="@+id/tv_music_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:singleLine="true"
+                android:text="asdasdas"
+                android:layout_centerHorizontal="true"/>
+
+        <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:progressDrawable="@drawable/bg_progress_notify"
+                android:progress="10"
+                android:max="100"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tv_music_name"/>
+
+        <TextView
+                android:id="@+id/tv_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="00:00"
+                android:layout_below="@id/progress_bar"/>
+
+        <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="66:66"
+                android:layout_below="@id/progress_bar"
+                android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tv_current"
+                android:layout_centerHorizontal="true">
+            <ImageView
+                    android:id="@+id/previous"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/notify_previous"/>
+
+            <ImageView
+                    android:id="@+id/btn_play"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/notify_play"
+                    android:layout_marginLeft="40dp"/>
+            <ImageView
+                    android:id="@+id/next"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/notify_next"
+                    android:layout_marginLeft="40dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+        android:visibility="gone"
+            android:src="@mipmap/notify_close"
+            android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

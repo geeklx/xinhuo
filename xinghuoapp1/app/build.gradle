@@ -42,7 +42,7 @@ android {
             }
         }
         ndk {
-            abiFilters /*'armeabi-v7a',*/ 'arm64-v8a'
+            abiFilters 'arm64-v8a'
         }
         manifestPlaceholders = [qqappid      : "你的qq appid",
 
@@ -60,7 +60,7 @@ android {
 //            version "3.18.1"
         }
     }
-    flavorDimensions "keep","sparke"
+    flavorDimensions "keep", "sparke"
     productFlavors {
         bxn_nation {
             dimension "keep"
@@ -185,6 +185,7 @@ dependencies {
     implementation project(':xinghuoapp1:appcommon')
     implementation project(':xinghuoapp1:appindex')
     implementation project(':xinghuoapp1:appindexxinghuo')
+    implementation project(':xinghuoapp1:appindexxinghuodianfeng')
     implementation project(':xinghuoapp1:applogin')
     implementation project(':xinghuoapp1:appsearch')
     implementation project(':xinghuoapp1:appmy')

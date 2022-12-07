@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:navigationIcon="@mipmap/ic_back"
+        app:title="">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_activity_order_comment"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="145dp"
+            android:layout_height="91dp"
+            android:src="@drawable/default_lesson"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignEnd="@id/iv_img"
+            android:layout_alignStart="@id/iv_img"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_play" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/iv_img"
+            android:ellipsize="end"
+            android:lines="2"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="16sp"
+            tools:text="撒旦飞洒个飞洒dasd地方" />
+
+        <TextView
+            android:id="@+id/tv_lesson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_name"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            tools:text="55课时" />
+
+        <TextView
+            android:id="@+id/tv_purchasers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_name"
+            android:layout_below="@id/tv_lesson"
+            android:layout_marginTop="18dp"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            tools:text="1555人购买" />
+
+        <TextView
+            android:id="@+id/tv_original_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_purchasers"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@id/tv_price"
+            android:textColor="@color/color_999999"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="￥599" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_original_price"
+            android:layout_alignBottom="@id/tv_original_price"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/color_ff5b35"
+            android:textSize="16sp"
+            android:text="免费" />
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="15sp"
+            android:text="商品评分" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.spark.peak.widegt.StarBar
+            android:id="@+id/sb_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:background="@color/color_ffffff"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:maxLength="200"
+        android:textCursorDrawable="@drawable/edit_cursor_color"
+        android:textColor="@color/color_999999"
+        android:hint="您的好评，将是我们无尽的动力~"
+        android:lines="7"
+        android:layout_height="wrap_content" />
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:textColor="@color/color_ffffff"
+        android:onClick="submit"
+        android:textSize="14sp"
+        android:text="@string/submit"
+        android:background="@color/color_1482ff"
+        android:layout_height="45dp" />
+</LinearLayout>

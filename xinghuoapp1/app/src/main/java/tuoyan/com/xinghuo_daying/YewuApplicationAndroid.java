@@ -26,6 +26,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ServiceUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.blankj.utilcode.util.Utils;
@@ -75,6 +76,7 @@ import java.util.Locale;
 import cn.jiguang.verifysdk.api.JVerificationInterface;
 import cn.jiguang.verifysdk.api.PreLoginListener;
 import cn.jiguang.verifysdk.api.RequestCallback;
+import cn.jpush.android.api.JPushInterface;
 import cn.udesk.UdeskSDKManager;
 import io.realm.Realm;
 import tuoyan.com.xinghuo_dayingindex.umengpush.PushHelper;
@@ -247,6 +249,8 @@ public class YewuApplicationAndroid extends AndroidApplication {
             }
         });
         JVerificationInterface.setDebugMode(false);
+        String aaa = JPushInterface.getRegistrationID(this);
+        SPUtils.getInstance().put("JPushInterfacegetRegistrationID",aaa);
     }
 
     //神策
@@ -507,7 +511,7 @@ public class YewuApplicationAndroid extends AndroidApplication {
 
     private void initpgyer() {
         new PgyerSDKManager.Init().setContext(this) //设置上下问对象
-                .setApiKey("8bd21fed5150eab87567cbcfb6ed8a46").setFrontJSToken("d68155b81756a82d2324fe46bff24c45").enable(Features.CHECK_UPDATE).start();
+                .setApiKey("8bd21fed5150eab87567cbcfb6ed8a46").setFrontJSToken("c23db605166d72dbe63c1dce1ee98e38").enable(Features.CHECK_UPDATE).start();
         // 上报异常bufen
 //        try {
 //

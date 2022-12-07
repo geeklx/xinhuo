@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="iv_avatar" type="id" />
+    <item name="tv_follow" type="id" />
+    <item name="tv_name" type="id" />
+    <item name="tv_follow_num" type="id" />
+    <item name="tv_post_num" type="id" />
+    <item name="tv_grade" type="id" />
+    <item name="iv_img" type="id" />
+    <item name="tv_lesson" type="id" />
+    <item name="tv_purchasers" type="id" />
+    <item name="tv_original_price" type="id" />
+    <item name="tv_price" type="id" />
+    <item name="tv_status" type="id" />
+    <item name="tv_cancel" type="id" />
+    <item name="tv_delete" type="id" />
+    <item name="tv_pay" type="id" />
+    <item name="tv_comment" type="id" />
+
+    <item name="home_menu_img" type="id"/>
+    <item name="home_menu_title" type="id"/>
+    <item name="home_netclass_img" type="id"/>
+    <item name="home_books_img" type="id"/>
+    <item name="home_books_title" type="id"/>
+    <item name="tv_expire_date" type="id" />
+    <item name="tv_description" type="id" />
+    <item name="iv_status" type="id" />
+    <item name="tv_books_count" type="id" />
+    <item name="tv_books_config" type="id" />
+    <item name="iv_netclass_corver" type="id" />
+    <item name="tv_netclass_title" type="id" />
+    <item name="my_books_name" type="id" />
+    <item name="my_books_img" type="id" />
+    <item name="my_books_delete" type="id" />
+    <item name="iv_sign_in_header" type="id" />
+    <item name="tv_sign_in_index" type="id" />
+    <item name="iv_sign_in_index" type="id" />
+    <item name="tv_sign_in_count" type="id" />
+    <item name="tv_sign_in_user_grade" type="id" />
+    <item name="tv_sign_in_user_name" type="id" />
+    <item name="tv_version_name" type="id" />
+    <item name="iv_version_book_img" type="id" />
+    <item name="iv_version_book_name" type="id" />
+    <item name="tv_context" type="id" />
+    <item name="tv_lable" type="id" />
+    <item name="tv_complete" type="id" />
+    <item name="tv_unit_name" type="id" />
+    <item name="iv_open_flag" type="id" />
+    <item name="rv_section" type="id" />
+    <item name="tv_section_name" type="id" />
+    <item name="rv_exercise" type="id" />
+    <item name="line_top" type="id" />
+    <item name="line_bottom" type="id" />
+    <item name="rl_lines" type="id" />
+    <item name="tv_exercise_name" type="id" />
+    <item name="tv_exercise_mark" type="id" />
+    <item name="rl_title" type="id" />
+    <item name="rl_title_unit" type="id" />
+    <item name="tv_paper_name" type="id" />
+    <item name="tv_paper_finish_count" type="id" />
+    <item name="tv_paper_score" type="id" />
+    <item name="tv_node_name" type="id" />
+    <item name="tv_data_name" type="id" />
+    <item name="iv_download_state" type="id" />
+    <item name="pb_download" type="id" />
+    <item name="tv_comment_num" type="id" />
+    <item name="tv_sign" type="id" />
+    <item name="tv_rmb" type="id" />
+    <item name="rv_answers" type="id" />
+    <item name="tv_q_name" type="id" />
+    <item name="tv_sort" type="id" />
+    <item name="tv_content" type="id" />
+    <item name="tv_page" type="id" />
+    <item name="ll_content" type="id" />
+    <item name="tv_flag" type="id" />
+    <item name="ic_play" type="id" />
+    <item name="iv_netclass_outtime" type="id" />
+    <item name="iv_icon" type="id" />
+    <item name="tv_size" type="id" />
+    <item name="iv_node_flag" type="id" />
+    <item name="node_view" type="id" />
+    <item name="img_add" type="id" />
+
+
+</resources>

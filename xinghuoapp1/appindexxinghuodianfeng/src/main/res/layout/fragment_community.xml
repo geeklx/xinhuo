@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/color_1482ff"
+            app:tabIndicatorHeight="3dp"
+            app:tabPaddingEnd="20dp"
+            app:tabPaddingStart="20dp"
+            app:tabSelectedTextColor="@color/color_1482ff"
+            app:tabTextAppearance="@style/answer"
+            app:tabTextColor="@color/color_1e1e1e">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/answer" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/circle" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_message" />
+
+        <ImageView
+            android:id="@+id/iv_msg_red_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/iv_message"
+            android:src="@mipmap/ic_msg_red_dot"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="47dp"-->
+    <!--android:background="@color/color_ffffff"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingEnd="15dp"-->
+    <!--android:paddingStart="15dp">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_code"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="27dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/bg_shape_5_eeeeee"-->
+    <!--android:drawablePadding="6dp"-->
+    <!--android:drawableStart="@drawable/ic_search"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:hint="@string/please_enter_the_redemption_code"-->
+    <!--android:paddingEnd="7dp"-->
+    <!--android:paddingStart="7dp"-->
+    <!--android:textColor="@color/color_999999"-->
+    <!--android:textCursorDrawable="@null"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<Space-->
+    <!--android:layout_width="15dp"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_ask"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:drawableStart="@mipmap/ic_ask"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/ask"-->
+    <!--android:textColor="@color/color_1482ff"-->
+    <!--android:textSize="15sp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<Space-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="5dp" />-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/fragment_error"
+            android:name="com.spark.peak.ui._public.NetErrorFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.github.lzyzsd.jsbridge.BridgeWebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ffffff" />
+    </FrameLayout>
+
+</LinearLayout>

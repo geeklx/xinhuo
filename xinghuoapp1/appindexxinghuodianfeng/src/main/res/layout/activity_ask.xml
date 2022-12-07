@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_ffffff"
+        app:navigationIcon="@mipmap/ic_close"
+        app:title="">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:onClick="submit"
+            android:text="@string/release"
+            android:textColor="@color/color_1482ff"
+            android:textSize="16sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="@color/color_ffffff"
+        android:gravity="start"
+        android:hint="请描述您的问题"
+        android:paddingBottom="10dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/color_999999"
+        android:textCursorDrawable="@drawable/edit_cursor_color"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:clipToPadding="true"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <ImageView
+            android:id="@+id/iv_img_1"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_img_2"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_add_img"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:onClick="addImg"
+            android:src="@mipmap/ic_add_img" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:onClick="askClass"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ask_class"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_ask_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/ic_navigation_right"
+            android:drawablePadding="10dp"
+            android:hint="@string/choose"
+            android:textColor="@color/color_747474"
+            android:textColorHint="@color/color_999999"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:onClick="belongBook"
+        android:paddingBottom="5dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/belong_book"
+            android:textColor="@color/color_1e1e1e"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_belong_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@mipmap/ic_navigation_right"
+            android:drawablePadding="10dp"
+            android:hint="@string/choose"
+            android:textColor="@color/color_747474"
+            android:textColorHint="@color/color_999999"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/divider" />
+</LinearLayout>
