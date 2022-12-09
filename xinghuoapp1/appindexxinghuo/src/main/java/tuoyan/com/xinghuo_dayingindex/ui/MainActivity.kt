@@ -15,6 +15,8 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import com.blankj.utilcode.util.SPUtils
+import com.google.gson.Gson
 import com.gyf.immersionbar.BarHide
 import com.gyf.immersionbar.ImmersionBar
 import com.liulishuo.filedownloader.BaseDownloadTask
@@ -193,7 +195,8 @@ class MainActivity : LifeActivity<HomePresenter>() {
 
         val id = PushAgent.getInstance(this).registrationId
         if (id.isNotEmpty()) {
-            MyApp.instance.equipmentId = id
+//            MyApp.instance.equipmentId = id
+            SPUtils.getInstance().put("equipmentId",id)
             presenter.userEquipmentId(id) {
                 SpUtil.isFreeLogin = it["isFreeLogin"] ?: ""
             }
@@ -785,7 +788,12 @@ class MainActivity : LifeActivity<HomePresenter>() {
                 DownloadBean.TYPE_AUDIO -> {
                     val resList = ArrayList<BookRes>()
                     resList.add(item)
-                    MyApp.instance.bookres = resList
+//                    MyApp.instance.bookres = resList
+                    // 存
+                    val list1: List<BookRes> = ArrayList()
+                    val gson1 = Gson()
+                    val data1 = gson1.toJson(resList)
+                    SPUtils.getInstance().put("BookRes", data1)
                     startActivity<AudioActivity>(AudioActivity.SUPPORT_KEY to item.supportingKey)
                 }
                 DownloadBean.TYPE_LINK -> {

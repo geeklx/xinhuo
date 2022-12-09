@@ -240,12 +240,13 @@ public class YewuApplicationAndroid extends AndroidApplication {
         JVerificationInterface.init(this, 3000, new RequestCallback<String>() {
             @Override
             public void onResult(int i, String s) {
-                JVerificationInterface.preLogin(getApplicationContext(), 3000, new PreLoginListener() {
-                    @Override
-                    public void onResult(int i, String s) {
-                        Log.d("JVerificationInterface", "[$code]message=$content");
-                    }
-                });
+
+            }
+        });
+        JVerificationInterface.preLogin(getApplicationContext(), 3000, new PreLoginListener() {
+            @Override
+            public void onResult(int i, String s) {
+                Log.d("JVerificationInterface", "[$code]message=$content");
             }
         });
         JVerificationInterface.setDebugMode(false);
