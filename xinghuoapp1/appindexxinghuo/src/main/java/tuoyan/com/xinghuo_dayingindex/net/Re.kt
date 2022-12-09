@@ -11,7 +11,6 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import tuoyan.com.xinghuo_dayingindex.BASE_URL
-import tuoyan.com.xinghuo_dayingindex.MyApp
 import tuoyan.com.xinghuo_dayingindex.appId
 import tuoyan.com.xinghuo_dayingindex.utlis.MD5Util
 import tuoyan.com.xinghuo_dayingindex.utlis.NetWorkUtils
@@ -30,25 +29,57 @@ import java.util.concurrent.TimeUnit
 
 object Re {
     val api: ApiService by lazy {
-        val client = OkHttpClient.Builder()
-            .connectTimeout(30, TimeUnit.SECONDS)
-            .readTimeout(20, TimeUnit.MINUTES)
-            .writeTimeout(20, TimeUnit.MINUTES)
-            .protocols(Collections.singletonList(Protocol.HTTP_1_1))
-            .cache(Cache(File(BaseApp.get().externalCacheDir, "cache_daying"), 1024 * 1024 * 200))//缓存
+        val client = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(20, TimeUnit.MINUTES).writeTimeout(20, TimeUnit.MINUTES)
+            .protocols(Collections.singletonList(Protocol.HTTP_1_1)).cache(
+                Cache(
+                    File(BaseApp.get().externalCacheDir, "cache_daying"), 1024 * 1024 * 200
+                )
+            )//缓存
             .addInterceptor(HttpLoggingInterceptor())//
             .addInterceptor(RequestFilterInterceptor())//重复请求过滤器
             .addInterceptor(tokenInterceptor())
-            .addInterceptor(requestCacheInterceptor())
-            .addNetworkInterceptor(responseCacheInterceptor())
+            //缓存
+            .addInterceptor(OfflineInterceptor()).addNetworkInterceptor(OnlineInterceptor())
+            //无缓存
+//            .addInterceptor(requestCacheInterceptor())
+//            .addNetworkInterceptor(responseCacheInterceptor())
             .build()
-        Retrofit.Builder()
-            .baseUrl(BASE_URL)
-            .client(client)
+        Retrofit.Builder().baseUrl(BASE_URL).client(client)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+            .addConverterFactory(GsonConverterFactory.create()).build()
             .create(ApiService::class.java)
+    }
+
+    /**
+     * 有网络的时候
+     */
+    class OnlineInterceptor : Interceptor {
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val request = chain.request()
+            val response = chain.proceed(request)
+            val onlineCacheTime = 0 //在线的时候的缓存过期时间，如果想要不缓存，直接时间设置为0
+            return response.newBuilder().header("Cache-Control", "public, max-age=$onlineCacheTime")
+                .removeHeader("Pragma").build()
+        }
+    }
+
+    /**
+     * 没有网的时候
+     */
+    class OfflineInterceptor : Interceptor {
+        override fun intercept(chain: Interceptor.Chain): Response {
+            val request = chain.request()
+            if (!NetWorkUtils.isNetWorkReachable()) {
+                //从缓存取数据
+                val newRequest = request.newBuilder().cacheControl(CacheControl.FORCE_CACHE).build()
+                val maxTime = 60 * 60 * 24
+                val response = chain.proceed(newRequest)
+                return response.newBuilder().removeHeader("Pragma")
+                    .header("Cache-Control", "public, only-if-cached, max-stale=$maxTime").build()
+            }
+            return chain.proceed(request)
+        }
     }
 
 
@@ -83,16 +114,18 @@ object Re {
     }
 
     private fun networkInterceptor(): (Interceptor.Chain) -> Response = {
-        val request = it.request().newBuilder().removeHeader("User-Agent").addHeader("User-Agent", getUserAgent()).cacheControl(CacheControl.FORCE_NETWORK).build()
+        val request = it.request().newBuilder().removeHeader("User-Agent")
+            .addHeader("User-Agent", getUserAgent()).cacheControl(CacheControl.FORCE_NETWORK)
+            .build()
         val response = it.proceed(request)
-        response.newBuilder().removeHeader("Pragma").header("Cache-Control", "private, max-age=" + (60 * 60 * 24 * 7)).build()
+        response.newBuilder().removeHeader("Pragma")
+            .header("Cache-Control", "private, max-age=" + (60 * 60 * 24 * 7)).build()
     }
 
     private fun requestCacheInterceptor(): (Interceptor.Chain) -> Response = { chain ->
         val req = chain.request()
-        val build = req.newBuilder()
-            .removeHeader("User-Agent")
-            .addHeader("User-Agent", getUserAgent())
+        val build =
+            req.newBuilder().removeHeader("User-Agent").addHeader("User-Agent", getUserAgent())
         if (isCache(req)) {
             build.cacheControl(CacheControl.FORCE_CACHE)
         }
@@ -106,21 +139,24 @@ object Re {
 
     private fun isCacheUrl(req: Request): Boolean {
         val baseUrl = req.url().toString()
-        return baseUrl.contains("common/homePageInfoN") || baseUrl.contains("goods/bookList") || baseUrl.contains("admodel/list")
+        return baseUrl.contains("common/homePageInfoN") || baseUrl.contains("goods/bookList") || baseUrl.contains(
+            "admodel/list"
+        )
     }
 
     private fun responseCacheInterceptor(): (Interceptor.Chain) -> Response = { chain ->
-        val response = chain.proceed(chain.request()).newBuilder()
-            .removeHeader("Pragma")
+        val response = chain.proceed(chain.request()).newBuilder().removeHeader("Pragma")
             .removeHeader("Cache-Control")
             .addHeader("Cache-Control", CacheControl.FORCE_CACHE.toString()).build()
         response
     }
 
     private fun cacheInterceptor(): (Interceptor.Chain) -> Response = {
-        val request = it.request().newBuilder().removeHeader("User-Agent").addHeader("User-Agent", getUserAgent()).cacheControl(CacheControl.FORCE_CACHE).build()
+        val request = it.request().newBuilder().removeHeader("User-Agent")
+            .addHeader("User-Agent", getUserAgent()).cacheControl(CacheControl.FORCE_CACHE).build()
         val response = it.proceed(request)
-        response.newBuilder().removeHeader("Pragma").header("Cache-Control", "private, max-age=" + (60 * 60 * 24 * 7)).build()
+        response.newBuilder().removeHeader("Pragma")
+            .header("Cache-Control", "private, max-age=" + (60 * 60 * 24 * 7)).build()
     }
 
     /**+
@@ -156,7 +192,8 @@ object Re {
         }
 
         headerBean.timestamp = (System.currentTimeMillis() / 10000 * 10000).toString()
-        val sign = "sign" + headerBean.appId + headerBean.timestamp + headerBean.v + headerBean.terminalid + headerBean.token + headerBean.appId + "androidsign"
+        val sign =
+            "sign" + headerBean.appId + headerBean.timestamp + headerBean.v + headerBean.terminalid + headerBean.token + headerBean.appId + "androidsign"
         headerBean.appSign = MD5Util.encrypt(sign)
         val toJson = Gson().toJson(headerBean)
         return toJson

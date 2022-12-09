@@ -15,8 +15,6 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
-import com.blankj.utilcode.util.SPUtils
-import com.google.gson.Gson
 import com.gyf.immersionbar.BarHide
 import com.gyf.immersionbar.ImmersionBar
 import com.liulishuo.filedownloader.BaseDownloadTask
@@ -35,8 +33,8 @@ import kotlinx.android.synthetic.main.layout_book_grade.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
-import org.jetbrains.anko.toast
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 import org.json.JSONObject
 import tuoyan.com.xinghuo_dayingindex.*
 import tuoyan.com.xinghuo_dayingindex.base.BaseV4Fragment
@@ -121,6 +119,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
         dm.heightPixels
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onSaveInstanceState(outState: Bundle) {
         //强制不调用，防止崩溃后 首页数据显示异常
 //        super.onSaveInstanceState(outState)
@@ -141,45 +140,29 @@ class MainActivity : LifeActivity<HomePresenter>() {
             val transaction = supportFragmentManager.beginTransaction()
             when (index) {
                 R.id.rb_home -> {
-                    ImmersionBar.with(this)
-                        .statusBarDarkFont(true)
-                        .init()
-                    transaction.hide(currentFragments())
-                        .show(homeFragment)
-                        .commit()
+                    ImmersionBar.with(this).statusBarDarkFont(true).init()
+                    transaction.hide(currentFragments()).show(homeFragment).commit()
                     currentIndex = 0
                 }
                 R.id.rb_study -> {
-                    ImmersionBar.with(this)
-                        .statusBarDarkFont(true)
-                        .init()
+                    ImmersionBar.with(this).statusBarDarkFont(true).init()
                     if (!studyFragment.isAdded) transaction.add(R.id.fl_home, studyFragment)
-                    transaction.hide(currentFragments())
-                        .show(studyFragment)
-                        .commit()
+                    transaction.hide(currentFragments()).show(studyFragment).commit()
                     currentIndex = 1
                 }
                 R.id.rb_community -> {
                     if (currentIndex != 2) {
-                        ImmersionBar.with(this)
-                            .statusBarDarkFont(true)
-                            .init()
+                        ImmersionBar.with(this).statusBarDarkFont(true).init()
                         if (!bookFragment.isAdded) transaction.add(R.id.fl_home, bookFragment)
-                        transaction.hide(currentFragments())
-                            .show(bookFragment)
-                            .commit()
+                        transaction.hide(currentFragments()).show(bookFragment).commit()
                         currentIndex = 2
                     }
 
                 }
                 R.id.rb_mine -> {
-                    ImmersionBar.with(this)
-                        .statusBarDarkFont(true)
-                        .init()
+                    ImmersionBar.with(this).statusBarDarkFont(true).init()
                     if (!mineFragment.isAdded) transaction.add(R.id.fl_home, mineFragment)
-                    transaction.hide(currentFragments())
-                        .show(mineFragment)
-                        .commit()
+                    transaction.hide(currentFragments()).show(mineFragment).commit()
                     currentIndex = 3
                     rb_mine.isSelected = false
                 }
@@ -210,8 +193,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
 
         val id = PushAgent.getInstance(this).registrationId
         if (id.isNotEmpty()) {
-//            MyApp.instance.equipmentId = id
-            SPUtils.getInstance().put("equipmentId",id)
+            MyApp.instance.equipmentId = id
             presenter.userEquipmentId(id) {
                 SpUtil.isFreeLogin = it["isFreeLogin"] ?: ""
             }
@@ -280,9 +262,8 @@ class MainActivity : LifeActivity<HomePresenter>() {
     }
 
     private fun initFirstFragment() {
-        supportFragmentManager.beginTransaction()
-            .add(R.id.fl_home, homeFragment)
-            .show(homeFragment).commit()
+        supportFragmentManager.beginTransaction().add(R.id.fl_home, homeFragment).show(homeFragment)
+            .commit()
         val intentFilter = IntentFilter()
         intentFilter.addAction(SEND_WEB_TOKEN)
         registerReceiver(refreshReceiver, intentFilter)
@@ -301,9 +282,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
     override fun handleEvent() {
         super.handleEvent()
         downloadDialog.setOnDismissListener {
-            ImmersionBar.with(this@MainActivity)
-                .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
-                .init()
+            ImmersionBar.with(this@MainActivity).hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR).init()
         }
         tv_reset.setOnClickListener {
             gradeAdapter.setData(initLevel())
@@ -329,10 +308,8 @@ class MainActivity : LifeActivity<HomePresenter>() {
         if (isDropOut) {
             isDropOut = false
             mToast("再按一次退出程序")
-            Observable.interval(0, 1, TimeUnit.SECONDS)
-                .observeOn(AndroidSchedulers.mainThread())
-                .take(3)
-                .doOnComplete {
+            Observable.interval(0, 1, TimeUnit.SECONDS).observeOn(AndroidSchedulers.mainThread())
+                .take(3).doOnComplete {
                     isDropOut = true
                 }.subscribe()
             return
@@ -345,12 +322,16 @@ class MainActivity : LifeActivity<HomePresenter>() {
      * 获取新版本
      */
     var isForce = ""
+    var version: NewVersion? = null
     var apkFilePath = "" //TODO 8.0以上安装未知来源应用需要申请的权限
     val REQUEST_APK_INSTALL = 9898
 
     private fun getNewVersion() {
         //1强制,2不提示,3仅提示一次,0每次都提示
         presenter.getNewVersion(BuildConfig.FLAVOR) { version ->
+            this.version = version
+            // ceshi
+//            version.isForce = "1"
             if (version.isForce == "0" || version.isForce == "1") {
                 isForce = version.isForce
                 showUpdateDialog(version)
@@ -364,23 +345,24 @@ class MainActivity : LifeActivity<HomePresenter>() {
     }
 
     private fun showUpdateDialog(version: NewVersion) {
-        AlertDialog.Builder(this)
-            .setCancelable(false)
-            .setTitle("发现新版本" + version.v)
-            .setMessage(version.msg)
-            .setPositiveButton("下载更新") { _, _ ->
+        AlertDialog.Builder(this).setCancelable(false).setTitle("发现新版本" + version.v)
+            .setMessage(version.msg).setPositiveButton("立即更新") { _, _ ->
                 version.url.let { url ->
                     downloadApk(url)
                 }
-            }.setNegativeButton(if (version.isForce == "1") "退出应用" else "暂不更新") { dialog, _ ->
+            }.setNegativeButton(if (version.isForce == "1") "暂不更新" else "暂不更新") { dialog, _ ->
                 if (version.isForce == "1") {
-                    this.finish()
+//                    this.finish()
+                    // 此处不退出 后台静默下载即可
+                    dialog.dismiss()
+                    version.url.let { url ->
+                        downloadApk_local(url)
+                    }
                 } else {
                     dialog.dismiss()
                 }
             }.setOnDismissListener {
-                ImmersionBar.with(this@MainActivity)
-                    .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
+                ImmersionBar.with(this@MainActivity).hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
                     .init()
             }.create().show()
     }
@@ -388,14 +370,26 @@ class MainActivity : LifeActivity<HomePresenter>() {
     val downloadDialog by lazy { ProgressDialog(this@MainActivity) }
     private fun downloadApk(url: String) {
         if (url.isNotEmpty()) {
+            if (FileUtils.Companion.createOrExistsFile2(DownloadManager.getExternalFilePath(url))){
+//                showDownloadDialog()
+                checkIsAndroidO {
+                    installAPK(this@MainActivity, DownloadManager.getExternalFilePath(url) , isForce)
+                }
+                return
+            }
             showDownloadDialog()
             FileDownloader.setup(this@MainActivity)
-            FileDownloader
-                .getImpl()
-                .create(url)
-                .setPath(DownloadManager.getExternalFilePath(url))
-                .setListener(downloadListener)
-                .start()
+            FileDownloader.getImpl().create(url).setPath(DownloadManager.getExternalFilePath(url))
+                .setListener(downloadListener).start()
+        } else {
+            toast("下载url异常")
+        }
+    }
+    private fun downloadApk_local(url: String) {
+        if (url.isNotEmpty()) {
+            FileDownloader.setup(this@MainActivity)
+            FileDownloader.getImpl().create(url).setPath(DownloadManager.getExternalFilePath(url))
+                .setListener(downloadListener_local).start()
         } else {
             toast("下载url异常")
         }
@@ -457,6 +451,45 @@ class MainActivity : LifeActivity<HomePresenter>() {
         }
     }
 
+    private val downloadListener_local by lazy {
+        object : FileDownloadListener() {
+            override fun warn(task: BaseDownloadTask?) {
+//                toast("出错啦~请稍后重试")
+                task?.path?.let {
+                    FileUtils.delete(it)
+                }
+            }
+
+            override fun completed(task: BaseDownloadTask?) {
+                try {
+                    apkFilePath = task?.path ?: ""
+
+                } catch (e: Exception) {
+                    e.message
+                }
+            }
+
+            override fun pending(task: BaseDownloadTask?, soFarBytes: Int, totalBytes: Int) {
+            }
+
+            override fun error(task: BaseDownloadTask?, e: Throwable?) {
+//                toast("apk下载失败，请重试")
+                task?.path?.let {
+                    FileUtils.delete(it)
+                }
+            }
+
+            override fun progress(task: BaseDownloadTask?, soFarBytes: Int, totalBytes: Int) {
+
+            }
+
+            override fun paused(task: BaseDownloadTask?, soFarBytes: Int, totalBytes: Int) {
+
+            }
+
+        }
+    }
+
     /**
      * 判断是否是8.0,8.0需要处理未知应用来源权限问题,否则直接安装
      */
@@ -487,17 +520,13 @@ class MainActivity : LifeActivity<HomePresenter>() {
             }
         } else if (requestCode == REQUEST_APK_INSTALL && resultCode == Activity.RESULT_CANCELED) {
             if (isForce == "1") {
-                AlertDialog.Builder(this).setMessage("您拒绝了权限，无法安装新版本")
-                    .setCancelable(false)
+                AlertDialog.Builder(this).setMessage("您拒绝了权限，无法安装新版本").setCancelable(false)
                     .setPositiveButton("关闭应用") { _, _ ->
                         this.finish()
-                    }
-                    .setOnDismissListener {
+                    }.setOnDismissListener {
                         ImmersionBar.with(this@MainActivity)
-                            .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
-                            .init()
-                    }
-                    .create().show()
+                            .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR).init()
+                    }.create().show()
             }
         } else {
             data ?: return
@@ -532,8 +561,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
                 }
                 "2" -> scanResult.key?.let { key ->
                     startActivity<BookDetailActivity>(
-                        BookDetailActivity.KEY to key,
-                        BookDetailActivity.TYPE to "1"
+                        BookDetailActivity.KEY to key, BookDetailActivity.TYPE to "1"
                     )
                 }
                 //配套二维码 无需判断上下架状态
@@ -552,8 +580,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
                 }
                 "5" -> scanResult.key?.let { key ->
                     startActivity<WebViewActivity>(
-                        WebViewActivity.URL to key,
-                        WebViewActivity.TITLE to ""
+                        WebViewActivity.URL to key, WebViewActivity.TITLE to ""
                     )
                 }
                 "8" -> scanResult.key?.let { key ->
@@ -561,8 +588,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
                         startActivity<PostActivity>(PostActivity.URL to key)
                     } else {
                         startActivity<WebViewActivity>(
-                            WebViewActivity.URL to key,
-                            WebViewActivity.TITLE to ""
+                            WebViewActivity.URL to key, WebViewActivity.TITLE to ""
                         )
                     }
                 }
@@ -603,8 +629,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
                             } else {
                                 val item = evalList[0]
                                 presenter.getReport(
-                                    evalList[0].appPaperKey,
-                                    evalList[0].userPracticeKey
+                                    evalList[0].appPaperKey, evalList[0].userPracticeKey
                                 ) { report ->
                                     report.userpractisekey = item.userPracticeKey
                                     if (item.answerType == "0") {
@@ -636,20 +661,15 @@ class MainActivity : LifeActivity<HomePresenter>() {
                     }
                 }
                 "11" -> scanResult.key?.let { key ->
-                    AlertDialog.Builder(this)
-                        .setOnDismissListener {
-                            ImmersionBar.with(this@MainActivity)
-                                .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
-                                .init()
-                        }
-                        .setTitle("是否绑定本书防伪码")
-                        .setMessage("防伪码只能关联唯一用户，请慎重绑定")
+                    AlertDialog.Builder(this).setOnDismissListener {
+                        ImmersionBar.with(this@MainActivity)
+                            .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR).init()
+                    }.setTitle("是否绑定本书防伪码").setMessage("防伪码只能关联唯一用户，请慎重绑定")
                         .setPositiveButton("确定") { dialog, _ ->
                             dialog.dismiss()
                             presenter.activatedFakeCode(
                                 mutableMapOf(
-                                    "key" to key,
-                                    "type" to "support"
+                                    "key" to key, "type" to "support"
                                 )
                             ) {
                                 toast("图书激活成功并已加入学习计划")
@@ -730,14 +750,12 @@ class MainActivity : LifeActivity<HomePresenter>() {
                 }
                 DownloadBean.TYPE_IMG -> {
                     startActivity<ImageActivity>(
-                        ImageActivity.URL to item.link,
-                        ImageActivity.NAME to item.name
+                        ImageActivity.URL to item.link, ImageActivity.NAME to item.name
                     )
                 }
                 DownloadBean.TYPE_CONTENT -> {
                     startActivity<WebViewActivity>(
-                        WebViewActivity.URL to item.content,
-                        WebViewActivity.TITLE to item.name
+                        WebViewActivity.URL to item.content, WebViewActivity.TITLE to item.name
                     )
                 }
                 DownloadBean.TYPE_PDF -> {
@@ -767,18 +785,12 @@ class MainActivity : LifeActivity<HomePresenter>() {
                 DownloadBean.TYPE_AUDIO -> {
                     val resList = ArrayList<BookRes>()
                     resList.add(item)
-//                    MyApp.instance.bookres = resList
-                    // 存
-                    val list1: List<ResourceListBean> = ArrayList()
-                    val gson1 = Gson()
-                    val data1 = gson1.toJson(resList)
-                    SPUtils.getInstance().put("BookRes", data1)
+                    MyApp.instance.bookres = resList
                     startActivity<AudioActivity>(AudioActivity.SUPPORT_KEY to item.supportingKey)
                 }
                 DownloadBean.TYPE_LINK -> {
                     startActivity<WebViewActivity>(
-                        WebViewActivity.URL to item.link,
-                        WebViewActivity.TITLE to item.name
+                        WebViewActivity.URL to item.link, WebViewActivity.TITLE to item.name
                     )
                 }
                 DownloadBean.TYPE_TEST -> {
@@ -831,8 +843,7 @@ class MainActivity : LifeActivity<HomePresenter>() {
                             NewsAndAudioActivity.TITLE to item.name
                         )
                         "2" -> startActivity<WebViewActivity>(
-                            WebViewActivity.URL to item.field2,
-                            WebViewActivity.TITLE to item.name
+                            WebViewActivity.URL to item.field2, WebViewActivity.TITLE to item.name
                         )
                     }
                 }
@@ -841,13 +852,10 @@ class MainActivity : LifeActivity<HomePresenter>() {
     }
 
     public override fun onResume() {
-        ImmersionBar.with(this)
-            .fullScreen(true)
-            .statusBarColor(R.color.transparent)
-            .statusBarDarkFont(true)
-            .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
-            .init()
+        ImmersionBar.with(this).fullScreen(true).statusBarColor(R.color.transparent)
+            .statusBarDarkFont(true).hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR).init()
         getPromotionalFlag()
+        getNewVersion()
         super.onResume()
         if (mineFragment.isAdded) {
             mineFragment.onResume()

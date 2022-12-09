@@ -191,6 +191,33 @@ class FileUtils private constructor() {
         /**
          * 判断文件是否存在，不存在则判断是否创建成功
 
+         * @param filePath 文件路径
+         * *
+         * @return `true`: 存在或创建成功<br></br>`false`: 不存在或创建失败
+         */
+        fun createOrExistsFile2(filePath: String): Boolean {
+            return createOrExistsFile2(getFileByPath(filePath))
+        }
+
+        /**
+         * 判断文件是否存在，不存在则判断是否创建成功
+
+         * @param file 文件
+         * *
+         * @return `true`: 存在或创建成功<br></br>`false`: 不存在或创建失败
+         */
+        fun createOrExistsFile2(file: File?): Boolean {
+            file ?: return false
+            // 如果存在，是文件则返回true，是目录则返回false
+            if (file.exists()) return file.isFile
+            if (!createOrExistsDir(file.parentFile)) return false
+            return false
+
+        }
+
+        /**
+         * 判断文件是否存在，不存在则判断是否创建成功
+
          * @param file 文件
          * *
          * @return `true`: 存在或创建成功<br></br>`false`: 不存在或创建失败

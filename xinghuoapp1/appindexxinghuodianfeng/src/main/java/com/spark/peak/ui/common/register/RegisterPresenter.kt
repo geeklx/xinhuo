@@ -16,6 +16,12 @@ import java.util.*
  */
 class RegisterPresenter(progress: OnProgress) : BasePresenter(progress) {
     fun register(register: Map<String, String>, onNext: () -> Unit, onError: () -> Unit) {
+//        api.register(register).sub({
+//            var aa = ""
+//            onNext()
+//        }, {
+//            onError()
+//        })
         api.register(register).sub({ results ->
             SpUtil.user = results.body
             userInfo { info ->
@@ -24,7 +30,9 @@ class RegisterPresenter(progress: OnProgress) : BasePresenter(progress) {
                 SpUtil.isLogin = false
                 onNext()
             }
-        }) { onError() }
+        }) {
+            onError()
+        }
     }
 
     fun sendCode(smsCode: SMSCode, onNext: () -> Unit, onError: () -> Unit) {
